@@ -1,11 +1,12 @@
 from discord.ext import commands
 
+from common.EdenCog import EdenCog
 
-class EdenCog(commands.Cog):
+
+class EdenBotCog(EdenCog):
     def __init__(self, bot: commands.bot) -> None:
-        self.bot = bot
-        print("Hello from eden cog")
+        super().__init__(bot)
 
-    @commands.slash_command(guild_ids=ALLOWED_GUILDS)
-    async def test(self, ctx: commands.Context):
-        await ctx.send("Hello from eden cog")
+
+def setup(bot: commands.Bot) -> None:
+    bot.add_cog(EdenBotCog(bot))

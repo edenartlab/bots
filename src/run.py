@@ -17,9 +17,8 @@ class MarsBot(commands.Bot):
             intents=intents,
         )
         self.mongo_client = MongoClient(os.getenv("MONGO_URI"))
-        self.db = self.mongo_client["eden-bots-dev"]
+        self.db = self.mongo_client[os.getenv("MONGO_DB_NAME")]
         self.bot_commands = self.get_commands()
-        print(self.bot_commands)
 
     def set_intents(self, intents: discord.Intents) -> None:
         intents.message_content = True
@@ -36,8 +35,15 @@ class MarsBot(commands.Bot):
         else:
             return []
 
+    def allowed_guilds(self, command_name) -> None:
+        command = self.bot_commands.get(command_name)
+        if command:
+            return command.get("guilds", None)
+        else:
+            return None
+
     async def on_ready(self) -> None:
-        print(f"Running bot...")
+        print("Running bot...")
 
     async def on_message(self, message: discord.Message) -> None:
         if message.author.bot:
@@ -57,8 +63,7 @@ def start(
 
     bot = MarsBot()
     for path in cog_paths:
-        res = bot.load_extension(path)
-        print(res)
+        bot.load_extension(path)
     bot.run(os.getenv("DISCORD_TOKEN"))
 
 
