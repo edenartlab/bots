@@ -2,6 +2,7 @@ import asyncio
 import os
 import random
 from typing import Optional
+from attr import dataclass
 import discord
 from discord.ext import commands
 
@@ -20,20 +21,29 @@ from common.models import (
 
 # from logos.scenarios import EdenAssistant
 
-ALLOWED_GUILDS = os.getenv("ALLOWED_GUILDS", "").split(",")
-ALLOWED_CHANNELS = os.getenv("ALLOWED_CHANNELS", "").split(",")
+ALLOWED_GUILDS = [int(g) for g in os.getenv("ALLOWED_GUILDS", "").split(",")]
+ALLOWED_CHANNELS = [int(c) for c in os.getenv("ALLOWED_CHANNELS", "").split(",")]
 
 EDEN_API_URL = os.getenv("EDEN_API_URL")
 EDEN_API_KEY = os.getenv("EDEN_API_KEY")
 EDEN_API_SECRET = os.getenv("EDEN_API_SECRET")
 
 
+@dataclass
+class LoraInput:
+    lora_id: str
+    lora_strength: float
+    lora_trigger: str
+    require_lora_trigger: bool
+
+
 class EdenCog(commands.Cog):
-    def __init__(self, bot: commands.bot) -> None:
+    def __init__(self, bot: commands.bot, lora: Optional[LoraInput] = None) -> None:
         self.bot = bot
         self.eden_credentials = SignInCredentials(
             apiKey=EDEN_API_KEY, apiSecret=EDEN_API_SECRET
         )
+        self.lora = lora
         # self.assistant = EdenAssistant("gpt-4")
 
     @commands.slash_command(guild_ids=ALLOWED_GUILDS)
@@ -81,6 +91,9 @@ class EdenCog(commands.Cog):
             upscale_f=upscale_f,
             seed=random.randint(1, 1e8),
         )
+
+        config = self.add_lora(config)
+        print(config)
 
         start_bot_message = f"**{text_input}** - <@!{ctx.author.id}>\n"
         await ctx.respond("Starting to create...")
@@ -130,6 +143,8 @@ class EdenCog(commands.Cog):
             guidance_scale=7.5,
             seed=random.randint(1, 1e8),
         )
+
+        config = self.add_lora(config)
 
         start_bot_message = f"**Remix** by <@!{ctx.author.id}>\n"
         await ctx.respond("Remixing...")
@@ -195,6 +210,8 @@ class EdenCog(commands.Cog):
             seed=random.randint(1, 1e8),
             interpolation_init_images_min_strength=0.3,  # a higher value will make the video smoother, but allows less visual change / journey
         )
+
+        config = self.add_lora(config)
 
         start_bot_message = f"**Real2Real** by <@!{ctx.author.id}>\n"
         await ctx.respond("Lerping...")
@@ -269,6 +286,8 @@ class EdenCog(commands.Cog):
             guidance_scale=7.5,
             seed=random.randint(1, 1e8),
         )
+
+        config = self.add_lora(config)
 
         start_bot_message = (
             f"**{text_input1}** to **{text_input2}** - <@!{ctx.author.id}>\n"
@@ -537,3 +556,12 @@ class EdenCog(commands.Cog):
             await message.edit(content=message_content)
         if file_update:
             await message.edit(files=[file_update], attachments=[])
+
+    def add_lora(self, config: StableDiffusionConfig):
+        if self.lora:
+            config.lora = self.lora.lora_id
+            config.lora_strength = self.lora.lora_strength
+        return config
+
+    def check_lora_trigger_provided(message: str, lora_trigger: str):
+        return lora_trigger in message
