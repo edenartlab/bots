@@ -37,7 +37,7 @@ class LoraInput:
     require_lora_trigger: bool
 
 
-class EdenCog(commands.Cog):
+class GeneratorCog(commands.Cog):
     def __init__(self, bot: commands.bot, lora: Optional[LoraInput] = None) -> None:
         self.bot = bot
         self.eden_credentials = SignInCredentials(

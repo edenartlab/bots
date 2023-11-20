@@ -1,9 +1,9 @@
 from discord.ext import commands
 
-from common.EdenCog import EdenCog
+from cogs.GeneratorCog import GeneratorCog
 
 
-class EdenBotCog(EdenCog):
+class EdenBotCog(GeneratorCog):
     def __init__(self, bot: commands.bot) -> None:
         super().__init__(bot)
 
