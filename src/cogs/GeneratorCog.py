@@ -22,6 +22,7 @@ from common.models import (
 # from logos.scenarios import EdenAssistant
 
 ALLOWED_GUILDS = [int(g) for g in os.getenv("ALLOWED_GUILDS", "").split(",")]
+ALLOWED_GUILDS_TEST = [int(g) for g in os.getenv("ALLOWED_GUILDS_TEST", "").split(",")]
 ALLOWED_CHANNELS = [int(c) for c in os.getenv("ALLOWED_CHANNELS", "").split(",")]
 
 EDEN_API_URL = os.getenv("EDEN_API_URL")
@@ -45,6 +46,33 @@ class GeneratorCog(commands.Cog):
         )
         self.lora = lora
         # self.assistant = EdenAssistant("gpt-4")
+
+    @commands.slash_command(guild_ids=ALLOWED_GUILDS_TEST)
+    async def test(
+        self,
+        ctx,
+    ):
+        print("Received test")
+
+        config = StableDiffusionConfig(
+            generator_name="test",
+        )
+
+        start_bot_message = f"**Testing** - <@!{ctx.author.id}>\n"
+        await ctx.respond("Starting to create...")
+        message = await ctx.channel.send(start_bot_message)
+
+        source = self.get_source(ctx)
+
+        generation_loop_input = GenerationLoopInput(
+            api_url=EDEN_API_URL,
+            message=message,
+            start_bot_message=start_bot_message,
+            source=source,
+            config=config,
+            is_video_request=False,
+        )
+        await self.generation_loop(generation_loop_input)
 
     @commands.slash_command(guild_ids=ALLOWED_GUILDS)
     async def create(

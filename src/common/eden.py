@@ -21,13 +21,18 @@ async def request_creation(
         "x-api-secret": credentials.apiSecret,
     }
 
+    attributes = await build_eden_task_attributes(api_url, source.author_id)
+    print("attributes", attributes)
+
     request = {
         "generatorName": generator_name,
         "config": config_dict,
-        "metadata": source.__dict__,
+        "attributes": attributes,
     }
 
-    response = requests.post(f"{api_url}/tasks/create", json=request, headers=header)
+    response = requests.post(
+        f"{api_url}/admin/tasks/create", json=request, headers=header
+    )
 
     print("config")
     print(config_dict)
@@ -134,3 +139,24 @@ async def check_server_result_ok(result):
 def delete_file(path):
     if os.path.isfile(path):
         os.remove(path)
+
+
+async def get_eden_user(api_url: str, discord_user_id: str):
+    response = requests.get(
+        f"{api_url}/creators", params={"discordId": discord_user_id}
+    )
+    if response.status_code != 200:
+        return None
+    docs = response.json().get("docs")
+    if not docs:
+        return None
+    return docs[0]["_id"]
+
+
+async def build_eden_task_attributes(api_url: str, discord_user_id: str):
+    eden_user = await get_eden_user(api_url, discord_user_id)
+    attributes = {
+        "discordId": str(discord_user_id),
+        "delegateUserId": eden_user,
+    }
+    return attributes
