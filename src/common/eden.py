@@ -1,11 +1,13 @@
+import asyncio
 import io
 import os
+from typing import Optional
 
 import aiohttp
 import discord
 import requests
 
-from common.models import SourceSettings
+from common.models import GenerationLoopInput, SourceSettings
 from common.models import SignInCredentials
 
 
@@ -30,9 +32,8 @@ async def request_creation(
         "attributes": attributes,
     }
 
-    response = requests.post(
-        f"{api_url}/admin/tasks/create", json=request, headers=header
-    )
+    response = requests.post(f"{api_url}/tasks/create", json=request, headers=header)
+    # response = requests.post(f"{api_url}/admin/tasks/create", json=request, headers=header)
 
     print("config")
     print(config_dict)
@@ -160,3 +161,89 @@ async def build_eden_task_attributes(api_url: str, discord_user_id: str):
         "delegateUserId": eden_user,
     }
     return attributes
+
+
+async def generation_loop(
+    loop_input: GenerationLoopInput,
+    eden_credentials: SignInCredentials,
+):
+    api_url = loop_input.api_url
+    start_bot_message = loop_input.start_bot_message
+    parent_message = loop_input.parent_message
+    message = loop_input.message
+    source = loop_input.source
+    config = loop_input.config
+    refresh_interval = loop_input.refresh_interval
+    is_video_request = loop_input.is_video_request
+    prefer_gif = loop_input.prefer_gif
+
+    try:
+        task_id = await request_creation(api_url, eden_credentials, source, config)
+        current_output_url = None
+        while True:
+            result, file, output_url = await poll_creation_queue(
+                api_url,
+                eden_credentials,
+                task_id,
+                is_video_request,
+                prefer_gif,
+            )
+            if output_url != current_output_url:
+                current_output_url = output_url
+                message_update = get_message_update(result)
+                await edit_message(
+                    message,
+                    start_bot_message,
+                    message_update,
+                    file_update=file,
+                )
+            if result["status"] == "completed":
+                file, output_url = await get_file_update(
+                    result, is_video_request, prefer_gif
+                )
+                if parent_message:
+                    await parent_message.reply(
+                        start_bot_message,
+                        files=[file],
+                        view=None,
+                    )
+                else:
+                    await message.channel.send(
+                        start_bot_message,
+                        files=[file],
+                        view=None,
+                    )
+                await message.delete()
+                return
+            await asyncio.sleep(refresh_interval)
+
+    except Exception as e:
+        await edit_message(message, start_bot_message, f"Error: {e}")
+
+
+def get_message_update(result):
+    status = result["status"]
+    if status == "failed":
+        return "_Server error: Eden task failed_"
+    elif status in "pending":
+        return "_Warming up, please wait._"
+    elif status in "starting":
+        return "_Creation is starting_"
+    elif status == "running":
+        progress = int(100 * result["progress"])
+        return f"_Creation is **{progress}%** complete_"
+    elif status == "complete":
+        return "_Creation is **100%** complete_"
+
+
+async def edit_message(
+    message: discord.Message,
+    start_bot_message: str,
+    message_update: str,
+    file_update: Optional[discord.File] = None,
+) -> discord.Message:
+    if message_update is not None:
+        message_content = f"{start_bot_message}\n{message_update}"
+        await message.edit(content=message_content)
+    if file_update:
+        await message.edit(files=[file_update], attachments=[])

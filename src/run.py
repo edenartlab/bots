@@ -58,7 +58,12 @@ def start(
     print("Launching bot...")
     bot_dir = Path(__file__).parent / "bots" / bot_name
     dotenv_path = bot_dir / ".env"
-    cog_paths = [f"bots.{bot_name}.{bot_name}"]
+    cog_paths = [
+        str(p.relative_to(Path(__file__).parent.parent).with_suffix(""))
+        .replace(os.sep, ".")
+        .replace("src.", "")
+        for p in bot_dir.glob("*.py")
+    ]
     load_dotenv(dotenv_path)
 
     bot = MarsBot()

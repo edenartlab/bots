@@ -1,4 +1,3 @@
-import asyncio
 import os
 import random
 from typing import Optional
@@ -7,22 +6,21 @@ import discord
 from discord.ext import commands
 
 from common.discord import (
-    is_mentioned,
-    replace_bot_mention,
-    replace_mentions_with_usernames,
+    get_source,
 )
-from common.eden import get_file_update, poll_creation_queue, request_creation
+from common.eden import (
+    generation_loop,
+)
 from common.models import (
     GenerationLoopInput,
     SignInCredentials,
-    SourceSettings,
     StableDiffusionConfig,
 )
 
-# from logos.scenarios import EdenAssistant
-
-ALLOWED_GUILDS = [int(g) for g in os.getenv("ALLOWED_GUILDS", "").split(",")]
-ALLOWED_GUILDS_TEST = [int(g) for g in os.getenv("ALLOWED_GUILDS_TEST", "").split(",")]
+ALLOWED_GUILDS = [g for g in os.getenv("ALLOWED_GUILDS", "").split(",")] or []
+ALLOWED_GUILDS = [int(g) for g in ALLOWED_GUILDS]
+ALLOWED_GUILDS_TEST = [g for g in os.getenv("ALLOWED_GUILDS_TEST", "").split(",")] or []
+ALLOWED_GUILDS_TEST = [int(g) for g in ALLOWED_GUILDS_TEST]
 ALLOWED_CHANNELS = [int(c) for c in os.getenv("ALLOWED_CHANNELS", "").split(",")]
 
 EDEN_API_URL = os.getenv("EDEN_API_URL")
@@ -45,7 +43,6 @@ class GeneratorCog(commands.Cog):
             apiKey=EDEN_API_KEY, apiSecret=EDEN_API_SECRET
         )
         self.lora = lora
-        # self.assistant = EdenAssistant("gpt-4")
 
     @commands.slash_command(guild_ids=ALLOWED_GUILDS_TEST)
     async def test(
@@ -62,7 +59,7 @@ class GeneratorCog(commands.Cog):
         await ctx.respond("Starting to create...")
         message = await ctx.channel.send(start_bot_message)
 
-        source = self.get_source(ctx)
+        source = get_source(ctx)
 
         generation_loop_input = GenerationLoopInput(
             api_url=EDEN_API_URL,
@@ -72,7 +69,9 @@ class GeneratorCog(commands.Cog):
             config=config,
             is_video_request=False,
         )
-        await self.generation_loop(generation_loop_input)
+        await generation_loop(
+            generation_loop_input, eden_credentials=self.eden_credentials
+        )
 
     @commands.slash_command(guild_ids=ALLOWED_GUILDS)
     async def create(
@@ -104,7 +103,7 @@ class GeneratorCog(commands.Cog):
         #         )
         #         return
 
-        source = self.get_source(ctx)
+        source = get_source(ctx)
         large, fast = False, False
         width, height, upscale_f = self.get_dimensions(aspect_ratio, large)
         steps = 15 if fast else 40
@@ -135,7 +134,9 @@ class GeneratorCog(commands.Cog):
             config=config,
             is_video_request=False,
         )
-        await self.generation_loop(generation_loop_input)
+        await generation_loop(
+            generation_loop_input, eden_credentials=self.eden_credentials
+        )
 
     @commands.slash_command(guild_ids=ALLOWED_GUILDS)
     async def remix(
@@ -155,7 +156,7 @@ class GeneratorCog(commands.Cog):
             await ctx.respond("Please provide an image to remix.")
             return
 
-        source = self.get_source(ctx)
+        source = get_source(ctx)
 
         steps = 50
         width, height = 1024, 1024
@@ -187,7 +188,9 @@ class GeneratorCog(commands.Cog):
             is_video_request=False,
             prefer_gif=False,
         )
-        await self.generation_loop(generation_loop_input)
+        await generation_loop(
+            generation_loop_input, eden_credentials=self.eden_credentials
+        )
 
     @commands.slash_command(guild_ids=ALLOWED_GUILDS)
     async def real2real(
@@ -204,7 +207,7 @@ class GeneratorCog(commands.Cog):
             await ctx.respond("This command is not available in this channel.")
             return
 
-        source = self.get_source(ctx)
+        source = get_source(ctx)
 
         if not (image1 and image2):
             await ctx.respond("Please provide two images to interpolate between.")
@@ -254,7 +257,9 @@ class GeneratorCog(commands.Cog):
             is_video_request=True,
             prefer_gif=False,
         )
-        await self.generation_loop(generation_loop_input)
+        await generation_loop(
+            generation_loop_input, eden_credentials=self.eden_credentials
+        )
 
     @commands.slash_command(guild_ids=ALLOWED_GUILDS)
     async def lerp(
@@ -288,7 +293,7 @@ class GeneratorCog(commands.Cog):
         #         )
         #         return
 
-        source = self.get_source(ctx)
+        source = get_source(ctx)
 
         interpolation_texts = [text_input1, text_input2]
         interpolation_seeds = [random.randint(1, 1e8) for _ in interpolation_texts]
@@ -332,182 +337,9 @@ class GeneratorCog(commands.Cog):
             is_video_request=True,
             prefer_gif=False,
         )
-        await self.generation_loop(generation_loop_input)
-
-    async def generation_loop(
-        self,
-        loop_input: GenerationLoopInput,
-    ):
-        api_url = loop_input.api_url
-        start_bot_message = loop_input.start_bot_message
-        parent_message = loop_input.parent_message
-        message = loop_input.message
-        source = loop_input.source
-        config = loop_input.config
-        refresh_interval = loop_input.refresh_interval
-        is_video_request = loop_input.is_video_request
-        prefer_gif = loop_input.prefer_gif
-
-        try:
-            task_id = await request_creation(
-                api_url, self.eden_credentials, source, config
-            )
-            current_output_url = None
-            while True:
-                result, file, output_url = await poll_creation_queue(
-                    api_url,
-                    self.eden_credentials,
-                    task_id,
-                    is_video_request,
-                    prefer_gif,
-                )
-                if output_url != current_output_url:
-                    current_output_url = output_url
-                    message_update = self.get_message_update(result)
-                    await self.edit_message(
-                        message,
-                        start_bot_message,
-                        message_update,
-                        file_update=file,
-                    )
-                if result["status"] == "completed":
-                    file, output_url = await get_file_update(
-                        result, is_video_request, prefer_gif
-                    )
-                    if parent_message:
-                        await parent_message.reply(
-                            start_bot_message,
-                            files=[file],
-                            view=None,
-                        )
-                    else:
-                        await message.channel.send(
-                            start_bot_message,
-                            files=[file],
-                            view=None,
-                        )
-                    await message.delete()
-                    return
-                await asyncio.sleep(refresh_interval)
-
-        except Exception as e:
-            await self.edit_message(message, start_bot_message, f"Error: {e}")
-
-    async def refresh_callback(
-        self,
-        loop_input: GenerationLoopInput,
-        reroll_seed: bool = True,
-    ):
-        loop_input.message = await loop_input.parent_message.reply(
-            loop_input.start_bot_message,
+        await generation_loop(
+            generation_loop_input, eden_credentials=self.eden_credentials
         )
-        if reroll_seed:
-            loop_input.config.seed = random.randint(1, 1e8)
-        await self.generation_loop(loop_input)
-
-    @commands.Cog.listener("on_message")
-    async def on_message(self, message: discord.Message) -> None:
-        try:
-            if (
-                message.channel.id not in ALLOWED_CHANNELS
-                or message.author.id == self.bot.user.id
-                or message.author.bot
-            ):
-                return
-
-            trigger_reply = is_mentioned(message, self.bot.user)
-
-            if trigger_reply:
-                return
-                ctx = await self.bot.get_context(message)
-                async with ctx.channel.typing():
-                    prompt = self.message_preprocessor(message)
-
-                    attachment_urls = [
-                        attachment.url for attachment in message.attachments
-                    ]
-                    attachment_lookup_file = {
-                        url: f"/files/image{i+1}.jpeg"
-                        for i, url in enumerate(attachment_urls)
-                    }
-                    attachment_lookup_url = {
-                        v: k for k, v in attachment_lookup_file.items()
-                    }
-                    attachment_files = [
-                        attachment_lookup_file[url] for url in attachment_urls
-                    ]
-                    assistant_message = {
-                        "prompt": prompt,
-                        "attachments": attachment_files,
-                    }
-
-                    response = await self.assistant(
-                        assistant_message, session_id=str(message.author.id)
-                    )
-
-                    reply = response["message"][:2000]
-                    reply_message = await message.reply(reply)
-
-                    # check if there is a config
-                    config = response["attachment"]
-                    if not config:
-                        return
-
-                    mode = config.pop("generator")
-
-                    if "text_input" in config:
-                        text_input = config["text_input"]
-                    elif "interpolation_texts" in config:
-                        text_input = " to ".join(config["interpolation_texts"])
-                    else:
-                        text_input = mode
-
-                    if "init_image_data" in config:
-                        config["init_image_data"] = attachment_lookup_url[
-                            config["init_image_data"]
-                        ]
-                    if "interpolation_init_images" in config:
-                        config["interpolation_init_images"] = [
-                            attachment_lookup_url[img]
-                            for img in config["interpolation_init_images"]
-                        ]
-
-                    config = StableDiffusionConfig(
-                        generator_name=mode, seed=random.randint(1, 1e8), **config
-                    )
-
-                    source = self.get_source(ctx)
-
-                    is_video_request = mode in ["interpolate", "real2real"]
-
-                    start_bot_message = f"**{text_input}** - <@!{ctx.author.id}>\n"
-                    original_text = (
-                        f"{reply[0:1950-len(start_bot_message)]}\n\n{start_bot_message}"
-                    )
-
-                    generation_loop_input = GenerationLoopInput(
-                        api_url=EDEN_API_URL,
-                        message=reply_message,
-                        start_bot_message=original_text,
-                        source=source,
-                        config=config,
-                        prefer_gif=False,
-                        is_video_request=is_video_request,
-                    )
-                    await self.generation_loop(generation_loop_input)
-
-        except Exception as e:
-            print(f"Error: {e}")
-            await message.reply(":) ")
-
-    def message_preprocessor(self, message: discord.Message) -> str:
-        message_content = replace_bot_mention(message.content, only_first=True)
-        message_content = replace_mentions_with_usernames(
-            message_content,
-            message.mentions,
-        )
-        message_content = message_content.strip()
-        return message_content
 
     def get_video_dimensions(self, aspect_ratio):
         if aspect_ratio == "square":
@@ -533,57 +365,6 @@ class GeneratorCog(commands.Cog):
         if ctx.channel.id not in ALLOWED_CHANNELS:
             return False
         return True
-
-    def get_source(self, ctx):
-        source = SourceSettings(
-            author_id=int(ctx.author.id),
-            author_name=str(ctx.author),
-            guild_id=int(ctx.guild.id),
-            guild_name=str(ctx.guild),
-            channel_id=int(ctx.channel.id),
-            channel_name=str(ctx.channel),
-        )
-        return source
-
-    def get_message_update(self, result):
-        status = result["status"]
-        if status == "failed":
-            return "_Server error: Eden task failed_"
-        elif status in "pending":
-            return "_Warming up, please wait._"
-        elif status in "starting":
-            return "_Creation is starting_"
-        elif status == "running":
-            progress = int(100 * result["progress"])
-            return f"_Creation is **{progress}%** complete_"
-        elif status == "complete":
-            return "_Creation is **100%** complete_"
-
-    async def edit_interaction(
-        self,
-        ctx,
-        start_bot_message,
-        message_update,
-        file_update=None,
-    ):
-        message_content = f"{start_bot_message}\n{message_update}"
-        if file_update:
-            await ctx.edit(content=message_content, file=file_update)
-        else:
-            await ctx.edit(content=message_content)
-
-    async def edit_message(
-        self,
-        message: discord.Message,
-        start_bot_message: str,
-        message_update: str,
-        file_update: Optional[discord.File] = None,
-    ) -> discord.Message:
-        if message_update is not None:
-            message_content = f"{start_bot_message}\n{message_update}"
-            await message.edit(content=message_content)
-        if file_update:
-            await message.edit(files=[file_update], attachments=[])
 
     def add_lora(self, config: StableDiffusionConfig):
         if self.lora:

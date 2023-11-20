@@ -76,3 +76,12 @@ class GenerationLoopInput:
     prefer_gif: bool = True
     refresh_interval: int = 2
     parent_message: discord.Message = None
+
+
+@dataclass
+class EdenAssistantConfig:
+    character_description: str
+    creator_prompt: str
+    documentation_prompt: str
+    documentation: str
+    router_prompt: str

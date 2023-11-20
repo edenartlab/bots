@@ -10,6 +10,7 @@ import discord
 from discord.ext import commands
 
 from common.constants import COMMAND_NOT_FOUND_MESSAGE
+from common.models import SourceSettings
 
 
 def is_mentioned(message: discord.Message, user: discord.User) -> bool:
@@ -195,3 +196,15 @@ def include_preface(response, settings):
     if settings.preface:
         response = settings.preface + response
     return response
+
+
+def get_source(ctx):
+    source = SourceSettings(
+        author_id=int(ctx.author.id),
+        author_name=str(ctx.author),
+        guild_id=int(ctx.guild.id),
+        guild_name=str(ctx.guild),
+        channel_id=int(ctx.channel.id),
+        channel_name=str(ctx.channel),
+    )
+    return source
