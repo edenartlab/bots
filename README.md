@@ -1,3 +1,9 @@
 # bots
 
-Describe your project here.
+## Installing
+
+```
+rye sync
+docker compose up
+python src/run.py [BOT_NAME]
+```
