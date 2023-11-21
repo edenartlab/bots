@@ -32,8 +32,8 @@ async def request_creation(
         "attributes": attributes,
     }
 
-    response = requests.post(f"{api_url}/tasks/create", json=request, headers=header)
-    # response = requests.post(f"{api_url}/admin/tasks/create", json=request, headers=header)
+    # response = requests.post(f"{api_url}/tasks/create", json=request, headers=header)
+    response = requests.post(f"{api_url}/admin/tasks/create", json=request, headers=header)
 
     print("config")
     print(config_dict)
