@@ -83,7 +83,7 @@ class AssistantCog(commands.Cog):
                 reply_message = await message.reply(reply)
 
                 # check if there is a config
-                config = response["attachment"]
+                config = response["config"]
                 if not config:
                     return
 
@@ -97,12 +97,12 @@ class AssistantCog(commands.Cog):
                     text_input = mode
 
                 if "init_image_data" in config:
-                    config["init_image_data"] = attachment_lookup_url[
+                    config["init_image_data"] = attachment_lookup_url.get(
                         config["init_image_data"]
-                    ]
+                    )
                 if "interpolation_init_images" in config:
                     config["interpolation_init_images"] = [
-                        attachment_lookup_url[img]
+                        attachment_lookup_url.get(img)
                         for img in config["interpolation_init_images"]
                     ]
 
@@ -129,7 +129,7 @@ class AssistantCog(commands.Cog):
                     is_video_request=is_video_request,
                 )
                 await generation_loop(
-                    generation_loop_input, eden_credentials=self.sign_in_credentials
+                    generation_loop_input, eden_credentials=self.eden_credentials
                 )
 
     def message_preprocessor(self, message: discord.Message) -> str:
