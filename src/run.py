@@ -22,10 +22,8 @@ class MarsBot(commands.Bot):
     def set_intents(self, intents: discord.Intents) -> None:
         intents.message_content = True
         intents.messages = True
-        # if "presence" in self.metadata.intents:
-        #     intents.presences = True
-        # if "members" in self.metadata.intents:
-        #     intents.members = True
+        intents.presences = True
+        intents.members = True
 
     def get_commands(self) -> None:
         bot_data = self.db["commands"].find_one({"bot": "eden"})
