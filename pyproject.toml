@@ -28,7 +28,6 @@ dev-dependencies = [
     "mypy>=1.7.0",
     "flake8>=6.1.0",
     "pytest>=7.4.3",
-    "discord-ext-autoreload>=0.1.2",
 ]
 
 [tool.hatch.metadata]

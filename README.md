@@ -5,5 +5,5 @@
 ```
 rye sync
 docker compose up
-python src/run.py [BOT_NAME]
+rye run python src/run.py [BOT_NAME]
 ```
