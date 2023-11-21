@@ -4,7 +4,6 @@ from pathlib import Path
 import discord
 from discord.ext import commands
 from dotenv import load_dotenv
-from pymongo import MongoClient
 
 
 class MarsBot(commands.Bot):
@@ -16,9 +15,9 @@ class MarsBot(commands.Bot):
             command_prefix="!",
             intents=intents,
         )
-        self.mongo_client = MongoClient(os.getenv("MONGO_URI"))
-        self.db = self.mongo_client[os.getenv("MONGO_DB_NAME")]
-        self.bot_commands = self.get_commands()
+        # self.mongo_client = MongoClient(os.getenv("MONGO_URI"))
+        # self.db = self.mongo_client[os.getenv("MONGO_DB_NAME")]
+        # self.bot_commands = self.get_commands()
 
     def set_intents(self, intents: discord.Intents) -> None:
         intents.message_content = True
