@@ -75,39 +75,41 @@ class AssistantCog(commands.Cog):
                 }
 
                 response = self.assistant(
-                    assistant_message, session_id=str(message.author.id)
+                    assistant_message, 
+                    session_id=str(message.author.id)
                 )
-                print("rrrrr", response)
-
-                reply = response["message"][:2000]
+                reply = response.get("message")[:2000]
                 reply_message = await message.reply(reply)
 
                 # check if there is a config
-                config = response["config"]
+                config = response.get("config")
+
                 if not config:
                     return
 
                 mode = config.pop("generator")
 
-                if "text_input" in config:
+                if config.get("text_input"):
                     text_input = config["text_input"]
-                elif "interpolation_texts" in config:
+                elif config.get("interpolation_texts"):
                     text_input = " to ".join(config["interpolation_texts"])
                 else:
                     text_input = mode
 
-                if "init_image_data" in config:
-                    config["init_image_data"] = attachment_lookup_url.get(
-                        config["init_image_data"]
+                if config.get("init_image"):
+                    config["init_image"] = attachment_lookup_url.get(
+                        config["init_image"]
                     )
-                if "interpolation_init_images" in config:
+                if config.get("interpolation_init_images"):
                     config["interpolation_init_images"] = [
                         attachment_lookup_url.get(img)
                         for img in config["interpolation_init_images"]
                     ]
-
+                if not config.get("seed"):
+                    config["seed"] = random.randint(1, 1e8)
+                    
                 config = StableDiffusionConfig(
-                    generator_name=mode, seed=random.randint(1, 1e8), **config
+                    generator_name=mode, **config
                 )
 
                 source = get_source(ctx)

@@ -24,7 +24,6 @@ async def request_creation(
     }
 
     attributes = await build_eden_task_attributes(api_url, source.author_id)
-    print("attributes", attributes)
 
     request = {
         "generatorName": generator_name,
@@ -34,9 +33,6 @@ async def request_creation(
 
     # response = requests.post(f"{api_url}/tasks/create", json=request, headers=header)
     response = requests.post(f"{api_url}/admin/tasks/create", json=request, headers=header)
-
-    print("config")
-    print(config_dict)
 
     check, error = await check_server_result_ok(response)
 
