@@ -1,12 +1,12 @@
 from pathlib import Path
 from discord.ext import commands
 from cogs.AssistantCog import AssistantCog
-from common.models import DadaAssistantConfig
+from common.models import EdenAssistantConfig
 
 
 class DadaAssistantCog(AssistantCog):
     def __init__(self, bot: commands.bot) -> None:
-        assistant_config = DadaAssistantConfig(
+        assistant_config = EdenAssistantConfig(
             character_description=self.load_prompt("character_description.txt"),
             creator_prompt=self.load_prompt("creator_prompt.txt"),
             documentation_prompt=self.load_prompt("documentation_prompt.txt"),

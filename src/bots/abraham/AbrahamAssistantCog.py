@@ -1,12 +1,12 @@
 from pathlib import Path
 from discord.ext import commands
 from cogs.AssistantCog import AssistantCog
-from common.models import AbrahamAssistantConfig
+from common.models import EdenAssistantConfig
 
 
 class AbrahamAssistantCog(AssistantCog):
     def __init__(self, bot: commands.bot) -> None:
-        assistant_config = AbrahamAssistantConfig(
+        assistant_config = EdenAssistantConfig(
             character_description=self.load_prompt("character_description.txt"),
             creator_prompt=self.load_prompt("creator_prompt.txt"),
             documentation_prompt=self.load_prompt("documentation_prompt.txt"),
