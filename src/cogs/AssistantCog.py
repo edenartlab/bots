@@ -2,6 +2,7 @@ import os
 import random
 import discord
 from discord.ext import commands
+from attr import dataclass
 
 from logos.scenarios import EdenAssistant
 
@@ -26,9 +27,19 @@ EDEN_API_KEY = os.getenv("EDEN_API_KEY")
 EDEN_API_SECRET = os.getenv("EDEN_API_SECRET")
 
 
+@dataclass
+class LoraInput:
+    lora_id: str
+    lora_strength: float
+    lora_trigger: str
+    require_lora_trigger: bool
+
+
 class AssistantCog(commands.Cog):
     def __init__(
-        self, bot: commands.bot, assistant_config: EdenAssistantConfig
+        self, bot: commands.bot, 
+        assistant_config: EdenAssistantConfig,
+        lora: Optional[LoraInput] = None
     ) -> None:
         self.bot = bot
         self.eden_credentials = SignInCredentials(
@@ -41,6 +52,7 @@ class AssistantCog(commands.Cog):
             documentation=assistant_config.documentation,
             router_prompt=assistant_config.router_prompt,
         )
+        self.lora = lora
 
     @commands.Cog.listener("on_message")
     async def on_message(self, message: discord.Message) -> None:
@@ -112,6 +124,8 @@ class AssistantCog(commands.Cog):
                     generator_name=mode, **config
                 )
 
+                config = self.add_lora(config)
+
                 source = get_source(ctx)
 
                 is_video_request = mode in ["interpolate", "real2real"]
@@ -142,3 +156,12 @@ class AssistantCog(commands.Cog):
         )
         message_content = message_content.strip()
         return message_content
+
+    def add_lora(self, config: StableDiffusionConfig):
+        if self.lora:
+            config.lora = self.lora.lora_id
+            config.lora_strength = self.lora.lora_strength
+        return config
+
+    def check_lora_trigger_provided(message: str, lora_trigger: str):
+        return lora_trigger in message

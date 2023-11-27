@@ -37,7 +37,11 @@ class LoraInput:
 
 
 class GeneratorCog(commands.Cog):
-    def __init__(self, bot: commands.bot, lora: Optional[LoraInput] = None) -> None:
+    def __init__(
+        self, 
+        bot: commands.bot, 
+        lora: Optional[LoraInput] = None
+    ) -> None:
         self.bot = bot
         self.eden_credentials = SignInCredentials(
             apiKey=EDEN_API_KEY, apiSecret=EDEN_API_SECRET
