@@ -1,9 +1,9 @@
 import os
 import random
 import discord
-from discord.ext import commands
+from typing import Optional
 from attr import dataclass
-
+from discord.ext import commands
 from logos.scenarios import EdenAssistant
 
 from common.discord import (
