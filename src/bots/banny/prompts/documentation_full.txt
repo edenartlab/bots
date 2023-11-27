@@ -1,0 +1,2495 @@
+# About JuiceboxDAO
+
+JuiceboxDAO contributors build the Juicebox protocol and the ecosystem around it, enabling projects to raise thousands of ETH and to build robust communities around their projects.
+
+JuiceboxDAO contributors build in the open — to participate, read the [contributing guide](contribute) and [join the Discord](https://discord.gg/juicebox). We have Discord Town Halls every Tuesday at 22:00 UTC. [Read about previous ones](/town-hall) or stop by and say hello!
+
+- Learn about the DAO's core values in the [Foundation](foundation).
+- If you are interested in contributing to the DAO, read the [Contributor Guide](contribute).
+- Visit the DAO's [Governance Portal](https://jbdao.org) to learn about and participate in DAO governance.
+- To learn more about JBX, read [JBX & Fees](/dao/reference/jbx/).
+- Learn more about the [Juicebox Ecosystem](/user/resources/ecosystem/).
+
+<details>
+
+<summary>Links</summary>
+
+#### Website
+
+[juicebox.money](https://juicebox.money/)<br/>
+[Goerli juicebox.money](https://goerli.juicebox.money/)<br/>
+[JuiceboxDAO v1 Project](https://juicebox.money/p/juicebox)<br/>
+[JuiceboxDAO v2/v3 Project](https://juicebox.money/@juicebox)
+
+#### Community
+
+[Discord](https://discord.gg/juicebox)<br/>
+[Twitter](https://twitter.com/juiceboxETH)<br/>
+[Cryptovoxels Lounge](http://juicebox.lexicondevils.xyz/)<br/>
+[YouTube](https://www.youtube.com/c/juiceboxdao)
+
+#### Resources
+
+[Github](https://github.com/jbx-protocol)<br/>
+[Analytics](reference/analytics/)<br/>
+[JuiceTool](https://juicetool.xyz/)<br/>
+[Notion](https://juicebox.notion.site/Juicebox-Notion-7b2436cec0c145c88b3efa0376c6dba3)<br/>
+[Brand Kit](/user/brand-kit/)
+
+</details>
+
+<details>
+
+<summary>Governance</summary>
+
+Juicebox governance runs on a [14 day cycle](process) – proposals receive "temperature checks" in Discord, and are ratified in the DAO's [Snapshot space](https://juicetool.xyz/snapshot/jbdao.eth). You can follow this through our governance portal [jbdao.org](https://jbdao.org), or read our [Governance Process](process) to learn more.
+
+#### Main Links
+
+[Governance Portal](https://jbdao.org)<br/>
+[Juicebox Snapshot](https://snapshot.org/#/jbdao.eth)<br/>
+[Snapshot Delegation](https://vote.juicebox.money/#/delegate/jbdao.eth)
+
+#### Resources
+
+[How to Make a Governance Proposal](proposals)<br/>
+[Governance Process](process)<br/>
+[Juicebox DAO Foundation](foundation)
+
+</details>
+
+### Who is Juicebox DAO?
+
+From [JBX & Fees](/dao/reference/jbx/):
+
+> The Juicebox protocol is developed by JuiceboxDAO. JuiceboxDAO has no CEO, no hiring department, and no Board of Directors; instead, it is self-governed via the JBX token. "DAO" stands for _Decentralized Autonomous Organization_ — by utilizing token governance and the Juicebox protocol itself, JuiceboxDAO is able to manage strategic decisions, payouts to contributors, and to consistently deliver upgrades to a best-in-class Ethereum protocol, along with a powerful suite of tools to support it.
+>
+> You can see current JBX holders ranked below:
+
+# JuiceboxDAO Foundation
+
+#### Mission statement
+
+*What the DAO works toward*
+
+JuiceboxDAO helps people confidently fund, operate, and scale programmable treasuries on Ethereum.
+
+#### Values
+
+*Who we are*
+
+- **We're builders.** The decisions we make prioritize those building, and we trust those who we've delegated responsibilities to.
+- **We're focused.** We encourage one another to focus on the commitments we've made to the DAO, and keep each other accountable to them.
+- **We're supportive.** We're here to help, and we communicate in a way that empowers one another.
+- **We're listeners.** We are humble with our knowledge, and seek balance between urgency and patience.
+- **We're honest.** We are each unique selves, and we communicate our individual ideas openly and with clarity. We express ourselves and exchange feedback with this in mind.
+- **We’re stewards.** We respect the opportunity to help set a tone for what it means to build on the open internet together.
+
+#### Focus areas
+
+*Where the DAO focuses its resources*
+
+(No particular order)
+
+**Protocol**
+
+Define, optimize, test, secure, monitor, and document the core Juicebox protocol.
+
+**Security**
+
+Minimize, monitor, and mitigate risks to project creators, contributors, and patrons across contracts and frontends.
+
+**Community alignment**
+
+Help project owners and members of the JB community get the resources and attention they need to build and work together.
+
+**Web3 ecosystem**
+
+Position JB to work with and help other public DAOs, tools, and services to safely widen opportunities for all in Web3.
+
+**Onboarding**
+
+Help people launch their projects on JB and build extensions to the protocol through active Q&A availability, providing useful documentation, and helping shape the information architecture of web clients.
+
+**Governance**
+
+Plan out how we will make decisions together as the DAO scales, and keep it accountable to its agreed upon decision-making schedule.
+
+**Legal**
+
+Work towards the legal clarity necessary to make Juicebox a welcoming protocol where any project can be deployed with confidence.
+
+**Analytics**
+
+Give projects rich insights into their community, and provide overview information about the JB protocol.
+
+**Frontend**
+
+Develop web clients for the protocol that make the user experience of exploring projects and contributing to them more empowering, reliable, and delightful over time.
+
+**Juicebox ecosystem**
+
+Stand up infrastructure to help projects running on the Juicebox protocol grow their decentralized communities and experiment with various treasury strategies.
+
+**Visibility & materials**
+
+Create and propagate digital and physical publications, stickers, art, videos, memes, and other stuff that radiate Juicebox vibes and tell our story.
+
+**Dev ops**
+
+Make it as easy as possible for people to build on JB by improving processes, tooling, and documentation for all developers.
+
+**Mechanism**
+
+Build models and tools to analyze Juicebox project configurations. Develop and implement utilities for tokens in the Juicebox ecosystem.
+
+**Product, project, and program management**
+
+Regularly define, assess, prioritize, and publicly communicate the goals and progress of what we’re working towards across focus areas.
+
+#### Membership
+
+*What does it mean to be a JuiceboxDAO member*
+
+DAO members are responsible for proposing and voting on:
+
+- how the DAO's treasury funds are allocated.
+- changes to the protocol the DAO has agreed to steward.
+- changes to formal processes the DAO has agreed to follow.
+- criteria for membership admission and boundaries for quitting.
+
+DAO membership is required by the people and projects who raise funds on the Juicebox protocol, is given to people who are currently stewarding its focus areas, and is open to people who choose to help fund its treasury.
+
+Membership is represented via the JBX token issued using the Juicebox protocol itself. All JBX holders are JuiceboxDAO members.
+
+Members can quit by burning any portion of their tokens at any time and take with them a portion of the treasury's funds.
+
+# Contributing to JuiceboxDAO
+
+### A Permeable DAO
+
+JuiceboxDAO strives to maintain an open contribution policy. Anyone may pitch in and help with any of the Focus Areas defined in the [DAO Foundation](../foundation), such as protocol and frontend development, community alignment, or governance.
+
+Unlike traditional workplaces, the DAO is open to pseudonymous contributors ("anons"). New contributors are not expected to present a resumé or any other identifying material. The DAOs permeability to new contributors with no substantial reputation informs its contributor onboarding structure.
+
+To welcome new contributors, many of whom have little to no reputation online, the DAO suggests that contributors consider the following process to successfully onboard as a paid contributor
+
+### Getting Started
+
+New contributors are advised to introduce themselves in the [Juicebox DAO Discord server](https://discord.gg/juicebox/), and to familiarize themselves with the focus areas they would like to contribute to. New contributors should also reach out to active contributors on Discord to figure out where the DAO needs help, or to propose new objectives. Project coordination often takes place in Juicebox DAO's [Notion workspace](https://notion.so/juicebox).
+
+### Trial Payouts
+
+Contributors who have completed some work and familiarized themselves with the DAO's ongoing efforts are encouraged to propose a smaller one-time trial payout. These proposals should detail work which has already been completed and plans for upcoming contributions to the DAO. Read [How to Make a Governance Proposal](../proposals) to learn more. For inspiration, read [recent governance proposals](https://vote.juicebox.money/#/jbdao.eth).
+
+### Recurring Payouts
+
+Contributors who have completed one or more trial payouts are advised to propose an ongoing role and recurring payout for 3-7 funding cycles. This proposal should detail responsibilities, task-based objectives, and long-term goals.
+
+### What should I do next?
+
+1. Join [the Discord](https://www.discord.gg/juicebox).
+2. Join the weekly [Discord Town Halls](../town-hall) (Tuesday 22:00 UTC).
+3. Read recent [governance proposals](https://juicetool.xyz/nance/juicebox).
+4. Read recent message history in relevant Discord channels to familiarize yourself with the high level ongoing projects in the DAO, and details of the areas you wish to contribute to.
+5. Reach out to active contributors in channels related to areas you would like to contribute to. Ask what you can help with or propose new objectives for the DAO.
+6. Participate in the DAO for 1-2 weeks before asking for a payout.
+
+*Note: In order to get paid by Juicebox DAO, you will need to have a cryptocurrency wallet. You can read more about wallets [here](https://ethereum.org/en/wallets/).*
+
+# JuiceboxDAO Governance Process
+
+*JuiceboxDAO's governance follows a 14 day cycle.*
+
+![](/img/gov-calendar.webp)
+
+#### Governance Schedule
+
+Day 1 -  Temperature Check - Saturday (00:00 UTC) <br/>
+Day 4 - Snapshot Vote - Tuesday (00:00 UTC) <br/>
+Day 8 - Multisig Execution - Saturday (00:00 UTC) <br/>
+Day 12 - Reconfiguration Delay - Wednesday (19:19 UTC) <br/>
+Day 15 / Day 1 - Funding Cycle Updated - Saturday (19:19 UTC) <br/>
+
+#### Step 0 - Discussion
+
+Proposals can be made on [jbdao.org](https://www.jbdao.org/) at any time. When ready, authors can change a proposal's status from `Draft` to `Discussion` to start a discussion thread in [JuiceboxDAO's Discord](https://www.discord.gg/juicebox).
+
+*See [How to Make a Governance Proposal](../proposals) for help.*
+
+#### Step 1 - Temperature Check
+
+`Begins on Day 1 of the Governance Cycle - Saturday 00:00 UTC`
+
+A 3-day Y/N Discord poll (a "temperature check") is made for each proposal submitted by the start of a Governance Cycle. While this poll is active, authors can update or redact their proposals as they get feedback. Verified Discord members with JBX get one vote for each poll. To participate, verify your JBX in [`#🍌｜verify-jbx`](https://discord.gg/juicebox).
+
+Proposals with 10 or more "Y" votes and at least 30% "Y" votes move to Snapshot voting.
+
+#### Step 2 - Snapshot Voting
+
+`Begins on Day 4 of the Governance Cycle - Tuesday 00:00 UTC`
+
+A 4-day For/Against/Abstain [Snapshot](https://snapshot.org/#/jbdao.eth) vote is made for proposals approved by temperature checks. JBX holders get one vote per JBX held for each proposal, and can delegate their voting power on Snapshot.
+
+Proposals with 80,000,000 or more votes (including "Abstain" and "Against" votes) and at least 66% "For" votes (not counting "Abstain" votes) will be implemented.
+
+#### Step 3 - Execution
+
+`Begins on Day 7 of the Governance Cycle - Saturday 00:00 UTC`
+
+The JuiceboxDAO multisig ([`0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e`](https://app.safe.global/home?safe=eth:0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e)) executes approved proposals according to their specifications.
+
+- If approved proposals conflict with each other, more recently approved proposals take priority for the conflicting part. If they were approved at the same time, the proposal with more "For" votes takes priority.
+- Proposals are effective when they are approved on Snapshot unless they say otherwise.
+- Parts of proposals which are impossible to execute won't be executed.
+- The multisig can make small reasonable modifications to a proposal when interpreting it.
+
+The multisig controls the JuiceboxDAO project and some [Juicebox protocol parameters](https://docs.juicebox.money/dev/learn/administration). JuiceboxDAO governance execution depends upon the cooperation of the multisig's elected signers, who have committed to executing the will of the DAO as expressed by the Governance Process.
+
+#### Step 4 - Reconfiguration Delay
+
+`Begins on Day 12 of the Governance Cycle - Wednesday 19:19 UTC`
+
+Any changes to JuiceboxDAO's project must be submitted at least 3 days before the next cycle starts. This is enforced by the Juicebox protocol. This gives DAO members time to verify queued changes, and to burn their JBX if desired.
+
+# JuiceboxDAO Multisig Process
+
+The JuiceboxDAO Multisig, [`0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e`](https://etherscan.io/address/0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e), is responsible for interpreting and executing the outcomes of the [Governance Process](https://docs.juicebox.money/dao/process/).
+
+## Rules
+
+1. Multisig signers must agree to execute the will of JBX token holders, as expressed through the Governance Process.
+2. The Multisig threshold must be at or above 60% of signers at all times.
+3. The Multisig can reimburse gas fees paid to execute previous Multisig transactions.
+4. In an emergency, the Multisig can execute transactions according to the [Juicebox Emergency Procedures](https://docs.juicebox.money/dao/security/emergency/).
+
+## Process
+
+During Offchain Snapshot voting, the Multisig should internally decide which signer(s) will be responsible for queuing project reconfigurations and any other necessary transactions. The Multisig should also designate a backup signer in the event that the first signer is unable to fulfill the following steps.
+
+Less than 12 hours after Snapshot voting finalizes, the designated signer(s) should queue all necessary transactions, create a Discord thread for each transaction, and then notify other Multisig members by tagging the `@Multisig` role. Each thread should contain a link to the relevant proposal(s), a transaction simulation, and a plain-language description of the proposed changes. If appropriate, the thread should also contain a link to a Juicetool configuration diff or other resources.
+
+Over the following 12 hours, each signer should independently verify and sign the proposed transactions. If a signer finds errors in or is unsure about a proposed transaction, that signer should voice their concerns in the appropriate Discord thread, tagging the signer which queued that transaction. Those signers should then work together to queue transactions which resolve those concerns (in the same manner as described above).
+
+The last signer to approve the queued transactions (thereby meeting the threshold) should also execute or batch execute those transactions after approving them. If the queued transactions have still not been executed within 24 hours of the next reconfiguration delay cutoff, the designated signer should execute them.
+
+# Make a Governance Proposal
+
+:::info
+Juicebox DAO runs on a [14 day governance cycle](../process). Follow along in the [Juicebox DAO Discord Server](https://discord.gg/juicebox) and on our [Governance Portal](https://jbdao.org).
+:::
+
+#### To create a new proposal:
+
+1. Visit the [current proposals page](https://juicetool.xyz/nance/juicebox)
+2. Click `New Proposal` in the upper right-hand corner.
+3. Click `Connect` in the upper right-hand corner. If you don't have a wallet, you can get one from [MetaMask.io](https://metamask.io).
+4. Select your proposal's type, fill out all of the metadata fields, and write your proposal in the editor below.
+5. Click `Submit`.
+6. A discussion thread for your proposal will be generated in the `#💡-proposals` channel of [Juicebox's Discord server](https://discord.gg/juicebox). The community will help you prepare the proposal for the next [temperature check](../process).
+
+*The revision process can cause a proposal to take more than one funding cycle to reach the Juicebox snapshot. Honest and plain feedback in Discord proposal threads is encouraged.*
+
+
+# Contributor Operations Security
+
+## General Tips
+
+1. **Think before you click.** Most cyber-attacks start with phishing or social engineering. Exercise caution when clicking links or downloading files. Tend towards being overly cautious, and don't hestitate to ask others for help.
+2. **Secure your accounts.** Use multi-factor authentication and an offline password manager like [KeePassXC](https://keepassxc.org/).
+3. **Simulate transactions.** Before approving any transactions, use a tool like [Tenderly](https://tenderly.co/) to verify its outcome. Only interact with trusted frontends and contracts.
+4. **Minimize dependencies.** The best software is no software. If you have to, look for tools that respects user privacy, and are open-source, audited, and well-established.
+5. **Stay up to date.** Always ensure that you have the latest security upgrades. Use automatic updates.
+
+## Prevention Checklist
+
+If you haven't already, take the following steps over the next 2 weeks. If you have any questions, ask filipv.
+
+- [ ] Familiarize yourself with the [Emergency Process](../emergency).
+- [ ] Set up automatic updates for all relevant software (browsers, apps, clients, etc).
+- [ ] Join the [Backup Telegram](https://t.me/jbx_backup).
+- [ ] Buy a [YubiKey](https://www.yubico.com/), or a similar 2FA hardware device.
+- [ ] Set up an offline password manager like [KeePassXC](https://keepassxc.org/).
+- [ ] If you haven't already, create a new email for work related to Juicebox.
+- [ ] Migrate online accounts related to Juicebox to your new email. Use the password manager to generate new passwords as you do this, with >128 bits of entropy.
+- [ ] Set up Two-Factor authentication for all of your Juicebox accounts
+- [ ] Buy and use a hardware wallet — a [Ledger](https://www.ledger.com/) or a [Trezor](https://trezor.io/).
+- [ ] Regularly run antivirus software. For Windows users, Windows Defender and [MalwareBytes](https://www.malwarebytes.com/) are both decent free options.
+- [ ] Check your email and phone number on [haveibeenpwned](https://haveibeenpwned.com/), and update credentials for any accounts which appear.
+
+## Intervention Checklist
+
+If you suspect that any of your accounts may be compromised, take the following steps as quickly as possible:
+
+- [ ] If you suspect that you may have malware, or if you're not sure how your account was compromised: Update your security software, run a scan, and delete any malware. Use a second device for the following steps while this runs.
+- [ ] Take immediate action to minimize damage. If you are able to log in to the compromised account, change the password immediately. If you don't already have 2FA on the account, add it. Deactivate any API keys or other integrations associated with that account.
+- [ ] Warn other contributors over Discord and Telegram. Write a brief message detailing the name of the compromised account/service and how the compromise took place. If the compromised account has any administrative permissions, be sure to contact contributors who can remove those permissions (or remove the account entirely).
+- [ ] If applicable, contact the relevant service's customer support. You should also ask other contributors if they have a contact which can help to resolve the issue more quickly. Start with the resources below:
+
+| Service  | Link                                                                                                  |
+| -------- | ----------------------------------------------------------------------------------------------------- |
+| Discord  | [Support](https://support.discord.com/hc/en-us/requests/new) (select `Hacked Account`)                |
+| GitHub   | [GitHub Authentication Docs](https://docs.github.com/en/authentication)                               |
+| Twitter  | [Help with my hacked account](https://help.twitter.com/en/safety-and-security/twitter-account-hacked) |
+| Google   | [Secure a hacked or compromised Google Account](https://support.google.com/accounts/answer/6294825)   |
+| Telegram | [FAQ](https://telegram.org/faq#q-my-phone-was-stolen-what-do-i-do)                                    |
+| Notion   | Scroll to bottom, click ['Contact Support'](https://www.notion.so/product)                            |
+
+## Multisig Checklist
+
+If you are a multisig signer, take the following steps over the next 2 weeks:
+
+- [ ] Familiarize yourself with the [Emergency Process](emergency).
+- [ ] Buy and use a hardware wallet — a [Ledger](https://www.ledger.com/) or a [Trezor](https://trezor.io/).
+- [ ] Create a wallet address which is only used for signing and executing JuiceboxDAO Safe transactions.
+- [ ] Register an ENS for your signer wallet. This makes your wallet easier to identify.
+- [ ] Familiarize yourself with [Tenderly](https://tenderly.co/)'s features. If you submit any transactions, share a simulation on Discord.
+- [ ] Join the Multisig Telegram (invitations sent via direct message).
+
+
+# JuiceboxDAO Media Guidelines
+
+#### Index of Current Accounts
+
+| Name/Link                                           | Responsible Contributor     |
+| --------------------------------------------------- | --------------------------- |
+| [Discord](https://discord.gg/juicebox)              | jango, filipv & nnnnicholas |
+| [Twitter](https://twitter.com/juiceboxETH)          | jango                       |
+| [Blog](https://docs.juicebox.money/blog)            | filipv                      |
+| [Podcast](https://anchor.fm/thejuicecast)           | Brileigh & Matthew          |
+| [YouTube](https://youtube.com/c/juiceboxdao)        | filipv                      |
+| [Newletter](https://subscribepage.io/juicenews)     | Brileigh & Matthew          |
+| [Instagram](https://www.instagram.com/juiceboxeth/) | 0xSTVG                      |
+| [TikTok](https://www.tiktok.com/@juiceboxeth)       | Brileigh & Matthew          |
+
+#### General Guidelines
+
+- Anybody can create a social media account for JuiceboxDAO, even if we already have an account on that platform.
+- JuiceboxDAO is decentralized. There are no "official" accounts.
+- Anybody can suggest posts for any one of these platforms, but the final say comes down to the responsible contributor (usually the person who created the account). Share your draft/post in the visibility channel of [our Discord](https://discord.gg/juicebox) and tag the responsible contributor for help improving it.
+- Try to coordinate major announcements across multiple platforms over Discord.
+
+#### Twitter
+
+- If you have something to share, tag @juiceboxETH for a retweet (not guaranteed).
+- For more serious announcements (from the @juiceboxETH account), write a draft and share it in the visiblity channel of [our Discord](https://discord.gg/juicebox). Tag @jango.
+- Avoid the "crypto grifter" tweeting style if possible. This usually involves excessive use of finger pointing emojis.
+
+#### Blog
+
+- Blog posts are written in [markdown](https://www.markdownguide.org/) and added to the [juice-docs repo](https://github.com/jbx-protocol/juice-docs).
+- Your post should either go in `/blog`, or into one of the subdirectories under `/blogs`.
+- Read [this page](https://docusaurus.io/docs/blog) to learn about you should name your file and format your frontmatter.
+- Make a pull request.
+
+#### YouTube
+
+- If you would like upload access, ask filipv and he might give it to you. Otherwise, share your video on Discord and somebody might upload it.
+- If you do share a video, please also share a title, description, and [properly formatted chapter timestamps](https://support.google.com/youtube/answer/9884579).
+
+
+# Juicebox Emergency Procedures
+
+:::info
+This procedure is based on practices established by [Yearn Finance](https://docs.yearn.finance/developers/v2/EMERGENCY).
+:::
+
+## Introduction
+
+The following procedures and guidelines have been written to minimize potential for loss of funds in the event of an emergency.
+
+## Definitions and Examples
+
+An emergency situation is:
+
+_A situation that may lead to a considerable loss of funds for Juicebox protocol users, JuiceboxDAO, or smart contracts related to Juicebox._
+
+This is a non-exhaustive list of possible emergency scenarios:
+
+### Protocol Emergencies
+
+- A bug or an exploit in a Juicebox terminal that may lead to a loss of funds for users.
+- A bug or an exploit in an Juicebox dependency, including oracle attacks, that may lead to a loss of funds.
+- A bug or an exploit which would allow a malicious project owner to take actions which their configurations would not suggest.
+
+### Opsec Emergencies
+
+- Loss of private keys for a privileged wallet, including (but not limited to) privileged administrative addresses, the JuiceboxDAO multisig wallet, or one or more of the JuiceboxDAO multisig signers.
+- Loss of credentials for a trusted or privileged online account, including (but not limited to) GitHub, Discord, Twitter, or Notion accounts.
+
+### Frontend Emergencies
+
+- A bug or an exploit in a protocol frontend which may lead to a loss of funds for users.
+- A bug, exploit, or another issue which would allow project creator to significantly and dangerously misrepresent their project's configuration in a protocol frontend.
+- A supply chain attack affecting one or more dependencies for a protocol frontend.
+- Any DNS attack for a protocol frontend.
+- An issue with an underlying service used by a protocol frontend, including (but not limited to) hosting providers, node providers, a subgraph, an IPFS gateway, or a wallet signing provider.
+
+## Roles
+
+In the event of an emergency situation, the following roles should be assigned to JuiceboxDAO contributors working to resolve the situation:
+
+- Facilitator
+- Multisig Lead
+- Contract Lead
+- Frontend Lead
+- Ops Lead
+
+A contributor may be assigned up to two of these roles concurrently. For certain emergency types, multiple contributors may be assigned to these roles (for example, a severe frontend exploit may necessitate multiple frontend leads in order to coordinate rapid changes across multiple frontends).
+
+### Facilitator
+
+Facilitates the emergency process according to this document, engaging with the relevant JuiceboxDAO contributors, protocol users, and third parties to quickly make necessary decisions. The Facilitator should be familiar with this process and confident that they can drive the team to follow through. It is expected that the person assigned to this role has relevant experience either from having managed previous scenarios or through drill training.
+
+### Multisig Lead
+
+Responsible for ensuring that the JuiceboxDAO Multisig (or other relevant multisigs) can execute transactions on time during the emergency.
+
+Main responsibilities:
+
+- Help to queue transactions, and to clearly and concisely communicate why they are needed and what they will do.
+- Prepare simulations, reconfiguration diffs, and other resources to help signers verify transactions.
+- Help clear the queue of any pending operations.
+- Coordinate required signers so they can respond to queued transactions quickly.
+
+### Contract Lead
+
+Coordinates quick changes to contracts during the emergency, including but not limited to:
+
+- Advising on and facilitating the queuing and execution of [administrative multisig actions](/dev/learn/administration/) as necessary.
+- Facilitating upgrades, migrations, and the deployment of new smart contracts as necessary.
+
+### Frontend Lead
+
+Coordinates quick changes to protocol frontends as required, including (but not limited to):
+
+- Disabling certain actions on one or more frontends.
+- Adding warnings, alerts, and banners.
+- Disabling one or more frontends altogether.
+- Any other frontend work necessary.
+
+### Ops Lead
+
+In charge of coordinating communications and operations assistance as required:
+
+- Verify what information can and should be published during and after the incident.
+- Coordinate communications on Discord, Twitter, and elsewhere as necessary.
+- Take note of timelines and events for a disclosure/postmortem.
+
+## Emergency Steps
+
+_Also see [Check list](#Emergency-checklist) and [Tools](#tools)._
+
+This is the guideline to follow when an incident is reported.
+
+The primary objective is to minimize the loss of funds, in particular for Juicebox users. All decisions made should be driven by this goal.
+
+1. Open a private communication channel (War Room) and only invite (i) online contributors that can fulfill the roles described above, as well as (ii) additional persons that can provide critical insight into the circumstances of the issue and how it can best be resolved. Check the [Services List](../services) and invite contributors relevant to the problem.
+2. Information shared in the War Room shall be considered private and should not be shared with any third parties. Relevant data should be pinned and updated by the Facilitator for the team to have handy.
+3. The team's first milestone is to assess the situation as quickly as possible: Confirming the reported information and determining how critical the incident is. A few questions to guide this process:
+   - Is there confirmation from several team members/sources that the issue is valid? Are there example transactions that show the incident occurring? (Pin these in the War Room)
+   - Is the developer that wrote the code in question in the War Room? If not, can we reach somebody who knows it well?
+   - Are funds presently at risk? Is immediate action required?
+   - Is the issue isolated or does it affect several contracts? Can the affected contracts be identified? (Pin these in the War Room)
+   - Will Multisig transactions be required? If so, the Multisig Lead should begin to notify signers and clear the queue in preparation for emergency transactions.
+   - If there is no immediate risk of loss of funds, does the team still need to take preventive action or some other mitigation?
+   - Is there consensus that the situation is under control and that the War Room can be closed?
+4. Once the issue has been confirmed as valid, the next step is to take immediate corrective action to prevent further loss of funds. If the root cause requires further research, the team should tend towards caution and take emergency preventive actions while the assessment continues. A few questions to guide the decisions of the team:
+   - What [administrative transactions](/dev/learn/administration/) are required? Contract Lead should confirm this step.
+   - Should payments, redemptions, or other features be removed or disabled from frontends? Frontend Lead should confirm this step.
+   - Are multiple Team members able to confirm that corrective actions will stop the immediate risk through Ganache/Tenderly/other fork testing? Contract Lead should confirm this step.
+   - Will immediate public communications/announcements help to minimize the loss of funds? Ops Lead should confirm this step.
+5. What next steps should be taken to resolve this issue? The Facilitator and the Multisig Lead should coordinate this execution between the corresponding roles. During this step, the War Room should take time to assess and research a long-term solution.
+6. Once corrective measures are in place and multiple sources confirm that funds are no longer at risk, the next objective is to identify the root cause. A few questions/actions during this step that can help the team make decisions:
+   - What communications should be made public at this point?
+   - Are there other vulnerabilities related to this root cause which need to be addressed?
+   - Can research be divided between members of the War Room? This step can involve live debug sessions to help identify the problem using the sample transactions.
+7. Once the cause is identified, the team can brainstorm to come up with the most suitable remediation plan and its code implementation (if required). A few questions that can help during this time:
+   - In case there are many possible solutions can the team prioritize by weighing each option by time to implement and minimization of losses?
+   - Can the possible solutions be tested and compared to confirm the end state fixes the issue?
+   - Is there agreement in the War Room about the best solution? If not, can the objections be identified and a path for how to reach consensus on the approach be worked out, prioritizing the minimization of losses?
+   - If a solution will take longer than a few hours, are there any further communications and preventive actions needed while the fix is developed?
+   - Does the solution require a longer-term plan? Are there identified owners for the tasks/steps for the plan's execution?
+8. Once a solution has been implemented, the team will confirm the solution resolves the issue and minimizes the loss of funds. Possible actions needed during this step:
+   - Run fork simulations of end state to confirm the efficacy of the proposed solution(s)
+   - Coordinate multisig queuing, signatures, and execution
+   - Enable UI changes to normalize operations as needed
+9. Assign a lead to prepare a [disclosure](http://github.com/jbx-protocol/juice-security) (should it be required), preparing a postmortem with a timeline of the events that took place. Ops Lead should facilitate this.
+10. The team agrees when the War Room can be dismantled. The Facilitator breaks down the War Room and sets reminders if it takes longer than a few hours for members to reconvene.
+
+### Emergency Checklist
+
+- [ ] Create War Room
+- [ ] Assign Key Roles to War Room members
+- [ ] Add relevant developer(s) to the War Room (check the [Services List](../services))
+- [ ] Clear queued transactions on relevant Multisig(s)
+- [ ] Disable payments, redemptions, or other features as needed in the frontend(s)
+- [ ] Identify and confirm the issue, as well as any relevant transactions (pin to War Room)
+- [ ] Take immediate corrective/preventive actions to prevent or minimize further loss of funds
+- [ ] Communicate the current situation internally and externally as appropriate
+- [ ] Determine the root cause
+- [ ] Propose workable immediate solutions
+- [ ] Implement and validate immediate solutions
+- [ ] Prioritize long-term solutions
+- [ ] Reach agreement on best long-term solution
+- [ ] Execute long-term solution
+- [ ] Confirm incident has been resolved
+- [ ] Assign ownership of security disclosure report
+- [ ] Disband War Room
+- [ ] Conduct immediate debrief
+- [ ] Schedule a postmortem
+
+### Tools
+
+List of tools and alternatives in case primary tools are not available during an incident.
+
+| Category             | Primary                            | Backup                            |
+| -------------------- | ---------------------------------- | --------------------------------- |
+| Sharing Code         | [GitHub](https://github.com)       | [HackMd](https://hackmd.io/)      |
+| Communications       | [Discord](https://discord.gg)      | [Telegram](https://telegram.org/) |
+| Transaction Details  | [Etherscan](https://etherscan.io)  | [EthTxInfo](https://ethtx.info/)  |
+| Debugging/Simulation | [Tenderly](https://tenderly.co)    | Truffle, Brownie, etc.            |
+| Screen Sharing       | [Jitsi Meet](https://meet.jit.si/) | [Discord](https://discord.gg)     |
+
+**The Facilitator is responsible for ensuring that no unauthorized persons enter the War Room or join these tools via invite links that leak.**
+
+## Incident Postmortem
+
+A postmortem should be conducted after an incident to gather data and feedback from War Room participants in order to produce actionable improvements for Juicebox processes such as this one.
+
+Following the dissolution of a War Room, the Facilitator should ideally conduct an immediate informal debrief to gather initial notes before they are forgotten by participants.
+
+This can then be complemented by a more extensive postmortem as outlined below.
+
+The postmortem should be conducted at most a week following the incident to ensure an accurate recollection by the participants.
+
+It is key that most of the participants of the War Room are involved during this session for an accurate assessment of the events that took place. Discussion is encouraged. The objective is to collect constructive feedback on how the process can be improved, and not to assign blame to any War Room participants.
+
+Participants are encouraged to provide input on each of the steps. If a participant is not giving input, the Facilitator is expected to try to obtain more feedback by asking questions.
+
+### Postmortem Outputs
+
+- List of what went well.
+- List of what be improved.
+- List of questions that came up in the postmortem.
+- List of insights from the process.
+- Root cause analysis along with concrete measures required to prevent the incident from ever happening again.
+- List of action items assigned to owners with estimates for completion.
+
+### Postmortem Steps
+
+1. Facilitator runs the session in a voice channel and shares a screen for participants to follow notes.
+2. Facilitator runs through an agenda to obtain the necessary outputs.
+3. For the root cause analysis, the Facilitator conducts an exercise to write the problem statement first and then confirm with the participants that the statement is correct and understood. Root cause analysis can be identified with the following tools:
+   - [Brainstorming](https://en.wikipedia.org/wiki/Brainstorming) session with participants
+   - [5 Whys Technique](https://en.wikipedia.org/wiki/Five_whys)
+4. Once root causes have been identified, action items can be written and assigned to willing participants that can own the tasks. It is recommended that an estimated time for completion is given. A later process can track completion of given assignments. The action items need to be clear, actionable and measurable for completion.
+5. The Facilitator tracks completion of action items. The end result of the process should be an actionable improvement in the process. Some possible improvements:
+   - Changes in processes and documentation.
+   - Changes in code and tests to validate.
+   - Changes in tools implemented and incorporated into processes.
+
+
+Some of the services utilized by JuiceboxDAO and Peel, as well as who to contact in the event that something goes wrong with them. For services which mention Peel, check [their Discord](https://discord.gg/7NmqDwGhn2).
+
+| Name/Link                                                                               | Contact            | Backup Contact                | Notes                                                                                                              |
+| --------------------------------------------------------------------------------------- | ------------------ | ----------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| Juicebox Protocol                                                                       | jango              | Dr. Gorilla                   | Tag `contract-crew` in [Discord](https://discord.gg/juicebox).                                                     |
+| [juicebox.money](https://juicebox.money)                                                | aeolian            | peri                          | Peel.                                                                                                              |
+| [GitHub](https://github.com/jbx-protocol)                                               | filipv             | aeolian, Dr. Gorilla, jango   | Also check with the repo's contributors.                                                                           |
+| [Vercel](https://vercel.com/)                                                           | aeolian            | wraeth                        | Peel. Hosts [juicebox.money](https://juicebox.money) and the Juice Docs.                                           |
+| [DAO Multisig](https://app.safe.global/eth:0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e/) | filipv             | twodam                        |                                                                                                                    |
+| [Infura](https://infura.io)                                                             | peri               | aeolian & filipv              | Peel. RPC and IPFS for [juicebox.money](https://juicebox.money). Custom billing plan, ask peri/filipv for details. |
+| [The Graph](https://docs.juicebox.money/dev/subgraph/)                                  | peri               | filipv, Derek from Data Nexus | Peel.                                                                                                              |
+| [Discord](https://discord.gg/juicebox) (and bots)                                       | filipv             | jango & nicholas              | [Mee6](https://mee6.xyz) for react roles/embeds.                                                                   |
+| [Juice Docs](https://docs.juicebox.money/)                                              | filipv             | zhape                         | [Docusaurus](https://docusaurus.io/), hosted on [Peel's Vercel](https://vercel.com).                               |
+| juicebox.money DNS                                                                      | Aeolian            | Peri                          | Peel                                                                                                               |
+| juicebox.money email server                                                             | filipv             |                               | Contributors can get emails if they want them.                                                                     |
+| Supabase                                                                                | Wraeth             | Peri                          | Peel uses this for project search and user profiles on [juicebox.money](https://juicebox.money).                   |
+| [jbdao.org](https://jbdao.org)                                                          | twodam (frontend)  | jigglyjams (backend)          |                                                                                                                    |
+| [Nance](https://juicetool.xyz/nance/juicebox) & GovernanceBot (Discord)                 | jigglyjams         | twodam                        | Nance interacts with Notion.                                                                                       |
+| [JuiceTool](https://juicetool.xyz)                                                      | twodam             | jigglyjams                    |                                                                                                                    |
+| [Sepana](https://sepana.io/)                                                            | peri               | filipv                        | Peel. Project search on juicebox.money.                                                                            |
+| [Notion](https://juicebox.notion.site/Juicebox-Notion-7b2436cec0c145c88b3efa0376c6dba3) | filipv             | jigglyjams                    |                                                                                                                    |
+| [Figma](https://www.figma.com/files/team/933380197444944427/Juicebox-%F0%9F%A7%83)      | filipv             | Strath                        |                                                                                                                    |
+| [Dune Analytics](https://dune.com/juicebox)                                             | twodam             | filipv                        |                                                                                                                    |
+| [YouTube](https://youtube.com/c/juiceboxdao)                                            | filipv             | Brileigh & Matthew            |                                                                                                                    |
+| [Cryptovoxels Lounge](http://juicebox.lexicondevils.xyz/)                               | darbytrash         | Wackozacco                    |                                                                                                                    |
+| [Twitter](https://twitter.com/juiceboxETH)                                              | jango              |                               |                                                                                                                    |
+| [Snapshot](https://snapshot.org/#/jbdao.eth)                                            | filipv             | jigglyjams                    |                                                                                                                    |
+| [Blunt Finance](https://blunt.finance/)                                                 | jacopo             | jango                         |                                                                                                                    |
+| [Defifa](https://defifa.net)                                                            | jango              | blaz                          |                                                                                                                    |
+| [StudioDAO](https://www.studiodao.xyz/)                                                 | kenbot             | rakelle                       |                                                                                                                    |
+| [Podcast](https://anchor.fm/thejuicecast)                                               | Brileigh & Matthew |                               |                                                                                                                    |
+| [Juice News](https://subscribepage.io/juicenews)                                        | Brileigh & Matthew |                               |                                                                                                                    |
+| [Instagram](https://www.instagram.com/juiceboxeth/)                                     | 0xSTVG             |                               |                                                                                                                    |
+| [TikTok](https://www.tiktok.com/@juiceboxeth)                                           | Brileigh & Matthew |                               |                                                                                                                    |
+# SDK
+
+---
+sidebar_position: 1
+---
+
+# Getting started
+
+:::info
+If you're interested in building a Juicebox smart contract, see the `juice-contract-template` [GitHub Repository](https://github.com/jbx-protocol/juice-contract-template). If you need any help, join our [Discord server](https://discord.gg/juicebox).
+:::
+
+#### Import
+
+Add the protocol files to the project.
+```bash
+# command line
+npm install @jbx-protocol/juice-contracts-v3/
+```
+
+If referencing from typescript:
+```typescript
+const contract = require(`@jbx-protocol/juice-contracts-v3/deployments/${network}/${contractName}.json`)
+```
+
+If referencing from a contract:
+```
+import '@jbx-protocol/juice-contracts-v3/contracts/[file-path].sol'
+```
+
+#### Now what
+
+From here, you can build the following:
+
+[Basics](basics.md): Interact with the protocol's basic functionality. Useful for building front-ends.
+
+[Pay a project](utilities/project-payer.md): Deploy or inherit from a contract that makes it easy to forward funds to Juicebox projects.
+
+[Split payments](utilities/splits-payer.md): Deploy or inherit from a contract that makes it easy to forward funds to groups of splits whose members are either addresses, Juicebox projects, or arbitrary contracts that inherit from [`IJBSplitAllocator`](treasury-extensions/split-allocator.md).
+
+[Program a treasury](programmable-treasury.md): Get familiar with the configurable properties available when launching a project.
+
+[Program project permissions](project-nft.md): Build custom Juicebox Project NFT logic to create your own project access controls.
+
+[Program treasury extensions](../treasury-extensions): Create custom contractual rules defining what happens when a project receives funds, and under what conditions funds can leave the treasury during a funding cycle.
+
+---
+sidebar_position: 2
+---
+
+# Basics
+
+#### Workflows
+
+The first transaction to call when getting started is [`JBController3_1.launchProjectFor(...)`](/dev/api/contracts/or-controllers/jbcontroller3_1/#launchprojectfor).
+
+```
+function launchProjectFor(
+  address _owner,
+  JBProjectMetadata calldata _projectMetadata,
+  JBFundingCycleData calldata _data,
+  JBFundingCycleMetadata calldata _metadata,
+  uint256 _mustStartAtOrAfter,
+  JBGroupedSplits[] calldata _groupedSplits,
+  JBFundAccessConstraints[] calldata _fundAccessConstraints,
+  IJBPaymentTerminal[] calldata _terminals,
+  string memory _memo
+) external override returns (uint256 projectId) { ... }
+```
+
+Check out the [Treasury design](/dev/build/programmable-treasury.md) page for more info on how to build projects treasuries to various specifications.
+
+<details>
+
+<summary>View project info</summary>
+
+Launching a project will mint a new NFT in the [`JBProjects`](/dev/api/contracts/jbprojects/README.md) contract. The owner can be found using [`JBProjects.ownerOf(...)`](https://docs.openzeppelin.com/contracts/4.x/api/token/erc721#IERC721-ownerOf-uint256-).
+
+```
+function ownerOf(uint256 _projectId) external returns (address owner) { ... }
+```
+
+The project's metadata can be found using [`JBProjects.metadataContentOf(...)`](/dev/api/contracts/jbprojects/properties/metadatacontentof.md).
+
+```
+function metadataContentOf(uint256 _projectId, uint256 _domain)
+  external
+  view
+  returns (string memory) { ... }
+```
+
+</details>
+
+<details>
+
+<summary>View funding cycles</summary>
+
+Funding cycle data can be found in the [`JBFundingCycleStore`](/dev/api/contracts/jbfundingcyclestore/README.md) contract. A funding cycle configuration can be found using [`JBFundingCycleStore.get(...)`](/dev/api/contracts/jbfundingcyclestore/read/get.md), where `_configuration` is the block timestamp when the funding cycle was configured, or using [`JBController3_1.getFundingCycleOf(...)`](/dev/api/contracts/or-controllers/jbcontroller3_1/#getfundingcycleof) if the funding cycle's metadata is needed alongside.
+
+```
+function get(uint256 _projectId, uint256 _configuration)
+  external
+  view
+  override
+  returns (JBFundingCycle memory fundingCycle) { ... }
+```
+
+```
+function getFundingCycleOf(uint256 _projectId, uint256 _configuration)
+  external
+  view
+  override
+  returns (JBFundingCycle memory fundingCycle, JBFundingCycleMetadata memory metadata) { ... }
+```
+
+The project's current funding cycle can be found using [`JBFundingCycleStore.currentOf(...)`](/dev/api/contracts/jbfundingcyclestore/read/currentof.md), or using [`JBController3_1.currentFundingCycleOf(...)`](/dev/api/contracts/or-controllers/jbcontroller3_1/#currentfundingcycleof) if the funding cycle's metadata is needed alongside.
+
+```
+function currentOf(uint256 _projectId)
+  external
+  view
+  override
+  returns (JBFundingCycle memory fundingCycle) { ... }
+```
+
+```
+function currentFundingCycleOf(uint256 _projectId)
+  external
+  view
+  override
+  returns (JBFundingCycle memory fundingCycle, JBFundingCycleMetadata memory metadata) { ... }
+```
+
+The project's queued funding cycle can be found using [`JBFundingCycleStore.queuedOf(...)`](/dev/api/contracts/jbfundingcyclestore/read/queuedof.md), or using [`JBController3_1.queuedFundingCycleOf(...)`](/dev/api/contracts/or-controllers/jbcontroller3_1/#queuedfundingcycleof) if the funding cycle's metadata is needed alongside.
+
+By default, the queued cycle is a copy of the current one that starts immediately afterwards, using a discounted weight.
+
+If the project has proposed a reconfiguration, the queued cycle will reflect the changes once they are approved by the current cycle's ballot. Reconfigurations during a funding cycle with no ballot are automatically queued.
+
+The project has no queued cycle if the current cycle has no duration.
+
+```
+function queuedOf(uint256 _projectId)
+  external
+  view
+  override
+  returns (JBFundingCycle memory fundingCycle) { ... }
+```
+
+```
+function queuedFundingCycleOf(uint256 _projectId)
+  external
+  view
+  override
+  returns (JBFundingCycle memory fundingCycle, JBFundingCycleMetadata memory metadata) { ... }
+```
+
+The project's latest configured funding cycle can be found using [`JBFundingCycleStore.latestConfiguredOf(...)`](/dev/api/contracts/jbfundingcyclestore/read/latestconfiguredof.md), or using [`JBController3_1.latestConfiguredFundingCycleOf(...)`](/dev/api/contracts/or-controllers/jbcontroller3_1/#latestconfiguredfundingcycleof) if the funding cycle's metadata is needed alongside. These calls also return the current ballot status for the configuration.
+
+If the latest configured funding cycle's ballot is `Approved`, the configuration should also be queued or current.
+
+```
+function latestConfiguredOf(uint256 _projectId)
+  external
+  view
+  override
+  returns (JBFundingCycle memory fundingCycle, JBBallotState ballotState) { ... }
+```
+
+```
+function latestConfiguredFundingCycleOf(uint256 _projectId)
+  external
+  view
+  override
+  returns (
+    JBFundingCycle memory fundingCycle,
+    JBFundingCycleMetadata memory metadata,
+    JBBallotState ballotState
+  ) { ... }
+```
+
+</details>
+
+<details>
+
+<summary>View splits</summary>
+
+A project's splits data can be found in the [`JBSplitStore`](/dev/api/contracts/jbsplitsstore/README.md) contract. A group of splits belonging to any particular group during any particular funding cycle configuration can be found using [`JBSplitStore.splitsOf(...)`](/dev/api/contracts/jbsplitsstore/read/splitsof.md). The funding cycle's configuration is used as the `_domain` within which the splits apply.
+
+```
+function splitsOf(
+  uint256 _projectId,
+  uint256 _domain,
+  uint256 _group
+) external view override returns (JBSplit[] memory) { ... }
+```
+
+</details>
+
+<details>
+
+<summary>View fund access constraints</summary>
+
+Constraints on accessing a project's funds can found in the [`JBFundAccessConstraintsStore`](/dev/api/contracts/jbfundaccessconstraintsstore/) contract associated with the [`JBController3_1`](/dev/api/contracts/or-controllers/jbcontroller3_1) contract used to launch the project. You can find the [`JBFundAccessConstraintsStore`](/dev/api/contracts/jbfundaccessconstraintsstore/) contract by calling [`JBController3_1.fundAccessConstraintsStore`](/dev/api/contracts/or-controllers/jbcontroller3_1/#fundaccessconstraintsstore). The distribution limit of any payment terminal during any funding cycle configuration can be found using [`JBFundAccessConstraintsStore.distributionLimitOf(...)`](/dev/api/contracts/jbfundaccessconstraintsstore/#distributionlimitof). The currency being used for this distribution limit is returned alongside.
+
+```
+function distributionLimitOf(
+    uint256 _projectId,
+    uint256 _configuration,
+    IJBPaymentTerminal _terminal,
+    address _token
+) external view override returns (uint256, uint256);
+```
+
+The overflow allowance from any payment terminal during any funding cycle configuration can be found using [`JBFundAccessConstraintsStore.overflowAllowanceOf`](/dev/api/contracts/jbfundaccessconstraintsstore/#overflowallowanceof). The currency being used for this overflow allowance is returned alongside.
+
+```
+function overflowAllowanceOf(
+    uint256 _projectId,
+    uint256 _configuration,
+    IJBPaymentTerminal _terminal,
+    address _token
+) external view override returns (uint256, uint256);
+```
+
+</details>
+
+<details>
+
+<summary>View terminals and controller</summary>
+
+The [`JBDirectory`](/dev/api/contracts/jbdirectory/README.md) contract stores addresses of payment terminals that a project is currently accepting funds through. A project's currently set terminals can be found using [`JBDirectory.terminalsOf(...)`](/dev/api/contracts/jbdirectory/read/terminalsof.md).
+
+```
+function terminalsOf(uint256 _projectId) external view override returns (IJBPaymentTerminal[] memory) { ... }
+```
+
+If a project has multiple terminals for the same token, the primary terminal that it wishes to accept that token type through can be found using [`JBDirectory.primaryTerminalOf(...)`](/dev/api/contracts/jbdirectory/read/primaryterminalof.md).
+
+```
+function primaryTerminalOf(uint256 _projectId, address _token)
+  public
+  view
+  override
+  returns (IJBPaymentTerminal) { ... }
+```
+
+The [`JBDirectory`](/dev/api/contracts/jbdirectory/README.md) contract also stores the address of the controller that is managing a project's funding cycles and tokens. A projects current terminal can be found using [`JBDirectory.controllerOf(...)`](/dev/api/contracts/jbdirectory/properties/controllerof.md).
+
+```
+function controllerOf(uint256 _projectId) external view override returns (IJBController3_1) { ... }
+```
+
+</details>
+
+Once a project has been created, it can begin accepting funds from anyone through any terminal it has added. For example, if the project has added the [`JBETHPaymentTerminal3_1_1`](/dev/api/contracts/or-payment-terminals/jbethpaymentterminal3_1_1), ETH can be sent to the project by calling its [`JBETHPaymentTerminal3_1_1.pay(...)`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1_1/#pay) transaction.
+
+```
+function pay(
+  uint256 _projectId,
+  uint256 _amount,
+  address,
+  address _beneficiary,
+  uint256 _minReturnedTokens,
+  bool _preferClaimedTokens,
+  string calldata _memo,
+  bytes calldata _metadata
+) external payable virtual override isTerminalOf(_projectId) returns (uint256) { ... }
+```
+
+<details>
+
+<summary>View treasury balance</summary>
+
+In payment terminals based on the [`JBPayoutRedemptionPaymentTerminal3_1_1`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1_1), such as [`JBETHPaymentTerminal3_1_1`](/dev/api/contracts/or-payment-terminals/jbethpaymentterminal3_1_1)'s and [`JBERC20PaymentTerminal3_1_1`](/dev/api/contracts/or-payment-terminals/jberc20paymentterminal3_1_1/)'s, a project's treasury balance can be found in its store contract. For example, in the [`JBSingleTokenPaymentTerminalStore3_1_1`](/dev/api/contracts/jbsingletokenpaymentterminalstore3_1_1/), the balance can be found using [`JBSingleTokenPaymentTerminalStore3_1_1.balanceOf(...)`](/dev/api/contracts/jbsingletokenpaymentterminalstore3_1_1/#balanceof).
+
+```
+function balanceOf(IJBPaymentTerminal _terminal, uint256 _projectId)
+  external
+  view
+  override
+  returns (uint256) { ... }
+```
+
+The project's current overflow for a terminal can also be found in the store contracts. For example, in the [`JBSingleTokenPaymentTerminalStore3_1_1`](/dev/api/contracts/jbsingletokenpaymentterminalstore3_1_1), the terminal's overflow can be found using [`JBSingleTokenPaymentTerminalStore3_1_1.currentOverflowOf(...)`](/dev/api/contracts/jbsingletokenpaymentterminalstore3_1_1/#currentoverflowof).
+
+```
+function currentOverflowOf(IJBSingleTokenPaymentTerminal _terminal, uint256 _projectId)
+  external
+  view
+  override
+  returns (uint256) { ... }
+```
+
+A terminal store can also resolve the total amount of overflow in all of a project's terminals. For example, in the [`JBSingleTokenPaymentTerminalStore3_1_1`](/dev/api/contracts/jbsingletokenpaymentterminalstore3_1_1), the project's overall overflow can be found using [`JBSingleTokenPaymentTerminalStore3_1_1.currentTotalOverflowOf(...)`](/dev/api/contracts/jbsingletokenpaymentterminalstore3_1_1/#currentoverflowof). You will need to send the number of decimals you're expecting the returned fixed point number to include, and the currency it is in terms of.
+
+```
+function currentTotalOverflowOf(
+  uint256 _projectId,
+  uint256 _decimals,
+  uint256 _currency
+) external view override returns (uint256) { ... }
+```
+
+</details>
+
+<details>
+
+<summary>View project token distribution</summary>
+
+Each holder's balance of a project's token can be found in the [`JBTokenStore`](/dev/api/contracts/jbtokenstore) contract. The balance can be found using [`JBTokenStore.balanceOf(...)`](/dev/api/contracts/jbtokenstore/read/balanceof.md).
+
+```
+function balanceOf(address _holder, uint256 _projectId) external view returns (uint256 _result) { ... }
+```
+
+The project token's total supply can also be found in the [`JBTokenStore`](/dev/api/contracts/jbtokenstore) contract using [`JBTokenStore.totalSupplyOf(...)`](/dev/api/contracts/jbtokenstore/read/totalsupplyof.md)
+
+```
+function totalSupplyOf(uint256 _projectId) external view returns (uint256) { ... }
+```
+
+</details>
+
+<details>
+
+<summary>View reserved token balance</summary>
+
+A project's undistributed reserved token balance can be found in the project's current controller. For example in the [`JBController3_1`](/dev/api/contracts/or-controllers/jbcontroller3_1/), this balance can be found using [`JBController3_1.reservedTokenBalanceOf(...)`](/dev/api/contracts/or-controllers/jbcontroller3_1/#reservedtokenbalanceof).
+
+```
+function reservedTokenBalanceOf(uint256 _projectId, uint256 _reservedRate)
+  external
+  view
+  returns (uint256) { ... }
+```
+
+For projects using [`JBController3_1`](/dev/api/contracts/or-controller/jbcontroller3_1), the project token's total supply including any allocated reserved tokens that have yet to be distributed can be found in using [`JBController3_1.totalOutstandingTokensOf(...)`](/dev/api/contracts/or-controllers/jbcontroller3_1/#totaloutstandingtokensof).
+
+```
+function totalOutstandingTokensOf(uint256 _projectId, uint256 _reservedRate)
+  external
+  view
+  override
+  returns (uint256) { ... }
+```
+</details>
+
+Anyone can distribute a project's funds from a terminal up to its current funding cycle's distribution limit to its preprogrammed payout splits at any time. For example, if the project has added the [`JBETHPaymentTerminal3_1_1`](/dev/api/contracts/or-payment-terminals/jbethpaymentterminal3_1_1), funds can be distributed by calling [`JBETHPaymentTerminal3_1_1.distributePayoutsOf(...)`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1_1/#distributepayoutsof).
+
+```
+function distributePayoutsOf(
+  uint256 _projectId,
+  uint256 _amount,
+  uint256 _currency,
+  uint256 _minReturnedTokens,
+  string calldata _memo
+) external virtual override returns (uint256 netLeftoverDistributionAmount)  { ... }
+```
+
+<details>
+
+<summary>View used distribution limit</summary>
+
+Any distribution limit used by a project can be found in the terminal store contract for each terminal. For example, in the [`JBSingleTokenPaymentTerminalStore3_1_1`](/dev/api/contracts/jbsingletokenpaymentterminalstore3_1_1/), the distribution limit used during a funding cycle can be found by calling [`JBSingleTokenPaymentTerminalStore3_1_1.usedDistributionLimitOf(...)`](/dev/api/contracts/jbsingletokenpaymentterminalstore3_1_1/#useddistributionlimitof).
+
+```
+function usedDistributionLimitOf(
+  IJBPaymentTerminal _terminal,
+  uint256 _projectId,
+  uint256 _fundingCycleNumber
+) external view override returns (uint256) { ... }
+```
+
+</details>
+
+A project's owner can distribute additional funds from its treasury's overflow for each of its terminals up until its preconfigured allowance. For example, if the project has added the [`JBETHPaymentTerminal3_1_1`](/dev/api/contracts/or-payment-terminals/jbethpaymentterminal3_1_1), funds can be distributed by calling its [`JBETHPaymentTerminal3_1_1.useAllowanceOf(...)`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1_1/#useallowanceof) transaction.
+
+```
+function useAllowanceOf(
+  uint256 _projectId,
+  uint256 _amount,
+  uint256 _currency,
+  uint256 _minReturnedTokens,
+  address payable _beneficiary,
+  string memory _memo
+)
+  external
+  virtual
+  override
+  requirePermission(projects.ownerOf(_projectId), _projectId, JBOperations.USE_ALLOWANCE)
+  returns (uint256 netDistributedAmount) { ... }
+```
+
+<details>
+
+<summary>View used overflow allowance</summary>
+
+Any overflow allowance used can also be found in the terminal store contracts for each terminal. For example, in the [`JBSingleTokenPaymentTerminalStore3_1_1`](/dev/api/contracts/jbsingletokenpaymentterminalstore3_1_1/), the overflow allowance used during a funding cycle can be found using [`JBSingleTokenPaymentTerminalStore3_1_1.usedOverflowAllowanceOf(...)`](/dev/api/contracts/jbsingletokenpaymentterminalstore3_1_1/#usedoverflowallowanceof).
+
+```
+function usedOverflowAllowanceOf(
+  IJBPaymentTerminal _terminal,
+  uint256 _projectId,
+  uint256 _fundingCycleNumber
+) external view override returns (uint256) { ... }
+```
+
+</details>
+
+The protocol uses price feeds to convert values from one currency to another when distributing payouts, using overflow allowances, issuing project tokens when payments are received in various currencies, and more. Current currency indexes can be found in [`JBCurrencies`](/dev/api/libraries/jbcurrencies.md). New currencies and price feeds can be added in the future.
+
+<details>
+
+<summary>View price conversions</summary>
+
+The same price feeds the protocol uses internally can be accessed externally through the [`JBPrices`](/dev/api/contracts/jbprices/README.md) contract using [`JBPrices.priceFor(...)`](/dev/api/contracts/jbprices/read/pricefor.md). This will revert if a feed is not found for the currency pair provided.
+
+```
+function priceFor(
+  uint256 _currency,
+  uint256 _base,
+  uint256 _decimals
+) external view override returns (uint256) { ... }
+```
+
+</details>
+
+A project's owner can mint more of the project's token by calling [`JBController3_1.mintTokensOf(...)`](/dev/api/contracts/jbtokenstore/write/mintfor.md). Anyone can burn their tokens by calling [`JBController3_1.burnFrom(...)`](/dev/api/contracts/jbtokenstore/write/burnfrom.md).
+
+```
+function mintTokensOf(
+  uint256 _projectId,
+  uint256 _tokenCount,
+  address _beneficiary,
+  string calldata _memo,
+  bool _preferClaimedTokens,
+  bool _useReservedRate
+)
+  external
+  override
+  requirePermissionAllowingOverride(
+    projects.ownerOf(_projectId),
+    _projectId,
+    JBOperations.MINT,
+    directory.isTerminalOf(_projectId, IJBPaymentTerminal(msg.sender))
+  ) { ... }
+```
+
+```
+function burnTokensOf(
+  address _holder,
+  uint256 _projectId,
+  uint256 _tokenCount,
+  string calldata _memo,
+  bool _preferClaimedTokens
+)
+  external
+  override
+  nonReentrant
+  requirePermissionAllowingOverride(
+    _holder,
+    _projectId,
+    JBOperations.BURN,
+    directory.isTerminalDelegateOf(_projectId, msg.sender)
+  ) { ... }
+```
+
+At any point, anyone can distribute a project's reserved tokens to the project's preprogrammed reserved token splits by calling [`JBController3_1.distributeReservedTokensOf(...)`](/dev/api/contracts/or-controllers/jbcontroller3_1/#distributereservedtokensof).
+
+```
+function distributeReservedTokensOf(uint256 _projectId, string memory _memo)
+  external
+  nonReentrant
+  returns (uint256) { ... }
+```
+
+Anyone who holds a project's tokens can redeem them at one of the project's terminals for a proportional share of the project's overflow. For example, if the project has added the [`JBETHPaymentTerminal3_1_1`](/dev/api/contracts/or-payment-terminals/jbethpaymentterminal3_1_1), ETH can be reclaimed by redeeming project tokens in its [`JBETHPaymentTerminal3_1_1.redeemTokensOf(...)`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1_1/#redeemtokensof) transaction. The overflow amount is the terminal's balance minus the current funding cycle's distribution limit, and can be set to include the project's balance across all terminals.
+
+Redeeming tokens allows a project's token holders to exit the community at any time with their share of the funds. If the project's [redemption rate](/dev/learn/glossary/redemption-rate/) is less than 100%, redemptions incur a 2.5% JBX membership fee.
+
+```
+function redeemTokensOf(
+  address _holder,
+  uint256 _projectId,
+  uint256 _tokenCount,
+  uint256 _minReturnedTokens,
+  address payable _beneficiary,
+  string memory _memo,
+  bytes memory _metadata
+)
+  external
+  virtual
+  override
+  requirePermission(_holder, _projectId, JBOperations.REDEEM)
+  returns (uint256 reclaimAmount) { ... }
+```
+
+A project's owner can reconfigure the project's funding cycle at any time by calling [`JBController3_1.reconfigureFundingCyclesOf(...)`](/dev/api/contracts/or-controllers/jbcontroller3_1/#reconfigurefundingcyclesof). If the project is in the middle of a funding cycle with a duration, the update will be queued to take effect next cycle. If the current funding cycle has an attached ballot contract, the reconfiguration must be approved by it before taking effect.
+
+```
+function reconfigureFundingCyclesOf(
+  uint256 _projectId,
+  JBFundingCycleData calldata _data,
+  JBFundingCycleMetadata calldata _metadata,
+  uint256 _mustStartAtOrAfter,
+  JBGroupedSplits[] calldata _groupedSplits,
+  JBFundAccessConstraints[] calldata _fundAccessConstraints,
+  string calldata _memo
+)
+  external
+  virtual
+  override
+  requirePermission(projects.ownerOf(_projectId), _projectId, JBOperations.RECONFIGURE)
+  returns (uint256 configuration){ ... }
+```
+
+<details>
+
+<summary>View reconfiguration ballot status</summary>
+
+Reconfigurations are subject to the approval of the ballot contract included in the current funding cycle. The current ballot state can be found using [`JBFundingCycleStore.ballotStateOf(...)`](/dev/api/contracts/jbfundingcyclestore/read/currentballotstateof.md).
+
+```
+function currentBallotStateOf(uint256 _projectId) external view override returns (JBBallotState) { ... }
+```
+
+</details>
+
+At any point, anyone can inject funds into a project's treasury via one of its terminals. For example, if the project has added the [`JBETHPaymentTerminal3_1_1`](/dev/api/contracts/or-payment-terminals/jbethpaymentterminal3_1_1), someone can add ETH to a treasury by calling the terminal's [`JBETHPaymentTerminal3_1_1.addToBalanceOf(...)`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1_1/#addtobalanceof) transaction.
+
+```
+function addToBalanceOf(
+  uint256 _projectId,
+  uint256 _amount,
+  address,
+  string calldata _memo,
+  bytes calldata _metadata
+) external payable virtual override isTerminalOf(_projectId) { ... }
+```
+
+By default the protocol uses an internal accounting mechanism to account for projects' tokens. At any time after the project has been created, its owner can issue ERC-20 tokens for the protocol to use as its community token by calling [`JBController3_1.issueTokenFor(...)`](/dev/api/contracts/jbtokenstore/write/issuefor.md).
+
+A project can instead bring their own token, so long as the token adheres to the [`IJBToken`](/dev/api/interfaces/ijbtoken.md) interface, uses 18 decimals fixed point accounting, and isn't already being used by another project. They can do so by calling [`JBController3_1.setFor(...)`](/dev/api/contracts/jbtokenstore/write/setfor.md) This makes it easy to use ERC-1155s or custom contracts, or to change tokens over time to achieve a more creative design.
+
+```
+function issueFor(
+  uint256 _projectId,
+  string calldata _name,
+  string calldata _symbol
+)
+  external
+  override
+  requirePermission(projects.ownerOf(_projectId), _projectId, JBOperations.ISSUE)
+  returns (IJBToken token) { ... }
+```
+
+```
+function setFor(
+  uint256 _projectId,
+  IJBToken _token
+)
+  external
+  nonReentrant
+  requirePermission(projects.ownerOf(_projectId), _projectId, JBOperations.SET_TOKEN) { ... }
+```
+
+<details>
+
+<summary>View the project's token</summary>
+
+The token currently being used by a project can be found in the [`JBTokensStore`](/dev/api/contracts/jbtokenstore/README.md) contract by using [`JBTokenStore.tokenOf(...)`](/dev/api/contracts/jbtokenstore/properties/tokenof.md). This will return a zero address if the project hasn't yet issued tokens or changed into a custom token.
+
+```
+function tokenOf(uint256 _projectId) external view override returns (IJBToken) { ... }
+```
+
+The project a token is currently being used for can be found by calling [`JBTokenStore.projectOf(...)`](/dev/api/contracts/jbtokenstore/properties/projectof.md).
+
+```
+function projectOf(IJBToken _token) external view override returns (uint256) { ... }
+```
+</details>
+
+If a project has issued an ERC-20s or is using a custom [`IJBToken`](/dev/api/interfaces/ijbtoken.md), a holder can claim tokens that are being represented via the internal accounting mechanism into the ERC-20 or custom `IJBToken` by calling [`JBTokenStore.claimFor(...)`](/dev/api/contracts/jbtokenstore/write/claimfor.md).
+
+```
+function claimFor(
+  address _holder,
+  uint256 _projectId,
+  uint256 _amount
+) external override requirePermission(_holder, _projectId, JBOperations.CLAIM) { ... }
+```
+
+<details>
+
+<summary>View a holder's unclaimed project token balance</summary>
+
+Each project token holder's unclaimed balance can be found in the [`JBTokensStore`](/dev/api/contracts/jbtokenstore/README.md) contract using [`JBTokenStore.unclaimedBalanceOf(...)`](/dev/api/contracts/jbtokenstore/properties/unclaimedbalanceof.md).
+
+```
+function unclaimedBalanceOf(address _holder, uint256 _projectId) external view override returns (uint256) { ... }
+```
+
+A project's total unclaimed token supply can be found using [`JBTokenStore.unclaimedTotalSupplyOf(...)`](/dev/api/contracts/jbtokenstore/properties/unclaimedtotalsupplyof.md)
+
+```
+function unclaimedTotalSupplyOf(uint256 _projectId) external view override returns (uint256) { ... }
+```
+
+</details>
+
+
+# Getting started
+
+:::info
+If you're interested in building a Juicebox smart contract, see the `juice-contract-template` [GitHub Repository](https://github.com/jbx-protocol/juice-contract-template). If you need any help, join our [Discord server](https://discord.gg/juicebox).
+:::
+
+#### Import
+
+Add the protocol files to the project.
+```bash
+# command line
+npm install @jbx-protocol/juice-contracts-v3/
+```
+
+If referencing from typescript:
+```typescript
+const contract = require(`@jbx-protocol/juice-contracts-v3/deployments/${network}/${contractName}.json`)
+```
+
+If referencing from a contract:
+```
+import '@jbx-protocol/juice-contracts-v3/contracts/[file-path].sol'
+```
+
+#### Now what
+
+From here, you can build the following:
+
+[Basics](basics.md): Interact with the protocol's basic functionality. Useful for building front-ends.
+
+[Pay a project](utilities/project-payer.md): Deploy or inherit from a contract that makes it easy to forward funds to Juicebox projects.
+
+[Split payments](utilities/splits-payer.md): Deploy or inherit from a contract that makes it easy to forward funds to groups of splits whose members are either addresses, Juicebox projects, or arbitrary contracts that inherit from [`IJBSplitAllocator`](treasury-extensions/split-allocator.md).
+
+[Program a treasury](programmable-treasury.md): Get familiar with the configurable properties available when launching a project.
+
+[Program project permissions](project-nft.md): Build custom Juicebox Project NFT logic to create your own project access controls.
+
+[Program treasury extensions](../treasury-extensions): Create custom contractual rules defining what happens when a project receives funds, and under what conditions funds can leave the treasury during a funding cycle.
+
+# Contract Examples
+
+Simple contract examples which integrate with Juicebox. If you're building new Juicebox-related contracts, join our [Discord server](https://discord.gg/juicebox) for help!
+
+## Pay
+
+A simple contract which pays a project through their primary ETH terminal.
+
+```
+import '@jbx-protocol/juice-contracts-v3/contracts/interfaces/IJBDirectory.sol';
+import '@jbx-protocol/juice-contracts-v3/contracts/libraries/JBTokens.sol';
+
+contract MyBangarangApp {
+  // Keep a reference to the directory in which project's current payment terminal's can be found.
+  IJBDirectory directory;
+
+  // Keep a reference to the project ID that'll be paid.
+  uint256 projectId;
+
+  constructor(IJBDirectory _directory, uint256 _projectId) {
+    directory = _directory;
+    projectId = _projectId;
+  }
+
+  function doSomething() external payable {
+    // Get the payment terminal the project currently prefers to accept ETH through.
+    IJBPaymentTerminal _ethTerminal = directory.primaryTerminalOf(projectId, JBTokens.ETH);
+
+    _ethTerminal.pay{ value: msg.value }(
+      projectId, // pay the correct project.
+      amount, // pay the full amount sent to this function.
+      JBTokens.ETH, // assert that the payment is being made in ETH.
+      msg.sender, // send the msg.sender as the beneficiary of any tokens issued from the payment.
+      0, // if you know the amount of project tokens you expect to be receiving as a result of this payment, specify it here to ensure this happens accordingly. this can be useful if your expectations rely on an oracle calculation. set to 0 if you're ok getting whatever you get.
+      false, // set this to true if you know the project has issued ERC-20's, and you prefer receiving the ERC-20's directly instead of keeping the option to claim later.
+      "This is a test payment!!", // send a memo if you want,
+      bytes(0) // no need to send metadata. if you know the project is using an extension that requires more information to fulfill the operation -- such as NFT minting -- you'll want to add the appropriate formatted metadata here.
+    });
+  }
+}
+```
+
+## Read Balance
+
+A simple contract which reads a project's balance in their primary ETH terminal.
+
+```
+import '@jbx-protocol/juice-contracts-v3/contracts/interfaces/IJBDirectory.sol';
+import '@jbx-protocol/juice-contracts-v3/contracts/interfaces/IJBETHPaymentTerminal.sol';
+import '@jbx-protocol/juice-contracts-v3/contracts/libraries/JBTokens.sol';
+
+contract JBProjectViewUtil {
+  // Keep a reference to the directory in which project's current payment terminal's can be found.
+  IJBDirectory directory;
+
+  constructor(IJBDirectory _directory, uint256 _projectId) {
+    directory = _directory;
+  }
+
+  function getETHBalance(uint256 _projectId) external returns (uint256) {
+    // Get the payment terminal the project currently prefers to accept ETH through.
+    IJBPaymentTerminal _ethTerminal = directory.primaryTerminalOf(projectId, JBTokens.ETH);
+
+    // Assumes the terminal is a IJBETHPaymentTerminal. If the terminal could be a lesser version, a ERC165 check should be done before casting.
+    return IJBETHPaymentTerminal(_ethTerminal).store().balanceOf(_ethTerminal, projectId);
+  }
+}
+```
+
+## Read Overflow
+
+A simple project which reads a project's overflow in their primary ETH terminal. A project's [*Overflow*](/dev/learn/glossary/overflow/) is the funds it holds which aren't needed for the current funding cycle's payouts.
+
+```
+import '@jbx-protocol/juice-contracts-v3/contracts/interfaces/IJBDirectory.sol';
+import '@jbx-protocol/juice-contracts-v3/contracts/libraries/JBTokens.sol';
+
+contract JBProjectViewUtil {
+  // Keep a reference to the directory in which project's current payment terminal's can be found.
+  IJBDirectory directory;
+
+  constructor(IJBDirectory _directory, uint256 _projectId) {
+    directory = _directory;
+  }
+
+  function getETHBalance(uint256 _projectId) external returns (uint256) {
+    // Get the payment terminal the project currently prefers to accept ETH through.
+    IJBPaymentTerminal _terminal = directory.primaryTerminalOf(_projectId, JBTokens.ETH);
+
+    // Return a project's balance in excess of any commitments already made but not yet distributed.
+    return _terminal.currentEthOverflowOf(_projectId);
+  }
+}
+```
+
+[`IJBPaymentTerminal`](/dev/api/interfaces/ijbpaymentterminal/)s are required to report how much ETH's worth of tokens it holds for a project in excess of funds needed for the current funding cycle's payouts via [`IJBPaymentTerminal.currentEthOverflowOf(uint256 _projectId)`](/dev/api/interfaces/ijbpaymentterminal/). The terminal can be written to assume a conversion rate to ETH of 0, meaning it could have a balance of 10,000 shitcoins but still have an ETH overflow of 0.
+
+This requirement allows for straightforwards calculation of a project's total redeemable balance for use in redemption calculations and custom [data sources](/dev/learn/glossary/data-source/).
+
+# Project NFT
+
+Anyone can build on the [`JBProjects`](/dev/api/contracts/jbprojects) NFT contract. This allows developers to write new contracts which use [`JBProjects`](/dev/api/contracts/jbprojects/) NFTs to manage permissions in a standardized way, and allows any project using Juicebox payment terminals to access your contracts, and vice versa.
+
+#### Create a project
+
+Instead of calling [`JBController3_1.launchProjectFor(...)`](/dev/api/contracts/or-controllers/jbcontroller3_1/#launchprojectfor) to create a project, configure its first funding cycle, and attach payment terminals and a juicebox controller contract to it in the same transaction, `JBProjects` can be minted independently to represent ownership over projects with subsequent capabilities attached later on.
+
+To create a project, call [`JBProjects.createFor(...)`](/dev/api/contracts/jbprojects/write/createfor.md). The [`JBProjectMetadata`](/dev/api/data-structures/jbprojectmetadata.md) structure allows arbitrary metadata to be mapped to any namespace domain. [juicebox.money](https://juicebox.money) metadata uses a domain of 0 to store its formatted metadata.
+
+```
+function createFor(address _owner, JBProjectMetadata calldata _metadata)
+  external
+  override
+  returns (uint256 projectId) { ... }
+```
+
+```
+struct JBProjectMetadata {
+  string content;
+  uint256 domain;
+}
+```
+
+<details>
+
+<summary>View project info</summary>
+
+Launching a project will mint a new NFT in the [`JBProjects`](/dev/api/contracts/jbprojects/README.md) contract. The owner can be found using [`JBProjects.ownerOf(...)`](https://docs.openzeppelin.com/contracts/4.x/api/token/erc721#IERC721-ownerOf-uint256-).
+
+```
+function ownerOf(uint256 _projectId) external returns (address owner) { ... }
+```
+
+The project's metadata can be found using [`JBProjects.metadataContentOf(...)`](/dev/api/contracts/jbprojects/properties/metadatacontentof.md).
+
+```
+function metadataContentOf(uint256 _projectId, uint256 _domain)
+  external
+  view
+  returns (string memory) { ... }
+```
+
+</details>
+
+Once a project has been created, new metadata can be added by calling [`JBProjects.metadataContentOf(...)`](/dev/api/contracts/jbprojects/properties/metadatacontentof.md).
+
+```
+function setMetadataOf(uint256 _projectId, JBProjectMetadata calldata _metadata)
+  external
+  override
+  requirePermission(ownerOf(_projectId), _projectId, JBOperations.SET_METADATA) { ... }
+```
+
+The project can set a new token URI by calling [`JBProjects.setTokenUriResolver(...)`](/dev/api/contracts/jbprojects/write/settokenuriresolver.md).
+
+```
+function setTokenUriResolver(IJBTokenUriResolver _newResolver) external override onlyOwner { ... }
+```
+
+#### Attaching application-specific functionality
+
+Project owners can configure their first funding cycle for their `JBProject`, attach payment terminals, and set all other standard Juicebox project properties by calling [`JBController3_1.launchFundingCyclesFor(...)`](/dev/api/contracts/or-controllers/jbcontroller3_1/#launchfundingcyclesfor).
+
+Most Juicebox protocol contracts are generic utilities for any `JBProject` owner, meaning stored data tends to me mapped from project IDs, and functionality that affects a project tends to be exposed only to the project's owner or a operator address specified by the project's owner.
+
+```
+function launchFundingCyclesFor(
+  uint256 _projectId,
+  JBFundingCycleData calldata _data,
+  JBFundingCycleMetadata calldata _metadata,
+  uint256 _mustStartAtOrAfter,
+  JBGroupedSplits[] calldata _groupedSplits,
+  JBFundAccessConstraints[] memory _fundAccessConstraints,
+  IJBPaymentTerminal[] memory _terminals,
+  string calldata _memo
+)
+  external
+  virtual
+  override
+  requirePermission(projects.ownerOf(_projectId), _projectId, JBOperations.RECONFIGURE)
+  returns (uint256 configuration) { ... }
+```
+
+
+# Programmable treasury
+
+In order to understand what Juicebox can do for your project, all you have to do is understand how one transaction works: [`JBController3_1.launchProjectFor(...)`](/dev/api/contracts/or-controllers/jbcontroller3_1/#launchprojectfor), which creates a project, configures its first funding cycle, and specifies where it can begin receiving and managing funds from.
+
+```
+function launchProjectFor(
+  address _owner,
+  JBProjectMetadata calldata _projectMetadata,
+  JBFundingCycleData calldata _data,
+  JBFundingCycleMetadata calldata _metadata,
+  uint256 _mustStartAtOrAfter,
+  JBGroupedSplits[] calldata _groupedSplits,
+  JBFundAccessConstraints[] calldata _fundAccessConstraints,
+  IJBPaymentTerminal[] memory _terminals,
+  string memory _memo
+) external virtual override returns (uint256 projectId) { ... }
+```
+
+This transaction launches a project. It does so by:
+
+* Minting a project in the [`JBProjects`](/dev/api/contracts/jbprojects/README.md) ERC-721 contract by calling [`JBProjects.createFor(...)`](/dev/api/contracts/jbprojects/write/createfor.md).
+* Then giving the [`JBController3_1`](/dev/api/contracts/or-controllers/jbcontroller3_1/) contract that is currently handling the [`launchProjectFor`](/dev/api/contracts/or-controllers/jbcontroller3_1/#launchprojectfor) transaction authority to write to the [`JBFundingCycleStore`](/dev/api/contracts/jbfundingcyclestore/README.md) and the [`JBTokenStore`](/dev/api/contracts/jbtokenstore/README.md) on the project's behalf by calling [`JBDirectory.setControllerOf(...)`](/dev/api/contracts/jbdirectory/write/setcontrollerof.md).
+* Then creating the project's first funding cycle using the provided `_data`, `_metadata`, and `_mustStartAtOrAfter` parameters by calling [`JBFundingCycleStore.configureFor(...)`](/dev/api/contracts/jbfundingcyclestore/write/configurefor.md).
+* Then storing splits for any provided split groups by calling [`JBSplitStore.set(...)`](/dev/api/contracts/jbsplitsstore/write/set.md).
+* Then storing any provided constraints on how the project will be able to access funds within any specified payment terminals by storing values via [`JBController3_1.fundAccessConstraintsStore.setFor()`](/dev/api/contracts/jbfundaccessconstraintsstore/#setfor) (you can access those stored values via [`JBFundAccessConstraintsStore.distributionLimitOf(...)`](/dev/api/contracts/jbfundaccessconstraintsstore/#distributionlimitof), [`JBFundAccessConstraintsStore.overflowAllowanceOf(...)`](/dev/api/contracts/jbfundaccessconstraintsstore/#overflowallowanceof)).
+* Then giving the provided `_terminals` access to the [`JBController3_1`](/dev/api/contracts/or-controllers/jbcontroller3_1/) contract that is handling the [`launchProjectFor(...)`](/dev/api/contracts/or-controllers/jbcontroller3_1/#launchprojectfor) transaction that is currently being executed, and also allowing anyone or any other contract in Web3 to know that the project is currently accepting funds through them by calling [`JBDirectory.setTerminalsOf(...)`](/dev/api/contracts/jbdirectory/write/setterminalsof.md).
+
+#### Basics
+
+Here are some examples, starting with the simplest version:
+
+*   For `_projectMetadata` send the following [`JBProjectMetadata`](/dev/api/data-structures/jbprojectmetadata) values:
+
+    ```javascript
+    {
+      content: "QmbH96jj8RTJgC9526RdsFs5dPvcsRfiRuD9797JXzcvbw",
+      domain: 0
+    }
+    ```
+*   For `_data` send the following [`JBFundingCycleData`](/dev/api/data-structures/jbfundingcycledata.md) values:
+
+    ```javascript
+    {
+      duration: 0,
+      weight: 1000000000000000000000000,
+      discountRate: 0,
+      ballot: 0x0000000000000000000000000000000000000000
+    }
+    ```
+*   For `_metadata` send the following [`JBFundingCycleMetadata`](/dev/api/data-structures/jbfundingcyclemetadata.md) values:
+
+    ```javascript
+    {
+      global: {
+        allowSetTerminals: false,
+        allowSetController: false,
+        pauseTransfers: false
+      },
+      reservedRate: 0,
+      redemptionRate: 10000,
+      ballotRedemptionRate: 0,
+      pausePay: false,
+      pauseDistributions: false,
+      pauseRedeem: false,
+      pauseBurn: false,
+      allowMinting: false,
+      allowTerminalMigration: false,
+      allowControllerMigration: false,
+      holdFees: false,
+      preferClaimedTokenOverride: false,
+      useTotalOverflowForRedemptions: false,
+      useDataSourceForPay: false,
+      useDataSourceForRedeem: false,
+      dataSource: 0x0000000000000000000000000000000000000000,
+      metadata: 0
+    }
+    ```
+* For `_mustStartAtOrAfter` send current timestamp.
+* For `_groupedSplits` send an empty array.
+* For `_fundAccessConstraints` send an empty array.
+* For `_terminals` send an array only including the contract address of the [`JBETHPaymentTerminal3_1_1`](/dev/api/contracts/or-terminals/jbethpaymentterminal3_1_1).
+
+This is the most vanilla project you can launch, which also makes it cheapest to launch gas-wise. Relatively little needs to get saved into storage.
+
+Under these conditions:
+
+* Your project can begin receiving funds through the [`JBETHPaymentTerminal3_1`](/dev/api/contracts/or-terminals/jbethpaymentterminal3_1).
+* 1,000,000 of your project's tokens will be minted per ETH received since the configured `_data.weight` is `1000000000000000000000000`. (The raw value sent has 18 decimal places).
+* All tokens minted as a result of received ETH will go to the beneficiary address specified by the payer of the ETH since the configured `_metadata.reservedRate` is 0.
+* Nothing fancy will happen outside of the default token minting behavior since the configured `_metadata.useDataSourceForPay` is `false`.
+* Nothing fancy will happen outside of the default token redemption behavior since the configured `_metadata.useDataSourceForRedeem` is `false`.
+* None of the funds in the treasury can be distributed to the project owner since no `_fundAccessConstraints` were specified. This means all funds in the treasury are considered overflow. Since the configured `_metadata.redemptionRate` sent is `10000` (which represents [100%](/dev/api/libraries/jbconstants/)), all outstanding tokens can be redeemed/burned to claim a proportional part of the overflow. This lets everyone who contributed funds reclaim their ETH if desired.
+* A new funding cycle with an updated configuration can be triggered at any time by the project owner since the configured `_data.duration` of 0 and `_data.ballot` of `0x0000000000000000000000000000000000000000`. This lets the project owner capture an arbitrary amount of what is in the treasury at any given point by sending a reconfiguration transaction with `_fundAccessConstraints` specified.
+* Your project will have basic project info with the IPFS file on `ipfs://QmbH96jj8RTJgC9526RdsFs5dPvcsRfiRuD9797JXzcvbw` (Juicebox Frontend use domain `0` to locate project metadata through IPFS, such as project name, logo, description, twitter handle and discord link)
+
+#### Fund access constraints
+
+Here's what happens when basic `_fundAccessConstraints` are specified by sending the following [`JBFundAccessContraints`](/dev/api/data-structures/jbfundaccessconstraints.md) values:
+
+```javascript
+[
+  {
+    terminal: <address of JBETHPaymentTerminal3_1_1>,
+    token: 0x000000000000000000000000000000000000EEEe, // Address representing ETH in JBTokens.
+    distributionLimit: 4200000000000000000,
+    overflowAllowance: 0,
+    distributionLimitCurrency: 1,
+    overflowAllowanceCurrency: 0
+  }
+]
+```
+
+* During each funding cycle with this configuration, the project can receive up to 4.2 ETH worth of tokens from the [`JBETHPaymentTerminal3_1_1`](/dev/api/contracts/or-terminals/jbethpaymentterminal3_1_1), since the configured `distributionLimitCurrency` is 1 ([which represents ETH](/dev/api/libraries/jbcurrencies.md)) and the `distributionLimit` is `4200000000000000000`. (The raw value sent has 18 decimal places).
+* Anyone can call the [`JBPayoutRedemptionPaymentTerminal3_1_1.distributePayoutsOf(...)`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1_1/#distributepayoutsof) transaction to send up to 4.2 ETH per funding cycle to the preconfigured splits. Since no splits were specified, all distributed funds go to the project owner.
+* With each new funding cycle, another 4.2 ETH can be distributed.
+* The project cannot distribute any funds in excess of the distribution limit since there is no `overflowAllowance`.
+
+Here's what happens when using an overflow allowance instead:
+
+```
+[
+  {
+    terminal: <address of JBETHPaymentTerminal3_1_1>,
+    token: 0x000000000000000000000000000000000000EEEe, // Address representing ETH in JBTokens.
+    distributionLimit: 0,
+    overflowAllowance: 690000000000000000000,
+    distributionLimitCurrency: 0,
+    overflowAllowanceCurrency: 2
+  }
+]
+```
+
+* Until a new reconfiguration transaction is sent, the project owner can send up to 690 USD worth of ETH tokens from the [`JBETHPaymentTerminal3_1_1`](/dev/api/contracts/or-terminals/jbethpaymentterminal3_1_1) to any address it chooses since the configured `overflowAllowanceCurrency` is 2 ([which represents USD](/dev/api/libraries/jbcurrencies.md)) and the `overflowAllowance` is `690000000000000000000` (the raw value sent has 18 decimal places).
+* Meanwhile, all of the project's funds in the [`JBPayoutRedemptionPaymentTerminal3_1_1`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1_1/) are considered overflow since there is no distribution limit.
+* Rolled-over funding cycles (i.e. cycles with the same configuration) do not refresh the allowance.
+* An overflow allowance is a free allowance the project can use without additional pre-programmed stipulations.
+
+The `_distributionLimit` and `_overflowAllowance` parameters must fit in a `uint232`.
+
+#### Grouped splits
+
+If you wish to automatically split treasury payouts or reserved token distributions between various destinations (addresses, other Juicebox projects, or split allocator contracts), add some grouped splits to the [`launchProjectFor`](/dev/api/contracts/or-controllers/jbcontroller3_1/#launchprojectfor) transaction.
+
+```
+{
+  group: 1,
+  splits: [
+   {
+     preferClaimed: false,
+     preferAddToBalance: false,
+     percent: 50000000, // 5%, out of 1000000000
+     projectId: 0,
+     beneficiary: 0x0123456789012345678901234567890123456789,
+     lockedUntil: 0,
+     allocator: 0x0000000000000000000000000000000000000000
+   },
+   {
+     preferClaimed: false,
+     preferAddToBalance: false,
+     percent: 60000000, // 6%, out of 1000000000
+     projectId: 420,
+     beneficiary: 0x0123456789012345678901234567890123456789,
+     lockedUntil: 0,
+     allocator: 0x0000000000000000000000000000000000000000
+   },
+   {
+     preferClaimed: true,
+     preferAddToBalance: false,
+     percent: 60000000, // 6%, out of 1000000000
+     projectId: 421,
+     beneficiary: 0x0123456789012345678901234567890123456789,
+     lockedUntil: 0,
+     allocator: 0x0000000000000000000000000000000000000000
+   },
+   {
+     preferClaimed: false,
+     preferAddToBalance: false,
+     percent: 70000000, // 7%, out of 1000000000
+     projectId: 0,
+     beneficiary: 0x0000000000000000000000000000000000000000,
+     lockedUntil: 1644543173,
+     allocator: 0x6969696969696969696969696969696969696969
+   },
+   {
+     preferClaimed: false,
+     preferAddToBalance: false,
+     percent: 10000000, // 1%, out of 1000000000
+     projectId: 0,
+     beneficiary: 0x0000000000000000000000000000000000000000,
+     lockedUntil: 0,
+     allocator: 0x0000000000000000000000000000000000000000
+   },
+  ]
+}
+```
+
+* If an `allocator` is provided, the split will try to send the split funds to it. Otherwise, if a `projectId` is provided the split will try to send funds to that projectId's Juicebox treasury by calling `pay(...)` or `addToBalanceOf(...)`, sending the project's tokens to the `beneficiary` if using `pay(...)`. Otherwise, if a `beneficiary` is provided the split funds will be sent directly to it. Otherwise, the split will not have a destination defined within it and so applications can treat it as a wild card. In this case, payouts send the split amount to the `msg.sender` of the transaction.
+* There are 5 splits in this group.
+  * The first will send 5% of the total directly to address `0x0123456789012345678901234567890123456789`.
+  * The second will send 6% to the treasury of the Juicebox project with ID 420. Since `preferAddToBalance` is false, the payment will be made through the `pay(...)` function of the project's current primary terminal for the token being distributed. Project 420's tokens will be sent to address `0x0123456789012345678901234567890123456789.`.
+  * The third will send 6% to the Juicebox treasury of project with ID 421. This project's tokens will be sent to address `0x0123456789012345678901234567890123456789.`, and they will be automatically claimed as ERC-20s in the beneficiary's wallet if the project has issued them due to the `preferClaimed` flag being `true`.
+  * The fourth will send 7% to the `allocate` function in contract with address `0x6969696969696969696969696969696969696969` which must adhere to [`IJBSplitAllocator`](/dev/api/interfaces/ijbsplitallocator.md). This function will also receive all contextual information regarding the split for it to do custom things with. This split will not be editable or removable from the group during this funding cycle configuration while the `lockedUntil` date has yet to passed.
+  * The last will send 1% of the total directly to `msg.sender` address since no destination was specified within the split.
+  * All of the remaining funds (100% - 5% - 6% - 6% - 7% - 1% = 75%) will be sent to the project owner's address.
+* Since the configured split group is 1 ([which represents ETH payouts](/dev/api/libraries/jbsplitsgroups.md)), the protocol will use this group of splits when distributing funds from the ETH terminal.
+* This splits will only apply to the funding cycle configuration during which they were set. Splits will have to be set again for future configurations.
+* The same group split behavior applies to reserved tokens ([represented by group namespace 2](/dev/api/libraries/jbsplitsgroups.md)), although those routed to a `projectId` will be sent to the project's owner, and those routed to an allocator will be sent to the contract before having the contract's `allocate` function called.
+
+
+# Namespaces & IDs
+
+Some Juicebox protocol contracts and utilities use shared namespaces and indices.
+
+## Operator Permissions
+
+[`JBOperatorStore`](/dev/api/contracts/jboperatorstore/) allows addresses to give permissions to any other address to take specific actions on their behalf. Typically, a project owner or protocol user would grant a proxy contract or an EOA (called an _operator_) administrative protocol permissions. This is administered through the [`requirePermission`](/dev/api/contracts/or-abstract/jboperatable/modifiers/requirepermission/) and [`requirePermissionAllowingOverride`](/dev/api/contracts/or-abstract/jboperatable/modifiers/requirepermissionallowingoverride/) modifiers from [`JBOperatable`](/dev/api/contracts/or-abstract/jboperatable/). When granting permissions to an operator, an address can pass a `domain` to limit these permissions to a certain project ID (where the domain is the project's ID), or can pass a domain of `0` to grant permissions across all domains (see [Operator](/dev/learn/glossary/operator/)).
+
+These permissions are represented by the following indices:
+
+| Index | Name                   | Found on                                                                             | Description                                                                                                                                                                                                                                                                                                                                                                 |
+| ----- | ---------------------- | ------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1     | `RECONFIGURE`          | [`JBOperations`](/dev/api/libraries/jboperations/)                                   | Allow an operator to call [`JBController3_1.reconfigureFundingCyclesOf(...)`](/dev/api/contracts/or-controllers/jbcontroller3_1/#reconfigurefundingcyclesof) (or similar functions on other controllers) on an address' behalf.                                                                                                                                             |
+| 2     | `REDEEM`               | [`JBOperations`](/dev/api/libraries/jboperations/)                                   | Allow an operator to call [`JBPayoutRedemptionPaymentTerminal3_1_1.redeemTokensOf(...)`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1_1/#redeemtokensof) (or similar functions on other terminals) on an address' behalf, redeeming token holders according to a project's (or its data source's) rules.                            |
+| 3     | `MIGRATE_CONTROLLER`   | [`JBOperations`](/dev/api/libraries/jboperations/)                                   | Allow an operator to call [`JBController3_1.migrate(...)`](/dev/api/contracts/or-controllers/jbcontroller3_1/#migrate) (or similar functions on other controllers) on an address' behalf. To migrate, the project must have [`allowControllerMigration`](/dev/api/data-structures/jbfundingcyclemetadata/) enabled.                                                         |
+| 4     | `MIGRATE_TERMINAL`     | [`JBOperations`](/dev/api/libraries/jboperations/)                                   | Allow an operator to call [`JBPayoutRedemptionPaymentTerminal3_1_1.migrate(...)`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1_1/#migrate) (or similar functions on other payment terminals) on an address' behalf. To migrate, the project must have [`allowTerminalMigration`](/dev/api/data-structures/jbfundingcyclemetadata/). |
+| 5     | `PROCESS_FEES`         | [`JBOperations`](/dev/api/libraries/jboperations/)                                   | Allow an operator to call [`JBPayoutRedemptionPaymentTerminal3_1_1.processFees(...)`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1_1/#processfees) (or similar functions on other terminals) on an address' behalf. See [_Hold fees_](/dev/learn/glossary/hold-fees/).                                                              |
+| 6     | `SET_METADATA`         | [`JBOperations`](/dev/api/libraries/jboperations/)                                   | Allow an operator to call [`JBProjects.setMetadataOf(...)`](/dev/api/contracts/jbprojects/write/setmetadataof/) on an address' behalf.                                                                                                                                                                                                                                      |
+| 7     | `ISSUE`                | [`JBOperations`](/dev/api/libraries/jboperations/)                                   | Allow an operator to call [`JBTokenStore.issueFor(...)`](/dev/api/contracts/jbtokenstore/write/issuefor/) on an address' behalf. This issues an ERC-20 token for a project's token holders to claim.                                                                                                                                                                        |
+| 8     | `SET_TOKEN`            | [`JBOperations`](/dev/api/libraries/jboperations/)                                   | Allow an operator to call [`JBTokenStore.setFor(...)`](/dev/api/contracts/jbtokenstore/write/setfor/) on an address' behalf. This sets a project's token (if not already set).                                                                                                                                                                                              |
+| 9     | `MINT`                 | [`JBOperations`](/dev/api/libraries/jboperations/)                                   | Allow an operator to call [`JBTokenStore.mintFor(...)`](/dev/api/contracts/jbtokenstore/write/mintfor/) on an address' behalf. [`allowMinting`](/dev/api/data-structures/jbfundingcyclemetadata/) must be enabled to mint project tokens.                                                                                                                                   |
+| 10    | `BURN`                 | [`JBOperations`](/dev/api/libraries/jboperations/)                                   | Allow an operator to call [`JBController3_1.burnTokensOf(...)`](/dev/api/contracts/or-controllers/jbcontroller3_1/#burntokensof) on an address' behalf. This burns a token holder's supply.                                                                                                                                                                                 |
+| 11    | `CLAIM`                | [`JBOperations`](/dev/api/libraries/jboperations/)                                   | Allow an operator to call [`JBTokenStore.claimFor(...)`](/dev/api/contracts/jbtokenstore/write/claimfor/) on an address' behalf. This claims internally tracked (unclaimed) tokens as a project's ERC-20.                                                                                                                                                                   |
+| 12    | `TRANSFER`             | [`JBOperations`](/dev/api/libraries/jboperations/)                                   | Allow an operator to call [`JBTokenStore.transferFrom(...)`](/dev/api/contracts/jbtokenstore/write/transferfrom/) on an address' behalf. [`pauseTransfers`](/dev/api/data-structures/jbglobalfundingcyclemetadata/) must be false to transfer unclaimed (internally tracked) tokens.                                                                                        |
+| 13    | `REQUIRE_CLAIM`        | [`JBOperations`](/dev/api/libraries/jboperations/)                                   | Allow an operator to call [`JBTokenStore.shouldRequireClaimingFor(...)`](/dev/deprecated/v2/contracts/jbtokenstore/write/shouldrequireclaimingfor/) on an address' behalf, forcing all future tokens to be claimed (as ERC-20). This function (and the corresponding permission) have been deprecated in Juicebox v3.                                                       |
+| 14    | `SET_CONTROLLER`       | [`JBOperations`](/dev/api/libraries/jboperations/)                                   | Allow an operator to call [`JBDirectory.setControllerOf(...)`](/dev/api/contracts/jbdirectory/write/setcontrollerof/) on an address' behalf. To set new controller(s), the project must have [`allowSetController`](/dev/api/data-structures/jbglobalfundingcyclemetadata/) enabled.                                                                                        |
+| 15    | `SET_TERMINALS`        | [`JBOperations`](/dev/api/libraries/jboperations/)                                   | Allow an operator to call [`JBDirectory.setTerminalsOf(...)`](/dev/api/contracts/jbdirectory/write/setterminalsof/) on an address' behalf. To set new terminal(s), the project must have [`allowSetTerminals`](/dev/api/data-structures/jbglobalfundingcyclemetadata/) enabled.                                                                                             |
+| 16    | `SET_PRIMARY_TERMINAL` | [`JBOperations`](/dev/api/libraries/jboperations/)                                   | Allow an operator to call [`JBDirectory.setPrimaryTerminalOf(...)`](/dev/api/contracts/jbdirectory/write/setprimaryterminalof/) on an address' behalf.                                                                                                                                                                                                                      |
+| 17    | `USE_ALLOWANCE`        | [`JBOperations`](/dev/api/libraries/jboperations/)                                   | Allow an operator to call [`JBPayoutRedemptionPaymentTerminal3_1_1.useAllowanceOf(...)`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1_1/#useallowanceof) (or similar functions on other terminals) on an address' behalf. This uses a project's [overflow allowance](/dev/learn/glossary/overflow/).                                |
+| 18    | `SET_SPLITS`           | [`JBOperations`](/dev/api/libraries/jboperations/)                                   | Allow an operator to call [`JBSplitsStore.set(...)`](/dev/api/contracts/jbsplitsstore/write/set/) on an address' behalf. This sets a project's [splits](/dev/learn/glossary/splits/).                                                                                                                                                                                       |
+| 19    | `SET_ENS_NAME_FOR`     | [`JBOperations2`](/dev/api/libraries/jboperations2/)                                 | Allow an operator to call [`JBProjectHandles.setEnsNamePartsFor(...)`](/dev/api/contracts/or-utilities/jbprojecthandles/write/setensnamepartsfor/) on an address' behalf, associating an ENS name with a project.                                                                                                                                                           |
+| 20    | `SET_TOKEN_URI`        | [`JBUriOperations`](/dev/extensions/juice-token-resolver/libraries/jburioperations/) | Allow an operator to call [`TokenUriResolver.setTokenUriResolverForProject(...)`](/dev/extensions/juice-token-resolver/tokenuriresolver/#settokenuriresolverforproject), setting a project's [`IJBTokenUriResolver`](/dev/api/interfaces/ijbtokenuriresolver/). This is the URI resolver used for the [Project NFT](/dev/build/project-nft/).                               |
+| 21    | `ADJUST_TIERS`         | [`JB721Operations`](/dev/extensions/juice-721-delegate/libraries/jb721operations/)   | Allow an operator to call [`JBTiered721Delegate.adjustTiers(...)`](/dev/extensions/juice-721-delegate/jbtiered721delegate/#adjusttiers) on an address' behalf.                                                                                                                                                                                                              |
+| 22    | `UPDATE_METADATA`      | [`JB721Operations`](/dev/extensions/juice-721-delegate/libraries/jb721operations/)   | Allow an operator to call [`JBTiered721Delegate.setMetadata(...)`](/dev/extensions/juice-721-delegate/jbtiered721delegate/#setmetadata) on an addresses' behalf.                                                                                                                                                                                                            |
+| 23    | `MINT`                 | [`JB721Operations`](/dev/extensions/juice-721-delegate/libraries/jb721operations/)   | Allow an operator to call [`JBTiered721Delegate.mintFor(...)`](/dev/extensions/juice-721-delegate/jbtiered721delegate/#mintfor) on an addresses' behalf.                                                                                                                                                                                                                    |
+| 24 | `SET_POOL_PARAMS` | [`JBBuybackDelegateOperations`](/dev/extensions/juice-buyback/libraries/jbbuybackdelegateoperations/) | Allow an operator to call [`JBGenericBuybackDelegate.changeSecondsAgo(...)`](/dev/extensions/juice-buyback/jbgenericbuybackdelegate/#changesecondsago) or [`JBGenericBuybackDelegate.setTwapDelta(...)`](/dev/extensions/juice-buyback/jbgenericbuybackdelegate/#settwapdelta) on an addresses' behalf.|
+| 25 | `CHANGE_POOL` | [`JBBuybackDelegateOperations`](/dev/extensions/juice-buyback/libraries/jbbuybackdelegateoperations/) | Allow an operator to call [`JBGenericBuybackDelegate.setPoolFor(...)`](/dev/extensions/juice-buyback/jbgenericbuybackdelegate/#setpoolfor) on an addresses' behalf. |
+
+## Delegate IDs
+
+When paying a Juicebox project with a [delegate](/dev/learn/glossary/delegate/), clients must pass the appropriate metadata in the [`JBDidPayData3_1_1`](/dev/api/data-structures/jbdidpaydata3_1_1/) (or the [`JBDidPayData`](/dev/api/data-structures/jbdidpaydata/) for projects using older payment terminals). The same is true for redemptions and the [`JBDidRedeemData3_1_1`](/dev/api/data-structures/jbdidredeemdata3_1_1/) (or [`JBDidRedeemData`](/dev/api/data-structures/jbdidredeemdata/) for projects using older payment terminals).
+
+This metadata must explicitly specify the delegate being interacted with. For older delegates, this is typically the `interfaceId` of the delegate's interface. Newer delegates are identified by a 4 byte ID specified in the constructor arguments, which can be read by calling a delegate's `delegateId()` view function:
+
+```
+function delegateId() external view returns (bytes4);
+```
+
+The deploy script defaults for notable delegates have been compiled below:
+
+| Delegate | delegateId |
+| --- | --- |
+| [`juice-buyback`](/dev/extensions/juice-buyback/) | [`BUYB`](https://github.com/jbx-protocol/juice-buyback/blob/9188f091347816c201097ae704fbf2c66b22d495/contracts/scripts/Deploy.s.sol#L26C43-L26C47) |
+| [`juice-721-delegate`](/dev/extensions/juice-721-delegate/) | [`721P`](https://github.com/jbx-protocol/juice-721-delegate/blob/6897119af158934bfd920f0f9a55758085111dd3/contracts/scripts/Deploy.s.sol#L22C44-L22C48) |
+| [`juice-721-delegate`](/dev/extensions/juice-721-delegate/) | [`721R`](https://github.com/jbx-protocol/juice-721-delegate/blob/6897119af158934bfd920f0f9a55758085111dd3/contracts/scripts/Deploy.s.sol#L23) |
+
+Frontends interacting with newer delegates can use [`JBMetadata-Helper`](https://github.com/simplemachine92/JBMetadata-Helper) to simplify this process.
+
+## Splits Groups
+
+Juicebox projects store [splits](/dev/learn/glossary/splits/) for an arbitrary number of groups, each corresponding to a specific kind of distribution (such as ETH payouts or reserved tokens). Each one of these groups corresponds to a specific index:
+
+| Index | Name              | Found on                                               | Description                                                                                                                                                                                                              |
+| ----- | ----------------- | ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 1     | `ETH_PAYOUT`      | [`JBSplitsGroups`](/dev/api/libraries/jbsplitsgroups/) | Used when distributing ETH payouts via [`JBPayoutRedemptionPaymentTerminal3_1_1.distributePayoutsOf(...)`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1_1/#distributepayoutsof). |
+| 2     | `RESERVED_TOKENS` | [`JBSplitsGroups`](/dev/api/libraries/jbsplitsgroups/) | Used when distributing [reserved tokens](/dev/learn/glossary/reserved-tokens/).                                                                                                                                          |
+
+These groups must be specified when passing [`JBGroupedSplits`](/dev/api/data-structures/jbgroupedsplits/) to a function such as:
+
+- [`JBController3_1.launchProjectFor(...)`](/dev/api/contracts/or-controllers/jbcontroller3_1/#launchprojectfor)
+- [`JBController3_1.launchFundingCyclesFor(...)`](/dev/api/contracts/or-controllers/jbcontroller3_1/#launchfundingcyclesfor)
+- [`JBController3_1.reconfigureFundingCyclesOf(...)`](/dev/api/contracts/or-controllers/jbcontroller3_1/#reconfigurefundingcyclesof)
+- [`JBSplitsStore.set(...)`](/dev/api/contracts/jbsplitsstore/write/set/)
+
+You can find a terminal's splits group index by accessing the relevant [`JBPayoutRedemptionPaymentTerminal3_1_1.payoutSplitsGroup`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1_1/#payoutsplitsgroup) property.
+
+## Currency Prices
+
+Juicebox uses [`JBPrices`](/dev/api/contracts/jbprices/) to manage and normalize prices for various currencies, with each currency having its own index:
+
+| Index | Name  | Found on                                           | Description                                                                                                                                                                                                                                                                         |
+| ----- | ----- | -------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1     | `ETH` | [`JBCurrencies`](/dev/api/libraries/jbcurrencies/) | 1 ETH = 1 ETH.                                                                                                                                                                                                                                                                      |
+| 2     | `USD` | [`JBCurrencies`](/dev/api/libraries/jbcurrencies/) | Uses [`JBChainlinkV3PriceFeed`](/dev/api/contracts/or-price-feeds/jbchainlinkv3pricefeed/), a generalized price feed for Chainlink's [`AggregatorV3Interface`](https://github.com/smartcontractkit/chainlink/blob/develop/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol). |
+
+The protocol uses this to allow projects to do their accounting in any number of currencies, but manage all funds in ETH or other assets (regardless of accounting denomination). Price feeds must adhere to [`IJBPriceFeed`](/dev/api/interfaces/ijbpricefeed/). New price feeds can be added via [`JBPrices.addFeedFor(...)`](/dev/api/contracts/jbprices/write/addfeed/), which can only be called by the [JuiceboxDAO multisig](/dev/learn/administration/).
+
+## Interface IDs
+
+[ERC-165](https://eips.ethereum.org/EIPS/eip-165) introduced standard interface detection via the `ERC165.sol` interface:
+
+```
+interface ERC165 {
+    /// @notice Query if a contract implements an interface
+    /// @param interfaceID The interface identifier, as specified in ERC-165
+    /// @dev Interface identification is specified in ERC-165. This function
+    ///  uses less than 30,000 gas.
+    /// @return `true` if the contract implements `interfaceID` and
+    ///  `interfaceID` is not 0xffffffff, `false` otherwise
+    function supportsInterface(bytes4 interfaceID) external view returns (bool);
+}
+```
+
+This allows people to check whether a given contract adheres to an interface. For your convenience, here are the `interfaceId`s for interfaces in [`juice-contracts-v3`](https://github.com/jbx-protocol/juice-contracts-v3):
+
+| Interface                                                                                                | interfaceId  |
+| -------------------------------------------------------------------------------------------------------- | ------------ |
+| [`IJBAllowanceTerminal3_1`](/dev/api/interfaces/ijballowanceterminal3_1)                                 | `0xa02f801c` |
+| [`IJBAllowanceTerminal`](/dev/api/interfaces/ijballowanceterminal)                                       | `0xbc8926e9` |
+| [`IJBController3_0_1`](/dev/api/interfaces/ijbcontroller3_0_1)                                           | `0x7c5a29e6` |
+| [`IJBController3_1`](/dev/api/interfaces/ijbcontroller3_1)                                               | `0x8cbbedc0` |
+| [`IJBController`](/dev/api/interfaces/ijbcontroller)                                                     | `0x85e36899` |
+| [`IJBControllerUtility`](/dev/api/interfaces/ijbcontrollerutility)                                       | `0xc41c2f24` |
+| [`IJBDirectory`](/dev/api/interfaces/ijbdirectory)                                                       | `0x4ecdb66b` |
+| [`IJBETHERC20ProjectPayerDeployer`](/dev/api/interfaces/ijbetherc20projectpayerdeployer)                 | `0x5be94a6f` |
+| [`IJBETHERC20SplitsPayerDeployer`](/dev/api/interfaces/ijbetherc20splitspayerdeployer)                   | `0x3715a283` |
+| [`IJBFeeGauge3_1`](/dev/api/interfaces/ijbfeegauge3_1)                                                   | `0x192dd609` |
+| [`IJBFeeGauge`](/dev/api/interfaces/ijbfeegauge)                                                         | `0x77695896` |
+| [`IJBFeeHoldingTerminal`](/dev/api/interfaces/ijbfeeholdingterminal)                                     | `0xc715967a` |
+| [`IJBFundAccessConstraintsStore`](/dev/api/interfaces/ijbfundaccessconstraintsstore)                     | `0xa65abb63` |
+| [`IJBFundingCycleBallot`](/dev/api/interfaces/ijbfundingcycleballot)                                     | `0x7ba3dfb3` |
+| [`IJBFundingCycleDataSource3_1_1`](/dev/api/interfaces/ijbfundingcycledatasource3_1_1)                   | `0x71700c69` |
+| [`IJBFundingCycleDataSource`](/dev/api/interfaces/ijbfundingcycledatasource)                             | `0x71700c69` |
+| [`IJBFundingCycleStore`](/dev/api/interfaces/ijbfundingcyclestore)                                       | `0xd9590add` |
+| [`IJBMigratable`](/dev/api/interfaces/ijbmigratable)                                                     | `0x3e8c615b` |
+| [`IJBOperatable`](/dev/api/interfaces/ijboperatable)                                                     | `0xad007d63` |
+| [`IJBOperatorStore`](/dev/api/interfaces/ijboperatorstore)                                               | `0x9125fdae` |
+| [`IJBPayDelegate3_1_1`](/dev/api/interfaces/ijbpaydelegate3_1_1)                                         | `0x6b204943` |
+| [`IJBPayDelegate`](/dev/api/interfaces/ijbpaydelegate)                                                   | `0xda9ee8b7` |
+| [`IJBPaymentTerminal`](/dev/api/interfaces/ijbpaymentterminal)                                           | `0xc07370e4` |
+| [`IJBPayoutRedemptionPaymentTerminal3_1_1`](/dev/api/interfaces/ijbpayoutredemptionpaymentterminal3_1_1) | `0x00000000` |
+| [`IJBPayoutRedemptionPaymentTerminal3_1`](/dev/api/interfaces/ijbpayoutredemptionpaymentterminal3_1)     | `0xedb527eb` |
+| [`IJBPayoutRedemptionPaymentTerminal`](/dev/api/interfaces/ijbpayoutredemptionpaymentterminal)           | `0xedb527eb` |
+| [`IJBPayoutTerminal3_1`](/dev/api/interfaces/ijbpayoutterminal3_1)                                       | `0x4a4305c0` |
+| [`IJBPayoutTerminal`](/dev/api/interfaces/ijbpayoutterminal)                                             | `0x2b267b4e` |
+| [`IJBPriceFeed`](/dev/api/interfaces/ijbpricefeed)                                                       | `0x7a3c4c17` |
+| [`IJBPrices`](/dev/api/interfaces/ijbprices)                                                             | `0x2730be0e` |
+| [`IJBProjectPayer`](/dev/api/interfaces/ijbprojectpayer)                                                 | `0x7ddb72fc` |
+| [`IJBProjects`](/dev/api/interfaces/ijbprojects)                                                         | `0xaa91a66f` |
+| [`IJBRedemptionDelegate3_1_1`](/dev/api/interfaces/ijbredemptiondelegate3_1_1)                           | `0x0bf46e59` |
+| [`IJBRedemptionDelegate`](/dev/api/interfaces/ijbredemptiondelegate)                                     | `0x2b13c58f` |
+| [`IJBRedemptionTerminal`](/dev/api/interfaces/ijbredemptionterminal)                                     | `0xfe663f0f` |
+| [`IJBSingleTokenPaymentTerminal`](/dev/api/interfaces/ijbsingletokenpaymentterminal)                     | `0x28960002` |
+| [`IJBSingleTokenPaymentTerminalStore3_1_1`](/dev/api/interfaces/ijbsingletokenpaymentterminalstore3_1_1) | `0x98d00da8` |
+| [`IJBSingleTokenPaymentTerminalStore`](/dev/api/interfaces/ijbsingletokenpaymentterminalstore)           | `0x98d00da8` |
+| [`IJBSplitAllocator`](/dev/api/interfaces/ijbsplitallocator)                                             | `0x9d740bfa` |
+| [`IJBSplitsPayer`](/dev/api/interfaces/ijbsplitspayer)                                                   | `0x35d42f96` |
+| [`IJBSplitsStore`](/dev/api/interfaces/ijbsplitsstore)                                                   | `0xd45e236b` |
+| [`IJBPaymentTerminalUtility`](/dev/api/interfaces/ijbpaymentterminalutility)                             | `0xc41c2f24` |
+| [`IJBToken`](/dev/api/interfaces/ijbtoken)                                                               | `0xc6805740` |
+| [`IJBTokenStore`](/dev/api/interfaces/ijbtokenstore)                                                     | `0xb79436b1` |
+| [`IJBTokenUriResolver`](/dev/api/interfaces/ijbtokenuriresolver)                                         | `0xda0544aa` |
+
+## Metadata
+
+Juicebox project metadata (such as a project's name, logo, and description) are stored on [IPFS](https://ipfs.tech/). A project's metadata IPFS hash can be found by accessing the [`JBProjects.metadataContentOf(...)`](/dev/api/contracts/jbprojects/properties/metadatacontentof/) property, which takes two arguments:
+
+- `_projectId` is the ID of the project to which the metadata belongs.
+- `_domain` is the **domain within which the metadata applies.**
+
+As of 2023-04-13, all projects store their metadata within domain `0`, but future frontends or contracts with unique metadata needs might consider utilizing new domains.
+
+#### Example
+
+If one calls [`JBProjects.metadataContentOf(...)`](/dev/api/contracts/jbprojects/properties/metadatacontentof/) with `_projectId` as `1` and `_domain` as `0`, the contract will return the IPFS hash `QmQHGuXv7nDh1rxj48HnzFtwvVxwF1KU9AfB6HbfG8fmJF`.
+
+Now, one can navigate to a [public IPFS gateway](https://ipfs.github.io/public-gateway-checker/) or a dedicated gateway (from [Infura](https://www.infura.io/), [Cloudflare](https://developers.cloudflare.com/web3/ipfs-gateway/), or another provider) to read the project's metadata:
+
+```json
+{
+  "name": "JuiceboxDAO",
+  "description": "Supports projects built using the Juicebox protocol, and the development of the protocol itself. All projects withdrawing funds from their treasury pay a 2.5% membership fee and receive JBX at the current issuance rate. JBX members govern the NFT that represents ownership over this treasury.",
+  "logoUri": "https://jbx.mypinata.cloud/ipfs/QmWXCt1zYAJBkNb7cLXTNRNisuWu9mRAmXTaW9CLFYkWVS",
+  "infoUri": "https://snapshot.org/#/jbdao.eth",
+  "twitter": "juiceboxETH",
+  "discord": "https://discord.gg/W9mTVG4QhD",
+  "payButton": "Add juice",
+  "tokens": [],
+  "version": 4
+}
+```
+
+See it yourself at [`https://ipfs.io/ipfs/QmQHGuXv7nDh1rxj48HnzFtwvVxwF1KU9AfB6HbfG8fmJF`](https://ipfs.io/ipfs/QmQHGuXv7nDh1rxj48HnzFtwvVxwF1KU9AfB6HbfG8fmJF). To learn more about IPFS, visit the [IPFS docs](https://docs.ipfs.tech/).
+
+Also see [*Project Metadata*](/dev/frontend/metadata/).
+
+
+# Overview
+
+The Juicebox protocol is a framework for funding and operating projects openly on Ethereum. It lets you:
+
+#### Deploy an NFT that represents ownership over a project
+
+  Whichever address owns this NFT has administrative privileges to configure treasury parameters within the Juicebox ecosystem.
+  
+  [Learn more about projects](/dev/learn/glossary/project)
+  
+
+#### Configure funding cycles for a project
+
+  Funding cycles define contractual constraints according to which the project will operate.
+  
+  [Learn more about funding cycles](/dev/learn/glossary/funding-cycle)<br/>
+  
+  The following properties can be configured into a funding cycle:
+  
+<details>
+
+<summary><em>Funding cycle properties</em></summary>
+
+##### Start timestamp
+
+  The timestamp at which the funding cycle is considered active. Projects can configure the start time of their first funding cycle to be in the future, and can ensure reconfigurations don't take effect before a specified timestamp.
+    
+  Once a funding cycle ends, a new one automatically starts right away. If there's an approved reconfiguration queued to start at this time, it will be used. Otherwise, a copy of the rolled over funding cycle will be used.
+  
+##### Duration
+
+  How long each funding cycle lasts (specified in seconds). All funding cycle properties are unchangeable while the cycle is in progress. In other words, any proposed reconfigurations can only take effect during the subsequent cycle.
+  
+  If no reconfigurations were submitted by the project owner, or if proposed changes fail the current cycle's [ballot](#ballot), a copy of the latest funding cycle will automatically start once the current one ends.
+  
+  A cycle with no duration lasts indefinitely, and reconfigurations can start a new funding cycle with the proposed changes right away.
+  
+##### Distribution limit
+
+  The amount of funds that can be distributed out from the project's treasury during a funding cycle. The project owner can pre-program a list of addresses, other Juicebox projects, and contracts that adhere to [<code>IJBSplitAllocator</code>](/dev/api/interfaces/ijbsplitallocator) to split distributions between. Treasury funds in excess of the distribution limit is considered overflow, which can serve as runway or be reclaimed by token holders who redeem their tokens.
+
+  Distributing is a public transaction that anyone can call on a project's behalf. The project owner can also include a split that sends a percentage of the distributed funds to the address who executes this transaction.
+
+The protocol charges a [JBX membership fee](#jbx-membership-fee) on funds withdrawn from the network. There are no fees for distributions to other Juicebox projects.
+
+  Distribution limits can be specified in any currency that the [<code>JBPrices</code>](/dev/api/contracts/jbprices) contract has a price feed for.
+
+
+##### Overflow allowance
+
+  The amount of treasury funds that the project owner can distribute on-demand.
+
+  This allowance does not reset per-funding cycle. Instead, it lasts until the project owner explicitly proposes a reconfiguration with a new allowance.
+
+The protocol charges a [JBX membership fee](#jbx-membership-fee) on funds withdrawn from the network.
+
+  Overflow allowances can be specified in any currency that the [<code>JBPrices</code>](/dev/api/contracts/jbprices) contract has a price feed for.
+
+
+##### Weight
+
+  A number used to determine how many project tokens should be minted and transferred when payments are received during the funding cycle. In other words, weight is the exchange rate between the project token and a currency (defined by a [JBPayoutRedemptionPaymentTerminal3_1_1](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1_1/)) during that funding cycle. Project owners can configure this directly, or allow it to be derived automatically from the previous funding cycle's weight and discount rate.
+
+
+##### Discount rate
+
+  The percent to automatically decrease the subsequent cycle's weight from the current cycle's weight.
+
+  The discount rate is not applied during funding cycles where the weight is explicitly reconfigured.
+
+  [Learn more about discount rates](/dev/learn/glossary/discount-rate)
+
+
+##### Ballot
+
+  The address of a contract that adheres to [<code>IJBFundingCycleBallot</code>](/dev/api/interfaces/ijbfundingcycleballot), which can provide custom criteria that prevents funding cycle reconfigurations from taking effect.
+
+  A common implementation is to force reconfigurations to be submitted at least X days before the end of the current funding cycle, giving the community foresight into any misconfigurations or abuses of power before they take effect.
+
+  A more complex implementation might include on-chain governance.
+
+  [Learn more ballots](/dev/learn/glossary/ballot)
+
+
+##### Reserved rate
+
+  The percentage of newly minted tokens that a project wishes to withhold for custom distributions. The project owner can pre-program a list of addresses, other Juicebox project owners, and contracts that adhere to [<code>IJBSplitAllocator</code>](/dev/api/interfaces/ijbsplitallocator) to split reserved tokens between.
+
+  [Learn more about reserved rate](/dev/learn/glossary/reserved-tokens)
+
+
+##### Redemption rate
+
+  The percentage of a project's treasury funds that can be reclaimed by community members by redeeming the project's tokens during the funding cycle.
+
+  A rate of 100% suggests a linear proportion, meaning X% of treasury overflow can be reclaimed by redeeming X% of the token supply.
+
+  [Learn more about redemption rates](/dev/learn/glossary/redemption-rate)
+
+
+##### Ballot redemption rate
+
+  A project can specify a custom redemption rate that only applies when a proposed reconfiguration is waiting to take effect.
+
+  This can be used to automatically allow for more favorable redemption rates during times of potential change.
+
+
+##### Pause payments, pause distributions, pause redemptions, pause burn
+
+  Projects can pause various bits of its treasury's functionality on a per-funding cycle basis. These functions are unpaused by default.
+
+
+##### Allow minting tokens, allow changing tokens, allow setting terminals, allow setting the controller, allow terminal migrations, allow controller migration
+
+  Projects can allow various bits of treasury functionality on a per-funding cycle basis. These functions are disabled by default.
+
+
+##### Hold fees
+
+  By default, JBX membership fees are paid automatically when funds are distributed out of the ecosystem from a project's treasury. During funding cycles configured to hold fees, this fee amount is set aside instead of being immediately processed. Projects can get their held fees returned by adding the same amount of withdrawn funds back to their treasury. Otherwise, JuiceboxDAO or the project can process these held fees at any point to get JBX at the current rate.
+
+  This allows a project to withdraw funds and later add them back into their Juicebox treasury without incurring fees.<br/>
+
+  This applies to both distributions from the distribution limit and from the overflow allowance.
+
+
+##### Data source
+
+  The address of a contract that adheres to [<code>IJBFundingCycleDataSource</code>](/dev/api/interfaces/ijbfundingcycledatasource), which can be used to extend or override what happens when the treasury receives funds, and what happens when someone tries to redeem their project tokens.
+
+  [Learn more about data sources](/dev/learn/glossary/data-source)
+
+</details>
+
+#### Mint tokens
+
+  By default, a project starts with 0 tokens and mints them when its treasury receives contributions.<br/>
+  A project can mint and distribute tokens on demand if its current funding cycle is configured to allow minting.<br/>
+  By default, project tokens are not ERC-20s and thus not compatible with standard market protocols like Uniswap. At any time, you can issue ERC-20s that your token holders can claim. This is optional.
+
+#### Burn tokens
+
+  Anyone can burn a project's tokens if the project's current funding cycle isn't configured to paused burning.
+
+#### Bring-your-own token
+
+  A project can bring its own token, as long as it adheres to [<code>IJBToken</code>](/dev/api/interfaces/ijbtoken) and uses fixed point accounting with 18 decimals.<br/>
+
+  This allows a project to use ERC-721's, ERC-1155's, or any other custom contract that'll be called upon when the protocol asks to mint or burn tokens.<br/>
+
+  A project can change its token during any of its funding cycles that are explicitly configured to allow changes.<br/>
+
+  By default, the protocol provides a transaction for projects to deploy [<code>JBToken</code>](/dev/api/contracts/jbtoken) ERC-20 tokens.
+
+#### Splits
+
+  A project can pre-program token distributions to splits. The destination of a split can be an Ethereum address, the project ID of another project's Juicebox treasury (the split will allow you to configure the beneficiary of that project's tokens that get minted in response to the contribution), to the <code>allocate(...)</code> function of any contract that adheres to [<code>IJBSplitAllocator</code>](/dev/api/interfaces/ijbsplitallocator), or to the address that initiated the transaction that distributes tokens to the splits.
+
+  [Learn more about splits](/dev/learn/glossary/splits)<br/>
+  [Learn more about allocators](/dev/learn/glossary/split-allocator)
+
+#### JBX membership fee
+
+  All funds distributed by projects from their treasuries to destinations outside of the Juicebox ecosystem (i.e. distributions that do not go to other Juicebox treasuries) will incure a protocol fee. Redemptions from projects using [<code>JBETHPaymentTerminal3_1_1</code>](/dev/api/contracts/or-payment-terminals/jbethpaymentterminal3_1_1/) incur fees if the redemption rate (or ballot redemption rate) is less than 100%. This fee is sent to the JuiceboxDAO treasury which runs on the Juicebox protocol itself (project ID of 1), triggering the same functionality as a payment directly to JuiceboxDAO (by default, minting JBX for the fee payer according to JuiceboxDAO's current funding cycle configuration) from an external source.<br/>
+
+  This fee is adjustable by JuiceboxDAO, with a max value of 5%.<br/>
+
+  Any funds sent from one juicebox treasury to another via splits do not incur fees.
+
+#### Custom treasury strategies
+
+  Funding cycles can be configured to use an [<code>IJBRedemptionDelegate</code>](/dev/api/interfaces/ijbfundingcycledatasource"><code>IJBFundingCycleDataSource</code></a>, <a href="/dev/api/interfaces/ijbpaydelegate"><code>IJBPayDelegate</code></a>, and <a href="/dev/api/interfaces/ijbredemptiondelegate) to extend or override the default protocol's behavior that defines what happens when an address tries to make a payment to the project's treasury, and what happens when someone tries to redeem the project tokens during any particular funding cycle.
+
+  [Learn more about data sources](/dev/learn/glossary/data-source)<br/>
+  [Learn more about delegates](/dev/learn/glossary/delegate)
+
+#### Accept multiple tokens
+
+  A project can specify any number of payment terminal contracts where it can receive funds denominated in various tokens. This allows projects to create distinct rules for accepting ETH, any ERC-20, or any asset in general.
+
+  Anyone can roll their own contract that adheres to [<code>IJBPaymentTerminal</code>](/dev/api/interfaces/ijbpaymentterminal) for projects to use, and a project can migrate funds between terminals that use the same token as it wishes.
+
+#### Forkability and migratability
+
+  A project can migrate its treasury's controller to any other contract that adheres to [<code>IJBController3_1</code>](/dev/api/interfaces/ijbcontroller3_1). This allows a project to evolve into updated or custom treasury dynamics over time as it wishes.
+
+#### Operators
+
+  Addresses can specify other addresses that are allowed to operate certain administrative treasury transactions on its behalf.<br/>
+
+  [Learn more about operators](/dev/learn/glossary/operator)
+
+# Risks
+
+The following are risks that everyone should be aware of before interacting with the protocol. The protocol's design exposes these risks in consequence to its normal operating procedures.
+
+*Also see [Security & Audits](/dev/resources/security).*
+
+#### Smart contract risk
+
+The protocol runs entirely on public smart contracts explained in detail throughout these docs. The Juicebox protocol is public infrastructure running well-known code, all consequences from interacting with networks running the protocol are borne by the entities who sign each transaction. The protocol works according to the specifications outlined in these docs to the extent the code is written and deployed correctly, which is a collective responsibility and not guaranteed. There is a major risk that this is not the case. Please do your own research.
+
+#### Project owner risk
+Ownership of each project on the Juicebox protocol belongs to the address possessing a [`JBProjects`](/dev/api/contracts/jbprojects) NFT with a unique token ID, which also serves as the project's ID. The address that owns this token can reconfigure a project's funding cycles, which empower it to manipulate a project's finances both productively and maliciously.
+
+   * The following values can be reconfigured by a project's owner on a per-funding cycle basis:
+
+     #### Setting a distribution limit and payout splits
+
+     With a distribution limit of zero, all treasury funds belong to the community. Token holders can redeem their tokens to reclaim their share of the treasury at any time, according to the current funding cycle's redemption bonding curve rate.
+
+     A non-zero distribution limit allocates a portion of the treasury for distribution to payout splits.
+
+     A project owner can also change the split allocations that are bound by the funding cycle's distribution limit at any time, unless the split was explicitly locked until a specified date during its creation.
+
+     🟢 <strong>Used productively</strong> this can be used to withdraw funds to a community safe, distribute funds to contributors, channel funds to other projects operating treasuries on the protocol, and more.<br/>
+
+     🔴 <strong>Used maliciously</strong> this can be used to rug the entire treasury into an arbitrary wallet.<br/><br/>
+
+     #### Setting an overflow allowance
+
+     With an overflow allowance of zero, all treasury funds belonging to the community – funds in excess of the distribution limit – cannot be accessed by the project owner. The only way funds can leave the treasury is through token redemptions.
+
+     A non-zero overflow allowance gives the project owner access to a portion of the community's funds for on-demand distribution to arbitrary addresses.
+
+     🟢 <strong>Used productively</strong> this can be used to manage discretionary spending.<br/>
+
+     🔴 <strong>Used maliciously</strong> this can be used to rug the entire treasury into an arbitrary wallet.<br/><br/>
+
+     #### Allowing token minting
+
+     While token minting is not allowed, the only way for new project tokens to be minted and distributed is for the project to receive new funds into its treasury. Tokens will get minted in accordance to the current funding cycle's values.
+
+     If token minting is allowed, an arbitrary number of tokens can be minted and distributed by the project owner, diluting the redemption value of all outstanding tokens.
+
+     🟢 <strong>Used productively</strong> this can be used to premint tokens to members, or satisfy other agreed upon inflationary treasury strategies.<br/>
+
+     🔴 <strong>Used maliciously</strong> this can be used to mint extra tokens and redeem them to reclaim treasury funds into an arbitrary wallet, rugging the entire treasury.<br/><br/>
+
+     #### Setting the funding cycle's weight
+
+     A funding cycle's weight determines how many tokens will be minted and distributed when a treasury receives funds. By default, a funding cycle has the same weight as the cycle that preceded it after applying the preceding cycle's discount rate.
+
+     🟢 <strong>Used productively</strong> this can be used to manage how tokens are issued over time.<br/>
+
+     🔴 <strong>Used maliciously</strong> this can be used to manipulate token issuance, and rug the entire treasury into an arbitrary wallet.<br/><br/>
+
+     #### Allowing changing of project tokens
+
+     While changing tokens isn't allowed, the current project token will be used to satisfy redemptions and new issuance for the duration of the funding cycle.
+
+     If changing tokens is allowed, a new token can replace the role of a previous token for new issuance and redemptions.
+
+     🟢 <strong>Used productively</strong> this can be used to allow projects to augment a previous token strategy with a Juicebox treasury, detach a token from a Juicebox treasury, or create custom token mechanisms associated with its Juicebox treasury.<br/>
+
+     🔴 <strong>Used maliciously</strong> this can be used to cut off a community of token holders from their treasury while using the redemption of a new token to reclaim treasury funds into an arbitrary wallet.<br/><br/>
+
+     #### Pause payments, pause distributions, pause redemptions, pause burn
+
+     While each functionality isn't paused, the standard functionality will be accessible.
+
+     If payments are paused to a project, the protocol will reject any inbound payments. If disitributions are paused for a project, the protocol will reject any request to distribute funds from the treasury. If redemptions are paused, the protocol will reject any request to redeem tokens. If burning is paused, the protocol will reject any request by token holders to burn their tokens.
+
+     🟢 <strong>Used productively</strong> this can be used to allow projects to creatively tune how its treasury can be accessed.<br/>
+
+     🔴 <strong>Used maliciously</strong> this can be used to cut off a community of token holders from standard treasury functionality.<br/><br/>
+
+     #### Custom treasury extensions
+
+     If a project's funding cycles have no data source, delegate, split allocator, or ballot contracts attached, the consequences of each interaction with the protocol are predictable, consistent, and specified within these docs.
+
+     If a project has attached a data source, delegate, split allocator, or ballot contract to a funding cycle, the protocol will access information from them and call functionality within them at specific moments during the execution of various transactions within the regular operation of the protocol.
+
+     🟢 <strong>Used productively</strong> this can be used to customize what happens when a treasury receives funds, under what conditions funds can leave a treasury, and under what conditions reconfigurations can take effect.<br/>
+
+     🔴 <strong>Used maliciously</strong> this can be used to mint excess tokens, rug the entire treasury into an arbitrary wallet, trick users into compromising their individual wallets, create arbitrary unwanted and extractive behavior, or introduce smart contract bugs into otherwise productive extension designs. Do not interact with a project that is using an untrusted extension.<br/><br/>
+
+     #### Add and remove payment terminals
+
+     While setting payment terminals isn't allowed, a project can only receive funds and offer token redemptions from within the payment terminals it has already attached.
+
+     If setting payment terminals is allowed, projects can begin managing inflows and outflows of funds from new contracts, or remove current contracts where they are doing so.
+
+     🟢 <strong>Used productively</strong> this can be used to begin accepting new tokens into a treasury, or creating totally custom treasury behavior.<br/>
+
+     🔴 <strong>Used maliciously</strong> this can be used to cut off a community of token holders from their treasury, create arbitrary unwanted and extractive behavior, or introduce smart contract bugs. Do not interact with a projects using untrusted payment terminals.<br/><br/>
+
+     #### Setting the controller
+
+     While setting the controller isn't allowed, a project can only operate according to the rules of its currently set controller.
+
+     If setting the controller is allowed, projects can bring new rules according to which it'll operate.
+
+     🟢 <strong>Used productively</strong> this can be used to create totally custom treasury behavior.<br/>
+
+     🔴 <strong>Used maliciously</strong> this can be used to cut off a community of token holders from their treasury, create arbitrary unwanted and extractive behavior, or introduce smart contract bugs. Do not interact with a projects using an untrusted controller.<br/><br/>
+
+     #### Migrating funds between terminals
+
+     While migrating funds between terminals isn't allowed, a project's funds in a terminal cannot be migrated to another terminal which may have alternate constraints.
+
+     If migrating funds between terminals is allowed, a project can move its funds from one terminal to another.
+
+     🟢 <strong>Used productively</strong> this can be used to move a treasury into a totally custom environment, or to trusted upgraded versions of the protocol.<br/>
+
+     🔴 <strong>Used maliciously</strong> this can be used to cut off a community of token holders from their treasury, create arbitrary unwanted and extractive behavior, or introduce smart contract bugs.<br/><br/>
+
+#### Undistributed reserved rate risk
+
+:::info
+This risk only applies to projects which have not yet upgraded to [`JBController3_1`](/dev/api/contracts/or-controllers/jbcontroller3_1/). Newly deployed projects don't have this risk.
+:::
+
+If a project enters a funding cycle with a different reserved rate than the preceding cycle while still having outstanding reserved tokens to distribute, the quantity of distributable tokens will change to reflect the new reserved rate.
+
+   For example, if in FC#1 a project has a reserved rate of 10% and 9,000 tokens are minted, 1,000 tokens (10% of the total) are reserved to be distributed to the configured reserved token receivers. If FC#2 with a reserved rate of 50% begins without the reserved tokens having been distributed, there will now be 9,000 tokens (50% of the total) reserved to be distributed to the configured reserved token receivers.
+
+   Distributing reserved tokens is a public action – anyone can send a transaction to do this.
+
+#### Price oracle risk
+
+The protocol uses price oracles to normalize prices throughout the its standard operations. These oracles are smart contract mechanisms external to the core Juicebox protocol. Projects using multiple currencies for certain functionality bare the risk of these external oracle systems misreporting price values, or halting all together. To avoid this risk, projects should account distribution limits in the same currency as is being collected.
+
+#### Large number risk
+
+Under certain circumstances, token holders attempting to burn token amounts greater than (2^256 / 2) - 1, or 57896044618658097711785492504343953926634992332820282019728792003956564819968, will have their transactions reverted due to an arithmetic underflow.
+
+# Administration
+
+The protocol has very minimal global governance. The following are the only global functions that can be accessed by a privileged administrating address, initially the [JuiceboxDAO multisig](https://gnosis-safe.io/app/eth:0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e/home), a 9 of 14 multisig voted in by JBX members:
+
+* **[`JBProjects.setTokenUriResolver(...)`](/dev/api/contracts/jbprojects/write/settokenuriresolver.md)**<br/>
+  Allows the owner of the [`JBProjects`](/dev/api/contracts/jbprojects/README.md) contract to provide and change the [`IJBTokenUriResolver`](/dev/api/interfaces/ijbtokenuriresolver.md) used to resolve metadata for project NFTs in its [`tokenURI(...)`](/dev/api/contracts/jbprojects/read/tokenuri.md) function.
+  <br/>
+* **[`JBPrices.addFeedFor(...)`](/dev/api/contracts/jbprices/write/addfeed.md)**<br/>
+  Allows the owner of the [`JBPrices`](/dev/api/contracts/jbprices/README.md) contract to add new price feeds used to convert amounts denoted in one currency to another. Once added, a price feed cannot be removed.
+  <br/>
+* **[`JBDirectory.setIsAllowedToSetFirstController(...)`](/dev/api/contracts/jbdirectory/write/setisallowedtosetfirstcontroller.md)**<br/>
+  Allows the owner of the [`JBDirectory`](/dev/api/contracts/jbdirectory/README.md) contract to add/remove addresses that can set a project's first controller on its behalf.
+  <br/>
+* **[`JBETHPaymentTerminal3_1_1.setFee(...)`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1_1/#setfee)**<br/>
+  Allows the owner of the [`JBETHPaymentTerminal3_1_1`](/dev/api/contracts/or-payment-terminals/jbethpaymentterminal3_1_1/) (or any other terminal inheriting from [`JBPayoutRedemptionPaymentTerminal3_1_1`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1_1/)) to change the protocol fee incurred when projects distribute their treasury funds outside of the protocol ecosystem or when funds are redeemed from a project with a redemption rate less than 100%. The max fee is 5%.
+  <br/>
+* **[`JBETHPaymentTerminal3_1_1.setFeeGauge(...)`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1_1/#setfeegauge)**<br/>
+  Allows the owner of the [`JBETHPaymentTerminal3_1_1`](/dev/api/contracts/or-payment-terminals/jbethpaymentterminal3_1_1/) (or any other terminal inheriting from [`JBPayoutRedemptionPaymentTerminal3_1_1`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1_1/)) to change the fee gauge used to provide fee discounts on a per-project basis.
+  <br/>
+* **[`JBETHPaymentTerminal3_1_1.setFeelessAddress(...)`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1_1/#setfeelessaddress)**<br/>
+  Allows the owner of the [`JBETHPaymentTerminal3_1_1`](/dev/api/contracts/or-payment-terminals/jbethpaymentterminal3_1_1/) (or any other terminal inheriting from [`JBPayoutRedemptionPaymentTerminal3_1_1`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1_1/)) to add/remove any other address used by other projects to/from a list of address to which distributed funds can be sent without incurring protocol fees, and from which funds can be added back to the project's balance without refunding held fees.
+* **[`JBETHPaymentTerminal3_1_1.processFees(...)`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1_2/#processfees)**<br/>
+Allows the owner of the [`JBETHPaymentTerminal3_1_1`](/dev/api/contracts/or-payment-terminals/jbethpaymentterminal3_1_1/) (or any other terminal inheriting from [`JBPayoutRedemptionPaymentTerminal3_1_1`](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1_1/)) to process any project's [held fees](/dev/learn/glossary/hold-fees/).
+  <br/>
+
+Ownership for each contract is managed independently and can be transferred to a new owner by the current owner.
+
+# Users
+
+
+# Project Setup Examples
+
+The examples below demonstrate how projects have used Juicebox to achieve their goals.
+
+Before looking at the examples below, read the success stories on [juicebox.money](https://juicebox.money):
+
+1. [ConstitutionDAO](https://juicebox.money/success-stories/constitutiondao): How a group of friends on the internet raised over $46 million to buy the U.S. Constitution.
+2. [MoonDAO](https://juicebox.money/success-stories/moondao): How a community of space enthusiasts raised $8.3 million to send a DAO member to space on a Blue Origin rocket.
+3. [SharkDAO](https://juicebox.money/success-stories/sharkdao): How SharkDAO raised over 1,000 ETH to buy 6 Nouns NFTs and become the largest sub-DAO of Nouns DAO.
+4. [StudioDAO](https://juicebox.money/success-stories/studiodao): How StudioDAO is building the first million person movie studio on Juicebox.
+
+## Crowdfunding
+
+*Trying to raise as much funding as possible – for an auction, a charitable cause, or something else.*
+
+### ConstitutionDAO
+
+[ConstitutionDAO](https://juicebox.money/p/constitutiondao) tried to buy a copy of the U.S. Constitution at auction, and was able to raise $49.6m to do so by using the following strategies:
+
+1. Before launching the project, ConstitutionDAO had a Discord community with over 2,000 members and had gained the support of several well-established figures on Twitter – as always, sharing your narrative and building a community is an important first step.
+2. For their first cycle, ConstitutionDAO had unlimited payouts with an unlocked cycle (no duration) and no edit deadline. This gave ConstitutionDAO members the flexibility to move funds or update the project however they needed to as the auction evolved, and the community trusted ConstitutionDAO because of the involvement of several public figures.
+3. During the auction, ConstitutionDAO pulled the project's funds into the Gnosis Safe wallet which owned the project – this allowed them to bid on the Constitution.
+4. ConstitutionDAO didn't win the auction. After some [brainstorming](/updates/constitutiondao-refund-brainstorm/), the community decided to perform a refund through Juicebox. Funds were transferred back to the project, payouts were set to 0, and the redemption rate was set to 100% – everyone who wanted to reclaim their funds could burn their $PEOPLE tokens to do so. The NFT which represented the project's ownership was then sent to a burn address (a wallet nobody has access to), guaranteeing that no further changes could be made to the project.
+
+To learn more about ConstitutionDAO, read [this blog post](/blog/constitutiondao-config/) and visit [constitutiondao.com](https://www.constitutiondao.com/).
+
+### ConstitutionDAO 2
+
+One year after the original ConstitutionDAO, [ConstitutionDAO 2](https://juicebox.money/v2/p/350) raised 233.2 ETH (worth TODO) in another bid at buying the Constitution. Unlike the original project, which used the $PEOPLE token, ConstitutionDAO 2 used NFTs to raise funds.
+
+The project had four NFT tiers with custom art: one priced at 0.1 ETH, one priced at 1 ETH, another priced at 10 ETH, and a final NFT priced at 100 ETH. While the project raised funds, it used a similar strategy to ConstitutionDAO – unlimited payouts, no deadline, and an unlocked cycle for maximum flexibility.
+
+When Sotheby's unexpectedly postponed the auction, ConstitutionDAO 2 gave their community two options:
+
+1. For those who wanted to reclaim their funds and move on, the project set their payouts to 0 and enabled NFT redemptions with a redemption rate of 100% – this meant people could burn their NFTs for a full refund.
+2. Those interested in continued participation were given the option to burn their ConstitutionDAO 2 NFT to claim membership in another group called UnumDAO.
+
+Alongside their Juicebox campaign, ConstitutionDAO 2 raised funds with [Nucleo](https://www.gonucleo.xyz/), a private multisig built on Aztec (a privacy-oriented zk-rollup). To learn more about this and project, visit [unumdao.org](https://unumdao.org/).
+
+ConstitutionDAO 2 built a website where people could learn about and support the project, and promoted the project across various social media platforms – in particular, Twitter and Discord.
+
+### Also See
+
+- [AssangeDAO](https://juicebox.money/p/assangedao), a group which raised ~$52.4m to purchase a Murat Pak NFT, the revenues of which went towards the legal defense of Julian Assange.
+- [SpiceDAO](https://juicebox.money/p/spicedao), a group which raised ~$11.6m to purchase a copy of Jodorowski's screenplay for *Dune*.
+- [LunchDAO](https://juicebox.money/p/lunchdao), a group which raised ~$2.4m to purchase a lunch with Warren Buffet.
+
+## Bootstrapping a Project
+
+*Raising funds to get a project started – using Juicebox as an alternative to loans or venture capital.*
+
+See:
+
+- [MoonDAO](https://juicebox.money/p/moondao), a DAO which sent one of their members into space and is funding decentralized access to space and space research.
+- [PandaDAO](https://juicebox.money/p/pandadao) was a developer DAO which created several NFT projects and tools for DAOs.
+- [DomainDAO](https://juicebox.money/p/domaindao) is attempting to establish a .dao TLD (top-level domain).
+
+## Running a Project Over Time
+
+*Using Juicebox to run a project with ongoing payroll, token issuance, and revenues.*
+
+### JuiceboxDAO
+
+[JuiceboxDAO](https://juicebox.money/@juicebox), the group which builds and maintains the Juicebox protocol and the ecosystem around it, is funded and managed on Juicebox – the DAO operates the first project on each version of the protocol, and is funded through direct contributions and [protocol fees](/dao/reference/jbx/#about-fees).
+
+[JuiceboxDAO v1](https://juicebox.money/p/juicebox) started off with a 30 day cycle, and a 7-day edit deadline – this conservative approach gave supporters confidence that they would be able to respond to changes to the project well in advance. The project also had a 10% reserved rate, a 60% redemption rate, and a **20% issuance reduction rate**. This issuance reduction rate (a per-cycle increase to token price) was extremely large – this gave a strong incentive to support the project within its first cycle instead of supporting it later on. The relatively low redemption rate was another incentive in favor of supporting the projects – contributors received most of the tokens issued by their payments.
+
+Additionally, the project had payouts to contributors from day one. This set a tone of rewarding contributors, which attracted developers and other people interested in contributing to the community.
+
+Later cycles operated on a shorter 14-day cadence, synchronized with the DAO's 14 day [Governance Process](/dao/process/). JuiceboxDAO uses project token voting on [Snapshot](https://snapshot.org) to make decisions, and implements governance outcomes through its [Gnosis Safe](https://app.safe.global/apps/open?safe=eth:0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e).
+
+The DAO collaborates in its [Discord server](https://discord.gg/juicebox), and reaches new members on [Twitter](https://twitter.com/juiceboxETH).
+
+### TileDAO
+
+The [TileDAO](https://juicebox.money/p/tiles) project was funded by primary sales from the [Tiles NFT collection](https://tiles.art/#/). Both the DAO and the NFT collection were created by [@peripheralist](https://twitter.com/peripheralist), and the project was used to manage grants, payouts, and event funding.
+
+The project was owned by a Gnosis Safe multisig, and used 7-day cycles, a 50% redemption rate, and paid contributors from the beginning. This allowed the project to quickly fund and iterate upon new ideas. The project used a 10% reserved rate and a 0% issuance reduction rate when it was launched, but token issuance tapered off over time as the reserved rate was raised to 34% and the issuance reduction rate was raised to 2%. This 2% reduction in token issuance each cycle compounded quickly due to the short cycles – within several months, token issuance was reduced to less than half its original rate.
+
+The project grew through organic traction [on Twitter](https://twitter.com/Tile_DAO), and community members joined a private Discord server for verified NFT holders. TileDAO went on to run several events, create murals, and launch a second NFT project called [Dreamland](https://tiles.art/#/dreamland).
+
+### Also See
+
+- [Peel](https://juicebox.money/@peel), the group of frontend developers building [juicebox.money](https://juicebox.money).
+- [StudioDAO](https://juicebox.money/@studiodao), a group building a decentralized movie studio owned by filmmakers and fans.
+- [Slice](https://juicebox.money/p/slice), a dapp which allows people to sell items, mint NFTs, and split payments from a decentralized store.
+
+## Buying NFTs
+
+*Although this is conceptually similar to [Crowdfunding](#crowdfunding), many people use Juicebox to group-buy NFTs from popular collections.*
+
+See:
+
+- [SharkDAO](https://juicebox.money/p/sharkdao) raised 1,019 ETH to buy 6 Nouns NFTs and become the largest sub-DAO of Nouns DAO.
+- [Gobbler's Union](https://juicebox.money/@gobblerunion) raised 286 ETH to buy [Art Gobblers](https://artgobblers.com/) NFTs.
+- [Merge DAO](https://juicebox.money/p/mergedao) raised 198 ETH to buy Murat Pak's [Merge](https://www.niftygateway.com/collections/pakmerge) NFTs.
+
+
+:::info
+We also have a [video tutorial](https://www.youtube.com/watch?v=2s2OyxG_rvo). If you need help, [join our Discord](https://discord.gg/juicebox) or [contact onboarding](https://juicebox.money/contact).
+:::
+
+To begin, visit [juicebox.money/create](https://juicebox.money/create). You will need to have an Ethereum wallet and some ETH to pay for gas fees.
+
+- If you need an Ethereum wallet, visit [Metamask.io](https://metamask.io/) to set one up.
+- To experiment before committing to mainnet, you can use the [Goerli Testnet juicebox.money](https://goerli.juicebox.money/).
+
+What to know beforehand:
+
+- You can edit all of your project's rules over time — this allows your project to evolve as your community does.
+- When you create a Juicebox project, the project's NFT is minted to your wallet. Only the holder of that NFT (the project owner) can edit the project's rules. Nobody else can edit your project's rules — not even JuiceboxDAO.
+- This guide is based on [juicebox.money](https://juicebox.money/create). If you're setting up your project somewhere else, the steps might be different.
+
+## Project Settings
+
+#### Project details
+
+Your project's name, logo, and description. Tell people what your project is about, and why they should support it! You can edit these later. For an animated logo, upload a `.gif`.
+
+#### Cycles
+
+With unlocked cycles, you can edit your project's rules at any time.
+
+With locked cycles, you can lock your project's rules for a period of time (like 3 minutes, 2 years, or 14 days), helping you build trust with your supporters.
+
+If you try to edit your rules in the middle of a locked cycle, the edits get *queued* for the next cycle. In other words: instead of going into effect immediately, they go into effect when your next cycle starts. If your don't queue a new cycle, Juicebox copies your current rules over.
+
+*How to choose:* If you **need** the flexibility, you can use unlocked cycles — otherwise, locked cycles are the better option for building confidence with your supporters.
+
+#### Payouts
+
+The amount of ETH which can be paid out from your project during the cycle. Payouts reset each cycle.
+
+- Having no payouts means you can't pay out any ETH.
+- 3 ETH of payouts lets you pay out 3 ETH.
+- $4,500 of payouts lets you pay out $4,500 worth of ETH.
+- "Unlimited payouts" lets you pay out all of the ETH in the project.
+
+The ETH not needed for a cycle's payouts will:
+
+1. Serve as a runway. Your payouts reset every cycle, so leaving ETH in the project gives you a head-start for next cycle.
+2. Allow your supporters to redeem their tokens to receive some ETH back from the project. You can choose the amount of ETH they receive by setting up a [redemption rate](#redemption-rate).
+
+*How to choose:* The lower you set your payouts, the more ETH will be available for redemptions, making supporters more likely to trust your project — and if you start with **no** payouts, you can offer your supporters a full refund. Keep in mind that payouts are the only way for you to access funds. If you need more flexibility, set this to a higher amount.
+
+#### Payout Recipients
+
+This is where your payouts are sent. By default, payouts go to your wallet (the project owner), but you can set up any number of Ethereum wallets or Juicebox projects to pay ETH to.
+
+You can define payouts by percentage (50% of funds go to `vitalik.eth`) or by amount (3 ETH goes to the `@peel` project, or $2,500 worth of ETH goes to `jango.eth`). You can use these payouts to manage your organization's entire payroll — JuiceboxDAO does.
+
+:::info
+Payouts to wallets (like `vitalik.eth`) will incur a 2.5% fee, which is paid to JuiceboxDAO. In exchange, your project will receive JuiceboxDAO's project token ($JBX), allowing you to govern the protocol. You can also redeem these tokens to reclaim some of the fees. Payouts to Juicebox projects don't incur any fees. To learn more, read [JBX & Fees](/dao/reference/jbx/).
+:::
+
+#### Edit deadline
+
+Edits must be made before this deadline. This gives token holders time to verify the edits before they take effect, and assures them that you can't edit the cycle at the last second.
+
+For example: with a 3-day edit deadline, edits must be made at least 3 days before a cycle starts. Otherwise, those edits won't take effect until the cycle *after* the next one.
+
+*How to choose:* The longer your edit deadline, the easier it will be for supporters to check your edits, but the harder it will be to move quickly. A 3-day deadline is a good starting point for most projects.
+
+## Token
+
+:::info
+Project tokens are not ERC-20 tokens by default. Once you deploy your project, you can issue an ERC-20 for your supporters to claim, making them compatible with tools like Uniswap. This is optional.
+:::
+
+#### Total issuance rate
+
+The total number of tokens issued when this project is paid 1 ETH. Some of these tokens may be reserved by the project, and the rest are sent to the payer.
+
+*How to choose:* The protocol calculates everything proportionately, so this number doesn't matter too much. 1,000,000 is a good starting point for most projects.
+
+#### Reserved rate
+
+As tokens are issued, you can set aside a percentage of them for the wallets and Juicebox projects of your choosing. With a reserved rate of 20%, 20% of tokens are redirected towards whoever is on your list.
+
+*How to choose:* If you need to offer full refunds, set this to 0%. Reserved rates can vary widely — projects set this anywhere from 0% to 50%.
+
+#### Issuance reduction rate
+
+This makes your token more expensive over time. With an issuance reduction rate of 5%, your tokens will get 5% more expensive each cycle, even if you don't edit the cycle.
+
+*How to choose:* The issuance reduction rate can have a dramatic effect: the higher you set it, the more you reward earlier supporters over later ones. Most projects will keep this disabled, or use a rate from 1-3%.
+
+#### Redemption rate
+
+Supporters can burn their tokens to reclaim some of the ETH not needed for payouts. The amount of ETH they receive depends on the redemption rate.
+
+At 100%, redemptions are 1:1 — somebody redeeming 10% of all project tokens will receive 10% of the overflow. At 0%, redemptions are turned off. Anywhere else, redemptions take place along a bonding curve, meaning earlier redeemers will get less ETH per token redeemed, and later redeemers will get more.
+
+The lower this rate is, the less of an incentive there is to redeem tokens before others.
+
+*How to choose:* To start, you should keep this rate at 100% (redemptions on) or 0% (redemptions off), and then adjust from there.
+
+:::info
+Redemptions incur a 2.5% fee while the redemption rate is less than 100%. This fee is paid to JuiceboxDAO. In exchange, your project will receive JuiceboxDAO's project token ($JBX), allowing you to govern the protocol. You can also redeem these tokens to reclaim some of the fees. To learn more, read [JBX & Fees](/dao/reference/jbx/).
+:::
+
+#### Owner token minting
+
+If this is enabled, you (the project owner) can issue tokens on demand.
+
+*How to choose:* This will appear risky to supporters, so keep this off unless you're completely sure you need to enable it.
+
+## NFTs
+
+Juicebox also lets you reward your supporters with one or more custom NFT tiers:
+
+- **You can use NFTs for redemption instead of using tokens.**
+- You can set up tiers when creating your project, and can also add or remove tiers over time.
+- Each tier can have unique metadata, as well as a unique price, maximum supply, reserved rate, and governance voting power.
+
+You can use NFTs for off-chain governance with a tool like [Snapshot](/user/resources/snapshot/), or for on-chain governance with Governor Contracts — Juicebox NFTs adhere to the [`ERC721Votes`](https://docs.openzeppelin.com/contracts/4.x/api/token/erc721#ERC721Votes) standard. [*Learn more about on-chain governance.*](#on-chain-governance)
+
+:::info
+These NFTs are a great way to create an NFT collection for your artwork — some projects use Juicebox for this alone, turning off tokens entirely.
+:::
+
+:::caution
+Adding NFTs may increase the gas fee for creating your project.
+:::
+
+#### Tiers
+
+You need to have at least one tier for your project to have NFTs. To add a tier, click `Add NFT`. Each tier can have:
+
+- A unique image, name, description, and link.
+- A price. If this is set to 1 ETH, somebody who pays your project 1 ETH will receive 1 ETH worth of project tokens **and** an NFT.
+- A limited supply — the maximum number of NFTs that can be minted from this tier. You can use this to encourage people to be within the first 50 supporters, or you can make an expensive 1/1 NFT. Each tier can have a different supply.
+
+You can also set advanced options:
+
+- **Reserved NFTs.** For every `N` NFTs minted, mint an extra one to the address of your choosing. This can be a helpful way to reward your collaborators.
+- **Voting weight.** Give each tier a custom voting weight, which can be used for off-chain governance (with a tool like [Snapshot](/user/resources/snapshot/), or for on-chain governance.
+- **External link.** Link minters to your project's website, Discord, or somewhere else.
+
+#### Collection Settings
+
+These settings apply to all of your NFTs:
+
+- "Collection Name", "Collection Symbol", and "Collection Description" are each a different piece of collection metadata which will be displayed in wallets and on websites like [Zora](https://zora.co/) and [OpenSea](https://opensea.io/).
+- The **Payment Success Pop-up** is an optional pop-up shown when people mint an NFT. You can use this to direct contributors to your project's website, Discord, or somewhere else.
+
+#### On-chain Governance
+
+:::info
+Snapshot strategies can read each NFT's voting power, even if your project is set to `No on-chain governance`. See [*Using Snapshot With Juicebox*](/user/resources/snapshot/).
+:::
+
+Juicebox NFTs adhere to the [`ERC721Votes`](https://docs.openzeppelin.com/contracts/4.x/api/token/erc721#ERC721Votes) standard, meaning you can use them with on-chain governance tools like [Tally](https://tally.xyz/).
+
+This works by tracking an NFT's ownership over time as it is minted, burned, traded, or transferred, meaning that you can calculate the voting power of any address at any time (even for times in the past).
+
+[juicebox.money](https://juicebox.money) lists three on-chain governance options:
+
+| Option | Description |
+| --- | --- |
+| **No on-chain governance** | Your project won't track voting power over time. |
+| **Standard on-chain governance** | Track the total voting power of each address over time. |
+| **Tier-based on-chain governance** | Instead of tracking total voting power, the contract tracks each address' voting power within each NFT tier over time. This can be useful for running multiple voting processes out of one treasury, or for complex on-chain governance. |
+
+
+:::info
+If you're looking for something else, ask us on [Discord](https://discord.gg/juicebox).
+:::
+
+## Resources
+
+| Name/Link | Description |
+| --- | --- |
+| [Brand Guidelines PDF](/pdf/Juicebox-brand-guidelines-2023.pdf) | Our updated brand guidelines. |
+| [Brand Refresh on Figma](https://www.figma.com/file/jHNCnyxgB0DVLPTwmbOohq/JBM-Brand-Refresh-Website-2023?node-id=63%3A10352&t=EQbu5gdTfNTJSjvr-1) | Design files, style guide, assets and more. |
+| [Style Guide](https://www.figma.com/file/jHNCnyxgB0DVLPTwmbOohq/JBM-Brand-Refresh-Website-2023?node-id=41%3A12214&t=EQbu5gdTfNTJSjvr-1) | Our updated style guide. |
+| [WAGMI Studios Google Drive](https://drive.google.com/drive/folders/1-06MIi6xI9PjM3ENoUsxe2R-aQe4-uL0) | Juicebox artwork created by [WAGMI Studios](https://juicebox.money/@wagmi-studios). |
+| [Contact Us](https://juicebox.money/contact) | Have questions or inquiries? Get in touch with us. |
+| [Our PFP](/img/site/jb-pfp.png) | Our profile picture on Discord and other platforms. |
