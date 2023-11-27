@@ -8,7 +8,7 @@ class DoesGeneratorCog(GeneratorCog):
         lora = LoraInput(
             lora_id="6558ee435e91d48ad780de92",
             lora_strength=0.65,
-            lora_trigger="Does",
+            lora_trigger="does",
             require_lora_trigger=True,
         )
         super().__init__(bot, lora)

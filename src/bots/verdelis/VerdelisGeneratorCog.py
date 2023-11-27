@@ -6,9 +6,9 @@ from cogs.GeneratorCog import GeneratorCog, LoraInput
 class VerdelisGeneratorCog(GeneratorCog):
     def __init__(self, bot: commands.bot) -> None:
         lora = LoraInput(
-            lora_id="6558ee435e91d48ad780de92",
+            lora_id="656434c2730b5e00f6004bae",
             lora_strength=0.65,
-            lora_trigger="Verdelis",
+            lora_trigger="verdelis",
             require_lora_trigger=True,
         )
         super().__init__(bot, lora)
