@@ -24,6 +24,7 @@ ALLOWED_GUILDS_TEST = [int(g) for g in ALLOWED_GUILDS_TEST]
 ALLOWED_CHANNELS = [int(c) for c in os.getenv("ALLOWED_CHANNELS", "").split(",")]
 
 EDEN_API_URL = os.getenv("EDEN_API_URL")
+EDEN_FRONTEND_URL = EDEN_API_URL.replace("api", "app")
 EDEN_API_KEY = os.getenv("EDEN_API_KEY")
 EDEN_API_SECRET = os.getenv("EDEN_API_SECRET")
 
@@ -37,11 +38,7 @@ class LoraInput:
 
 
 class GeneratorCog(commands.Cog):
-    def __init__(
-        self, 
-        bot: commands.bot, 
-        lora: Optional[LoraInput] = None
-    ) -> None:
+    def __init__(self, bot: commands.bot, lora: Optional[LoraInput] = None) -> None:
         self.bot = bot
         self.eden_credentials = SignInCredentials(
             apiKey=EDEN_API_KEY, apiSecret=EDEN_API_SECRET
@@ -67,6 +64,7 @@ class GeneratorCog(commands.Cog):
 
         generation_loop_input = GenerationLoopInput(
             api_url=EDEN_API_URL,
+            frontend_url=EDEN_FRONTEND_URL,
             message=message,
             start_bot_message=start_bot_message,
             source=source,
@@ -132,6 +130,7 @@ class GeneratorCog(commands.Cog):
 
         generation_loop_input = GenerationLoopInput(
             api_url=EDEN_API_URL,
+            frontend_url=EDEN_FRONTEND_URL,
             message=message,
             start_bot_message=start_bot_message,
             source=source,
@@ -185,6 +184,7 @@ class GeneratorCog(commands.Cog):
 
         generation_loop_input = GenerationLoopInput(
             api_url=EDEN_API_URL,
+            frontend_url=EDEN_FRONTEND_URL,
             message=message,
             start_bot_message=start_bot_message,
             source=source,
@@ -254,6 +254,7 @@ class GeneratorCog(commands.Cog):
 
         generation_loop_input = GenerationLoopInput(
             api_url=EDEN_API_URL,
+            frontend_url=EDEN_FRONTEND_URL,
             message=message,
             start_bot_message=start_bot_message,
             source=source,
@@ -334,6 +335,7 @@ class GeneratorCog(commands.Cog):
 
         generation_loop_input = GenerationLoopInput(
             api_url=EDEN_API_URL,
+            frontend_url=EDEN_FRONTEND_URL,
             message=message,
             start_bot_message=start_bot_message,
             source=source,
