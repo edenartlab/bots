@@ -243,7 +243,7 @@ async def generation_loop(
                     )
                 )
 
-                if is_connected:
+                if not is_connected:
                     view.add_item(
                         LinkButton(
                             "Link your Discord account to Eden",
