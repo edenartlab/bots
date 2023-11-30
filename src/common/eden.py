@@ -248,7 +248,6 @@ async def generation_loop(
                         LinkButton(
                             "Link your Discord account to Eden",
                             f"{frontend_url}/tools",
-                            button_style=ButtonStyle.primary,
                         )
                     )
 
