@@ -108,7 +108,7 @@ class GeneratorCog(commands.Cog):
         source = get_source(ctx)
         large, fast = False, False
         width, height, upscale_f = self.get_dimensions(aspect_ratio, large)
-        steps = 15 if fast else 40
+        steps = 15 if fast else 35
 
         config = StableDiffusionConfig(
             generator_name="create",
@@ -116,7 +116,7 @@ class GeneratorCog(commands.Cog):
             width=width,
             height=height,
             steps=steps,
-            guidance_scale=7.5,
+            guidance_scale=8,
             upscale_f=upscale_f,
             seed=random.randint(1, 1e8),
         )
@@ -172,7 +172,7 @@ class GeneratorCog(commands.Cog):
             width=width,
             height=height,
             steps=steps,
-            guidance_scale=7.5,
+            guidance_scale=8,
             seed=random.randint(1, 1e8),
         )
 
@@ -321,7 +321,7 @@ class GeneratorCog(commands.Cog):
             height=height,
             sampler="euler",
             steps=steps,
-            guidance_scale=7.5,
+            guidance_scale=8,
             seed=random.randint(1, 1e8),
         )
 
@@ -359,11 +359,11 @@ class GeneratorCog(commands.Cog):
 
     def get_dimensions(self, aspect_ratio, large):
         if aspect_ratio == "square":
-            width, height = 768, 768
+            width, height = 1024, 1024
         elif aspect_ratio == "landscape":
-            width, height = 960, 640
+            width, height = 1280, 768
         elif aspect_ratio == "portrait":
-            width, height = 640, 960
+            width, height = 768, 1280
         upscale_f = 1.4 if large else 1.0
         return width, height, upscale_f
 
