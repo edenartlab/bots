@@ -68,6 +68,7 @@ class ChatMessage:
 @dataclass
 class GenerationLoopInput:
     api_url: str
+    frontend_url: str
     start_bot_message: str
     source: SourceSettings
     config: any

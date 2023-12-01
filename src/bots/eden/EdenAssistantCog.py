@@ -1,6 +1,6 @@
 from pathlib import Path
 from discord.ext import commands
-from cogs.AssistantCog import AssistantCog, LoraInput
+from cogs.AssistantCog import AssistantCog
 from common.models import EdenAssistantConfig
 
 

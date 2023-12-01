@@ -23,6 +23,7 @@ from common.models import (
 ALLOWED_CHANNELS = [int(c) for c in os.getenv("ALLOWED_CHANNELS", "").split(",")]
 
 EDEN_API_URL = os.getenv("EDEN_API_URL")
+EDEN_FRONTEND_URL = EDEN_API_URL.replace("api", "app")
 EDEN_API_KEY = os.getenv("EDEN_API_KEY")
 EDEN_API_SECRET = os.getenv("EDEN_API_SECRET")
 
@@ -37,9 +38,10 @@ class LoraInput:
 
 class AssistantCog(commands.Cog):
     def __init__(
-        self, bot: commands.bot, 
+        self,
+        bot: commands.bot,
         assistant_config: EdenAssistantConfig,
-        lora: Optional[LoraInput] = None
+        lora: Optional[LoraInput] = None,
     ) -> None:
         self.bot = bot
         self.eden_credentials = SignInCredentials(
@@ -87,8 +89,7 @@ class AssistantCog(commands.Cog):
                 }
 
                 response = self.assistant(
-                    assistant_message, 
-                    session_id=str(message.author.id)
+                    assistant_message, session_id=str(message.author.id)
                 )
                 reply = response.get("message")[:2000]
                 reply_message = await message.reply(reply)
@@ -119,10 +120,8 @@ class AssistantCog(commands.Cog):
                     ]
                 if not config.get("seed"):
                     config["seed"] = random.randint(1, 1e8)
-                    
-                config = StableDiffusionConfig(
-                    generator_name=mode, **config
-                )
+
+                config = StableDiffusionConfig(generator_name=mode, **config)
 
                 config = self.add_lora(config)
 
@@ -137,6 +136,7 @@ class AssistantCog(commands.Cog):
 
                 generation_loop_input = GenerationLoopInput(
                     api_url=EDEN_API_URL,
+                    frontend_url=EDEN_FRONTEND_URL,
                     message=reply_message,
                     start_bot_message=original_text,
                     source=source,

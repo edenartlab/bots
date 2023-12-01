@@ -10,6 +10,13 @@ import requests
 from common.models import GenerationLoopInput, SourceSettings
 from common.models import SignInCredentials
 
+from discord import ui, ButtonStyle
+
+
+class LinkButton(ui.Button):
+    def __init__(self, label, url):
+        super().__init__(label=label, url=url, style=ButtonStyle.link)
+
 
 async def request_creation(
     api_url: str, credentials: SignInCredentials, source: SourceSettings, config
@@ -32,7 +39,9 @@ async def request_creation(
     }
 
     # response = requests.post(f"{api_url}/tasks/create", json=request, headers=header)
-    response = requests.post(f"{api_url}/admin/tasks/create", json=request, headers=header)
+    response = requests.post(
+        f"{api_url}/admin/tasks/create", json=request, headers=header
+    )
 
     check, error = await check_server_result_ok(response)
 
@@ -43,6 +52,31 @@ async def request_creation(
     task_id = result["taskId"]
 
     return task_id
+
+
+async def query_user_discord_connection(
+    api_url: str, credentials: SignInCredentials, discord_user_id: str
+):
+    header = {
+        "x-api-key": credentials.apiKey,
+        "x-api-secret": credentials.apiSecret,
+    }
+
+    response = requests.get(
+        f"{api_url}/creators", params={"discordId": discord_user_id}, headers=header
+    )
+
+    check, error = await check_server_result_ok(response)
+    if not check:
+        raise Exception(error)
+
+    result = response.json()
+    if not result:
+        return False
+
+    is_connected = result.get("docs") and len(result["docs"]) > 0
+
+    return is_connected
 
 
 async def poll_creation_queue(
@@ -164,6 +198,7 @@ async def generation_loop(
     eden_credentials: SignInCredentials,
 ):
     api_url = loop_input.api_url
+    frontend_url = loop_input.frontend_url
     start_bot_message = loop_input.start_bot_message
     parent_message = loop_input.parent_message
     message = loop_input.message
@@ -194,20 +229,39 @@ async def generation_loop(
                     file_update=file,
                 )
             if result["status"] == "completed":
+                is_connected = await query_user_discord_connection(
+                    api_url, eden_credentials, source.author_id
+                )
                 file, output_url = await get_file_update(
                     result, is_video_request, prefer_gif
                 )
+                view = ui.View()
+                view.add_item(
+                    LinkButton(
+                        "View this on Eden",
+                        f"{frontend_url}/creations/{result['creation']['_id']}",
+                    )
+                )
+
+                if not is_connected:
+                    view.add_item(
+                        LinkButton(
+                            "Link your Discord account to Eden",
+                            f"{frontend_url}/tools",
+                        )
+                    )
+
                 if parent_message:
                     await parent_message.reply(
                         start_bot_message,
                         files=[file],
-                        view=None,
+                        view=view,
                     )
                 else:
                     await message.channel.send(
                         start_bot_message,
                         files=[file],
-                        view=None,
+                        view=view,
                     )
                 await message.delete()
                 return

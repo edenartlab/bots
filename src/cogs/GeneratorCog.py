@@ -24,6 +24,7 @@ ALLOWED_GUILDS_TEST = [int(g) for g in ALLOWED_GUILDS_TEST]
 ALLOWED_CHANNELS = [int(c) for c in os.getenv("ALLOWED_CHANNELS", "").split(",")]
 
 EDEN_API_URL = os.getenv("EDEN_API_URL")
+EDEN_FRONTEND_URL = EDEN_API_URL.replace("api", "app")
 EDEN_API_KEY = os.getenv("EDEN_API_KEY")
 EDEN_API_SECRET = os.getenv("EDEN_API_SECRET")
 
@@ -37,11 +38,7 @@ class LoraInput:
 
 
 class GeneratorCog(commands.Cog):
-    def __init__(
-        self, 
-        bot: commands.bot, 
-        lora: Optional[LoraInput] = None
-    ) -> None:
+    def __init__(self, bot: commands.bot, lora: Optional[LoraInput] = None) -> None:
         self.bot = bot
         self.eden_credentials = SignInCredentials(
             apiKey=EDEN_API_KEY, apiSecret=EDEN_API_SECRET
@@ -67,6 +64,7 @@ class GeneratorCog(commands.Cog):
 
         generation_loop_input = GenerationLoopInput(
             api_url=EDEN_API_URL,
+            frontend_url=EDEN_FRONTEND_URL,
             message=message,
             start_bot_message=start_bot_message,
             source=source,
@@ -110,7 +108,7 @@ class GeneratorCog(commands.Cog):
         source = get_source(ctx)
         large, fast = False, False
         width, height, upscale_f = self.get_dimensions(aspect_ratio, large)
-        steps = 15 if fast else 40
+        steps = 15 if fast else 35
 
         config = StableDiffusionConfig(
             generator_name="create",
@@ -118,7 +116,7 @@ class GeneratorCog(commands.Cog):
             width=width,
             height=height,
             steps=steps,
-            guidance_scale=7.5,
+            guidance_scale=8,
             upscale_f=upscale_f,
             seed=random.randint(1, 1e8),
         )
@@ -132,6 +130,7 @@ class GeneratorCog(commands.Cog):
 
         generation_loop_input = GenerationLoopInput(
             api_url=EDEN_API_URL,
+            frontend_url=EDEN_FRONTEND_URL,
             message=message,
             start_bot_message=start_bot_message,
             source=source,
@@ -173,7 +172,7 @@ class GeneratorCog(commands.Cog):
             width=width,
             height=height,
             steps=steps,
-            guidance_scale=7.5,
+            guidance_scale=8,
             seed=random.randint(1, 1e8),
         )
 
@@ -185,6 +184,7 @@ class GeneratorCog(commands.Cog):
 
         generation_loop_input = GenerationLoopInput(
             api_url=EDEN_API_URL,
+            frontend_url=EDEN_FRONTEND_URL,
             message=message,
             start_bot_message=start_bot_message,
             source=source,
@@ -254,6 +254,7 @@ class GeneratorCog(commands.Cog):
 
         generation_loop_input = GenerationLoopInput(
             api_url=EDEN_API_URL,
+            frontend_url=EDEN_FRONTEND_URL,
             message=message,
             start_bot_message=start_bot_message,
             source=source,
@@ -320,7 +321,7 @@ class GeneratorCog(commands.Cog):
             height=height,
             sampler="euler",
             steps=steps,
-            guidance_scale=7.5,
+            guidance_scale=8,
             seed=random.randint(1, 1e8),
         )
 
@@ -334,6 +335,7 @@ class GeneratorCog(commands.Cog):
 
         generation_loop_input = GenerationLoopInput(
             api_url=EDEN_API_URL,
+            frontend_url=EDEN_FRONTEND_URL,
             message=message,
             start_bot_message=start_bot_message,
             source=source,
@@ -357,11 +359,11 @@ class GeneratorCog(commands.Cog):
 
     def get_dimensions(self, aspect_ratio, large):
         if aspect_ratio == "square":
-            width, height = 768, 768
+            width, height = 1024, 1024
         elif aspect_ratio == "landscape":
-            width, height = 960, 640
+            width, height = 1280, 768
         elif aspect_ratio == "portrait":
-            width, height = 640, 960
+            width, height = 768, 1280
         upscale_f = 1.4 if large else 1.0
         return width, height, upscale_f
 
