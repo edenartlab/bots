@@ -7,9 +7,9 @@ from common.models import EdenAssistantConfig
 class AgarthaAssistantCog(AssistantCog):
     def __init__(self, bot: commands.bot) -> None:
         lora = LoraInput(
-            lora_id="65642e86730b5e00f6f17008",
-            lora_strength=0.65,
-            lora_trigger="banny",
+            lora_id="656abc8c09360ec0b9fbe5c1",
+            lora_strength=0.8,
+            lora_trigger="agartha",
             require_lora_trigger=True,
         )
         assistant_config = EdenAssistantConfig(

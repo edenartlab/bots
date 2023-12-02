@@ -1,551 +1,147 @@
-This is the full documentation to the [Juicebox](https://juicebox.money) project.
+This is the full documentation, or the "Purple Paper" to the [Agartha]((https://agartha.one)) community.
 
-# About JuiceboxDAO
+The original name for this project was — *Decentralized Future Living*. It started as a workshop at [Mars College](https://mars.college/), 2022.
 
-JuiceboxDAO contributors build the Juicebox protocol and the ecosystem around it, enabling projects to raise thousands of ETH and to build robust communities around their projects.
+Inspired by existing co-living communities that are re-inventing and re-defining new ways of living, learning and loving together, along with the [Solarpunk Protopian](https://www.notion.so/The-Solarpunk-Movement-81a6817055514eb9831bb0804b122402?pvs=21) movement of creating a positive future where advanced technologies are used to serve harmonious living between humans and nature, we decided to summarize what we spent months researching and learning into an online identity — Agartha.
 
-JuiceboxDAO contributors build in the open — to participate, read the [contributing guide](contribute) and [join the Discord](https://discord.gg/juicebox). We have Discord Town Halls every Tuesday at 22:00 UTC. [Read about previous ones](/town-hall) or stop by and say hello!
+For now, our Community Map works as a gate for the curious internet explorers to discover the global landscape of ‘meaningful communities’ which includes:
 
-- Learn about the DAO's core values in the [Foundation](foundation).
-- If you are interested in contributing to the DAO, read the [Contributor Guide](contribute).
-- Visit the DAO's [Governance Portal](https://jbdao.org) to learn about and participate in DAO governance.
-- To learn more about JBX, read [JBX & Fees](/dao/reference/jbx/).
-- Learn more about the [Juicebox Ecosystem](/user/resources/ecosystem/).
+- Artist residencies
+- Intentional coliving projects
+- Eco villages
+- A hybrid of above all
 
-#### Website
+### The Meaning of Agartha
 
-[juicebox.money](https://juicebox.money/)<br/>
-[Goerli juicebox.money](https://goerli.juicebox.money/)<br/>
-[JuiceboxDAO v1 Project](https://juicebox.money/p/juicebox)<br/>
-[JuiceboxDAO v2/v3 Project](https://juicebox.money/@juicebox)
+Legends tell that there’s a Utopia underneath the south pole called Agartha.
 
-#### Community
+There’s also a story about general [Admiral Byrd](https://en.wikipedia.org/wiki/Richard_E._Byrd)’s [expedition to the south pole after WW2](https://drive.google.com/file/d/1EG4CAHQOJQwsYiiokNncSJi6KBFGhvxg/view?usp=sharing). Supposedly he discovered Jurassic-era lush jungles and an advanced alien species who told Byrd to bring one message back to the surface of earth, that: 
 
-[Discord](https://discord.gg/juicebox)<br/>
-[Twitter](https://twitter.com/juiceboxETH)<br/>
-[Cryptovoxels Lounge](http://juicebox.lexicondevils.xyz/)<br/>
-[YouTube](https://www.youtube.com/c/juiceboxdao)
+*Earth is at the threat of destroying itself with the amount of militarization and nuclear weapons at hand. If your species can agree to de-nuclear yourself, we would come greet you and share our knowledge and technologies with you.*
 
-#### Resources
+It is beyond our capacity to argue whether the story is true or not, whether Agartha exist or not.
 
-[Github](https://github.com/jbx-protocol)<br/>
-[Analytics](reference/analytics/)<br/>
-[JuiceTool](https://juicetool.xyz/)<br/>
-[Notion](https://juicebox.notion.site/Juicebox-Notion-7b2436cec0c145c88b3efa0376c6dba3)<br/>
-[Brand Kit](/user/brand-kit/)
+The meaning of Agartha stands in the beautiful metaphor of this story, that a better world is possible, it is quite simple, and the possibilities are hidden right under the surface. 
 
-<summary>Governance</summary>
+We’d like to position ourselves philosophically at the intersection of learning from ancient wisdom and developing modern technology to serve mankind’s overall wellbeing.
 
-Juicebox governance runs on a [14 day cycle](process) – proposals receive "temperature checks" in Discord, and are ratified in the DAO's [Snapshot space](https://juicetool.xyz/snapshot/jbdao.eth). You can follow this through our governance portal [jbdao.org](https://jbdao.org), or read our [Governance Process](process) to learn more.
+The greater mission for Agartha is to act as a gate to unearth ancient wisdoms with modern day technologies, act as a missing link to coordinate different grass root subculture communities through shared commonalities. 
 
-#### Main Links
+We have all the answers, we just need to bring them to the right people, at the right place and the right time.
 
-[Governance Portal](https://jbdao.org)<br/>
-[Juicebox Snapshot](https://snapshot.org/#/jbdao.eth)<br/>
-[Snapshot Delegation](https://vote.juicebox.money/#/delegate/jbdao.eth)
+The design of our logo represents an eye within a teardrop to symbolize that: the Universe is always watching us, and it cries for all the pains and sufferings humanity has to go through in order to evolve, progress and build a better future.
 
-#### Resources
+We don’t live in a utopia because we are here to figure out how to build it.
 
-[How to Make a Governance Proposal](proposals)<br/>
-[Governance Process](process)<br/>
-[Juicebox DAO Foundation](foundation)
+*To Mother Nature and Our Fractal Universe*
 
-</details>
+### Ethos
 
-### Who is Juicebox DAO?
+We spent a lot of time thinking about bringing positive impact to our modern world, what does that look like? How does it work? It’s societal and technological innovation as well as emotional and moral retrospectives. Here is a summary of important ethos for this project.
 
-From [JBX & Fees](/dao/reference/jbx/):
+### Community First
 
-> The Juicebox protocol is developed by JuiceboxDAO. JuiceboxDAO has no CEO, no hiring department, and no Board of Directors; instead, it is self-governed via the JBX token. "DAO" stands for _Decentralized Autonomous Organization_ — by utilizing token governance and the Juicebox protocol itself, JuiceboxDAO is able to manage strategic decisions, payouts to contributors, and to consistently deliver upgrades to a best-in-class Ethereum protocol, along with a powerful suite of tools to support it.
->
-> You can see current JBX holders ranked below:
+We believe in the power of networks, and humans are born to support and help each others. We’re rallying a community of freedom seekers, critical thinkers and regenerative leaders to meet, support and learn from each others, to team up and explore solutions together.
 
-# JuiceboxDAO Foundation
+Find a community to visit on our [Map](https://www.agartha.one/map) or join our Discord to say Hi!
 
-#### Mission statement
+### Techno-Centric
 
-*What the DAO works toward*
+Automation empowers us and simplification liberates us.
 
-JuiceboxDAO helps people confidently fund, operate, and scale programmable treasuries on Ethereum.
+We want to support a community of solution driven, techno-centric innovators and providing them the community they need.
 
-#### Values
+### **Earth as a Player**
 
-*Who we are*
+Counting earth as a player in our economy is not a political opinion, it’s survival.
 
-- **We're builders.** The decisions we make prioritize those building, and we trust those who we've delegated responsibilities to.
-- **We're focused.** We encourage one another to focus on the commitments we've made to the DAO, and keep each other accountable to them.
-- **We're supportive.** We're here to help, and we communicate in a way that empowers one another.
-- **We're listeners.** We are humble with our knowledge, and seek balance between urgency and patience.
-- **We're honest.** We are each unique selves, and we communicate our individual ideas openly and with clarity. We express ourselves and exchange feedback with this in mind.
-- **We’re stewards.** We respect the opportunity to help set a tone for what it means to build on the open internet together.
+We believe a sustainable future starts from reinventing the way we live, such as adopting local energy systems, permaculture food gardens and re-wilding deserts. Just one person planting trees everyday could turn dry lands to an oasis, imagine if we do it together.
 
-#### Focus areas
+### Individual Sovereignty
 
-*Where the DAO focuses its resources*
+A better future is when individuals have sovereignty over themselves to pursuit who they really want to be. It is a brave and daunting struggle towards owning one’s own sovereignty.
 
-(No particular order)
+A lot of the communities we list provide inspiring solutions to alternative lifestyles with a great support network, so that we can grow and choose to be sovereign individuals, but not alone.
 
-**Protocol**
+### Playfulness
 
-Define, optimize, test, secure, monitor, and document the core Juicebox protocol.
+Tasks can all be a lot more joyful if we turn them into fun games. We feel safe and cheerful if our culture can be safe and cheerful, and that all comes from the art of play! 
 
-**Security**
+Many places provide a psychologically ‘safe’ environment for its dwellers to really explore their inner children. When we have a space to get away from socio-economical pressure of toxic productivities, and truly create, produce and learn playfully, we most likely would get to create magic, and enjoy it too.
 
-Minimize, monitor, and mitigate risks to project creators, contributors, and patrons across contracts and frontends.
+# The Solarpunk Movement
 
-**Community alignment**
+### What is Solarpunk?
 
-Help project owners and members of the JB community get the resources and attention they need to build and work together.
+*Using advanced science and technology to create a more egalitarian society and harmony with earth.*
 
-**Web3 ecosystem**
+### Solapunk in One Video
 
-Position JB to work with and help other public DAOs, tools, and services to safely widen opportunities for all in Web3.
+https://www.youtube.com/watch?v=z-Ng5ZvrDm4
 
-**Onboarding**
+### Solarpunk in One Graph
 
-Help people launch their projects on JB and build extensions to the protocol through active Q&A availability, providing useful documentation, and helping shape the information architecture of web clients.
+![solarpunk_agartha.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5891a5f9-fa94-4470-b3c1-612f0ecbe9c6/solarpunk_agartha.png)
 
-**Governance**
+---
 
-Plan out how we will make decisions together as the DAO scales, and keep it accountable to its agreed upon decision-making schedule.
+### The Social Movement
 
-**Legal**
+*Eco Village + Technology + Regeneration → Communal, Innovative, Ecological*
 
-Work towards the legal clarity necessary to make Juicebox a welcoming protocol where any project can be deployed with confidence.
+A few shinning examples of Solarpunk builders:
 
-**Analytics**
+[Traditional Dream Factory](https://traditionaldreamfactory.com/) — the first Land-based DAO in Europe
 
-Give projects rich insights into their community, and provide overview information about the JB protocol.
+[Future Thinkers](https://futurethinkers.org/) — a GameB Smart Village in Canada
 
-**Frontend**
+[Mars College](https://mars.college/) — a Desert High-tech Transient Camp-Building Co-living Skill-share Project in California
 
-Develop web clients for the protocol that make the user experience of exploring projects and contributing to them more empowering, reliable, and delightful over time.
+**A larger archive of these communities can be found on [Regen Library](https://www.notion.so/Regen-Library-c3ca587347594684b3b744bcb0c9f2f0?pvs=21)* 
 
-**Juicebox ecosystem**
+- [**More the Agartha WebApp**](https://www.agartha.one/map)
+    
+---
 
-Stand up infrastructure to help projects running on the Juicebox protocol grow their decentralized communities and experiment with various treasury strategies.
+### Keys to Building Solarpunk Communities
 
-**Visibility & materials**
+*individual🧘‍♀️ → community👨‍👩‍👧‍👦 → society🏘 → earth🌍*
 
-Create and propagate digital and physical publications, stickers, art, videos, memes, and other stuff that radiate Juicebox vibes and tell our story.
+Shelter:
 
-**Dev ops**
+- Sustainable Building Materials
 
-Make it as easy as possible for people to build on JB by improving processes, tooling, and documentation for all developers.
+Water:
 
-**Mechanism**
+- Rain Catchment + Well Water
+- Grey Water Filtration System
 
-Build models and tools to analyze Juicebox project configurations. Develop and implement utilities for tokens in the Juicebox ecosystem.
+Food:
 
-**Product, project, and program management**
+- Permaculture & Agroforestry
+- Local Food Garden
+- Efficient Farming: Hydroponics, Aquaponics, Aeroponics
 
-Regularly define, assess, prioritize, and publicly communicate the goals and progress of what we’re working towards across focus areas.
+Waste:
 
-#### Membership
+- Upcycle Materials (paper, plastic)
+- Avoid Single Use Materials
+- Compost (biogas, biomiller, etc…)
 
-*What does it mean to be a JuiceboxDAO member*
+*Not only Solarpunk lifestyles can be close to Zero Emission, it can even regenerate local climates by tree-planting and water trapping.*
 
-DAO members are responsible for proposing and voting on:
+For example, [Auroville](https://auroville.org/) has [planted more than 3 million trees since 1968 onwards](https://www.downtoearth.org.in/blog/forests/how-auroville-can-teach-us-all-a-thing-or-two-about-offsetting-carbon-81331), and created a green belt of 1380 acres in India.
 
-- how the DAO's treasury funds are allocated.
-- changes to the protocol the DAO has agreed to steward.
-- changes to formal processes the DAO has agreed to follow.
-- criteria for membership admission and boundaries for quitting.
+---
 
-DAO membership is required by the people and projects who raise funds on the Juicebox protocol, is given to people who are currently stewarding its focus areas, and is open to people who choose to help fund its treasury.
+### References
 
-Membership is represented via the JBX token issued using the Juicebox protocol itself. All JBX holders are JuiceboxDAO members.
+[Low Tech Magazine](https://solar.lowtechmagazine.com/)
 
-Members can quit by burning any portion of their tokens at any time and take with them a portion of the treasury's funds.
+[Solarpunk themed MEMES](https://www.notion.so/Memes-60d7380307504b90ae820cd2dff6cf3b?pvs=21)
 
-# Contributing to JuiceboxDAO
+[What is Solarpunk by Andrewism?](https://www.youtube.com/watch?v=hHI61GHNGJM)
 
-### A Permeable DAO
+[Solarpunk is a Tumblr Vibe, also a Practical Movement](https://builtin.com/greentech/solarpunk)
 
-JuiceboxDAO strives to maintain an open contribution policy. Anyone may pitch in and help with any of the Focus Areas defined in the [DAO Foundation](../foundation), such as protocol and frontend development, community alignment, or governance.
-
-Unlike traditional workplaces, the DAO is open to pseudonymous contributors ("anons"). New contributors are not expected to present a resumé or any other identifying material. The DAOs permeability to new contributors with no substantial reputation informs its contributor onboarding structure.
-
-To welcome new contributors, many of whom have little to no reputation online, the DAO suggests that contributors consider the following process to successfully onboard as a paid contributor
-
-### Getting Started
-
-New contributors are advised to introduce themselves in the [Juicebox DAO Discord server](https://discord.gg/juicebox/), and to familiarize themselves with the focus areas they would like to contribute to. New contributors should also reach out to active contributors on Discord to figure out where the DAO needs help, or to propose new objectives. Project coordination often takes place in Juicebox DAO's [Notion workspace](https://notion.so/juicebox).
-
-### Trial Payouts
-
-Contributors who have completed some work and familiarized themselves with the DAO's ongoing efforts are encouraged to propose a smaller one-time trial payout. These proposals should detail work which has already been completed and plans for upcoming contributions to the DAO. Read [How to Make a Governance Proposal](../proposals) to learn more. For inspiration, read [recent governance proposals](https://vote.juicebox.money/#/jbdao.eth).
-
-### Recurring Payouts
-
-Contributors who have completed one or more trial payouts are advised to propose an ongoing role and recurring payout for 3-7 funding cycles. This proposal should detail responsibilities, task-based objectives, and long-term goals.
-
-### What should I do next?
-
-1. Join [the Discord](https://www.discord.gg/juicebox).
-2. Join the weekly [Discord Town Halls](../town-hall) (Tuesday 22:00 UTC).
-3. Read recent [governance proposals](https://juicetool.xyz/nance/juicebox).
-4. Read recent message history in relevant Discord channels to familiarize yourself with the high level ongoing projects in the DAO, and details of the areas you wish to contribute to.
-5. Reach out to active contributors in channels related to areas you would like to contribute to. Ask what you can help with or propose new objectives for the DAO.
-6. Participate in the DAO for 1-2 weeks before asking for a payout.
-
-*Note: In order to get paid by Juicebox DAO, you will need to have a cryptocurrency wallet. You can read more about wallets [here](https://ethereum.org/en/wallets/).*
-
-# JuiceboxDAO Governance Process
-
-*JuiceboxDAO's governance follows a 14 day cycle.*
-
-![](/img/gov-calendar.webp)
-
-#### Governance Schedule
-
-Day 1 -  Temperature Check - Saturday (00:00 UTC) <br/>
-Day 4 - Snapshot Vote - Tuesday (00:00 UTC) <br/>
-Day 8 - Multisig Execution - Saturday (00:00 UTC) <br/>
-Day 12 - Reconfiguration Delay - Wednesday (19:19 UTC) <br/>
-Day 15 / Day 1 - Funding Cycle Updated - Saturday (19:19 UTC) <br/>
-
-#### Step 0 - Discussion
-
-Proposals can be made on [jbdao.org](https://www.jbdao.org/) at any time. When ready, authors can change a proposal's status from `Draft` to `Discussion` to start a discussion thread in [JuiceboxDAO's Discord](https://www.discord.gg/juicebox).
-
-*See [How to Make a Governance Proposal](../proposals) for help.*
-
-#### Step 1 - Temperature Check
-
-`Begins on Day 1 of the Governance Cycle - Saturday 00:00 UTC`
-
-A 3-day Y/N Discord poll (a "temperature check") is made for each proposal submitted by the start of a Governance Cycle. While this poll is active, authors can update or redact their proposals as they get feedback. Verified Discord members with JBX get one vote for each poll. To participate, verify your JBX in [`#🍌｜verify-jbx`](https://discord.gg/juicebox).
-
-Proposals with 10 or more "Y" votes and at least 30% "Y" votes move to Snapshot voting.
-
-#### Step 2 - Snapshot Voting
-
-`Begins on Day 4 of the Governance Cycle - Tuesday 00:00 UTC`
-
-A 4-day For/Against/Abstain [Snapshot](https://snapshot.org/#/jbdao.eth) vote is made for proposals approved by temperature checks. JBX holders get one vote per JBX held for each proposal, and can delegate their voting power on Snapshot.
-
-Proposals with 80,000,000 or more votes (including "Abstain" and "Against" votes) and at least 66% "For" votes (not counting "Abstain" votes) will be implemented.
-
-#### Step 3 - Execution
-
-`Begins on Day 7 of the Governance Cycle - Saturday 00:00 UTC`
-
-The JuiceboxDAO multisig ([`0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e`](https://app.safe.global/home?safe=eth:0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e)) executes approved proposals according to their specifications.
-
-- If approved proposals conflict with each other, more recently approved proposals take priority for the conflicting part. If they were approved at the same time, the proposal with more "For" votes takes priority.
-- Proposals are effective when they are approved on Snapshot unless they say otherwise.
-- Parts of proposals which are impossible to execute won't be executed.
-- The multisig can make small reasonable modifications to a proposal when interpreting it.
-
-The multisig controls the JuiceboxDAO project and some [Juicebox protocol parameters](https://docs.juicebox.money/dev/learn/administration). JuiceboxDAO governance execution depends upon the cooperation of the multisig's elected signers, who have committed to executing the will of the DAO as expressed by the Governance Process.
-
-#### Step 4 - Reconfiguration Delay
-
-`Begins on Day 12 of the Governance Cycle - Wednesday 19:19 UTC`
-
-Any changes to JuiceboxDAO's project must be submitted at least 3 days before the next cycle starts. This is enforced by the Juicebox protocol. This gives DAO members time to verify queued changes, and to burn their JBX if desired.
-
-# JuiceboxDAO Multisig Process
-
-The JuiceboxDAO Multisig, [`0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e`](https://etherscan.io/address/0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e), is responsible for interpreting and executing the outcomes of the [Governance Process](https://docs.juicebox.money/dao/process/).
-
-## Rules
-
-1. Multisig signers must agree to execute the will of JBX token holders, as expressed through the Governance Process.
-2. The Multisig threshold must be at or above 60% of signers at all times.
-3. The Multisig can reimburse gas fees paid to execute previous Multisig transactions.
-4. In an emergency, the Multisig can execute transactions according to the [Juicebox Emergency Procedures](https://docs.juicebox.money/dao/security/emergency/).
-
-## Process
-
-During Offchain Snapshot voting, the Multisig should internally decide which signer(s) will be responsible for queuing project reconfigurations and any other necessary transactions. The Multisig should also designate a backup signer in the event that the first signer is unable to fulfill the following steps.
-
-Less than 12 hours after Snapshot voting finalizes, the designated signer(s) should queue all necessary transactions, create a Discord thread for each transaction, and then notify other Multisig members by tagging the `@Multisig` role. Each thread should contain a link to the relevant proposal(s), a transaction simulation, and a plain-language description of the proposed changes. If appropriate, the thread should also contain a link to a Juicetool configuration diff or other resources.
-
-Over the following 12 hours, each signer should independently verify and sign the proposed transactions. If a signer finds errors in or is unsure about a proposed transaction, that signer should voice their concerns in the appropriate Discord thread, tagging the signer which queued that transaction. Those signers should then work together to queue transactions which resolve those concerns (in the same manner as described above).
-
-The last signer to approve the queued transactions (thereby meeting the threshold) should also execute or batch execute those transactions after approving them. If the queued transactions have still not been executed within 24 hours of the next reconfiguration delay cutoff, the designated signer should execute them.
-
-# Make a Governance Proposal
-
-:::info
-Juicebox DAO runs on a [14 day governance cycle](../process). Follow along in the [Juicebox DAO Discord Server](https://discord.gg/juicebox) and on our [Governance Portal](https://jbdao.org).
-:::
-
-#### To create a new proposal:
-
-1. Visit the [current proposals page](https://juicetool.xyz/nance/juicebox)
-2. Click `New Proposal` in the upper right-hand corner.
-3. Click `Connect` in the upper right-hand corner. If you don't have a wallet, you can get one from [MetaMask.io](https://metamask.io).
-4. Select your proposal's type, fill out all of the metadata fields, and write your proposal in the editor below.
-5. Click `Submit`.
-6. A discussion thread for your proposal will be generated in the `#💡-proposals` channel of [Juicebox's Discord server](https://discord.gg/juicebox). The community will help you prepare the proposal for the next [temperature check](../process).
-
-*The revision process can cause a proposal to take more than one funding cycle to reach the Juicebox snapshot. Honest and plain feedback in Discord proposal threads is encouraged.*
-
-
-# Contributor Operations Security
-
-
-# Overview
-
-The Juicebox protocol is a framework for funding and operating projects openly on Ethereum. It lets you:
-
-#### Deploy an NFT that represents ownership over a project
-
-Whichever address owns this NFT has administrative privileges to configure treasury parameters within the Juicebox ecosystem.
-
-
-[Learn more about projects](/dev/learn/glossary/project)
-
-
-
-#### Configure funding cycles for a project
-
-Funding cycles define contractual constraints according to which the project will operate.
-
-
-[Learn more about funding cycles](/dev/learn/glossary/funding-cycle)<br/>
-
-
-The following properties can be configured into a funding cycle:
-
-
-<details>
-
-<summary><em>Funding cycle properties</em></summary>
-
-##### Start timestamp
-
-The timestamp at which the funding cycle is considered active. Projects can configure the start time of their first funding cycle to be in the future, and can ensure reconfigurations don't take effect before a specified timestamp.
-
-
-Once a funding cycle ends, a new one automatically starts right away. If there's an approved reconfiguration queued to start at this time, it will be used. Otherwise, a copy of the rolled over funding cycle will be used.
-
-
-##### Duration
-
-How long each funding cycle lasts (specified in seconds). All funding cycle properties are unchangeable while the cycle is in progress. In other words, any proposed reconfigurations can only take effect during the subsequent cycle.
-
-
-If no reconfigurations were submitted by the project owner, or if proposed changes fail the current cycle's [ballot](#ballot), a copy of the latest funding cycle will automatically start once the current one ends.
-
-
-A cycle with no duration lasts indefinitely, and reconfigurations can start a new funding cycle with the proposed changes right away.
-
-
-##### Distribution limit
-
-The amount of funds that can be distributed out from the project's treasury during a funding cycle. The project owner can pre-program a list of addresses, other Juicebox projects, and contracts that adhere to [<code>IJBSplitAllocator</code>](/dev/api/interfaces/ijbsplitallocator) to split distributions between. Treasury funds in excess of the distribution limit is considered overflow, which can serve as runway or be reclaimed by token holders who redeem their tokens.
-
-
-Distributing is a public transaction that anyone can call on a project's behalf. The project owner can also include a split that sends a percentage of the distributed funds to the address who executes this transaction.
-
-
-The protocol charges a [JBX membership fee](#jbx-membership-fee) on funds withdrawn from the network. There are no fees for distributions to other Juicebox projects.
-
-
-Distribution limits can be specified in any currency that the [<code>JBPrices</code>](/dev/api/contracts/jbprices) contract has a price feed for.
-
-
-<!---->
-
-##### Overflow allowance
-
-The amount of treasury funds that the project owner can distribute on-demand.
-
-
-This allowance does not reset per-funding cycle. Instead, it lasts until the project owner explicitly proposes a reconfiguration with a new allowance.
-
-
-The protocol charges a [JBX membership fee](#jbx-membership-fee) on funds withdrawn from the network.
-
-
-Overflow allowances can be specified in any currency that the [<code>JBPrices</code>](/dev/api/contracts/jbprices) contract has a price feed for.
-
-
-##### Weight
-
-A number used to determine how many project tokens should be minted and transferred when payments are received during the funding cycle. In other words, weight is the exchange rate between the project token and a currency (defined by a [JBPayoutRedemptionPaymentTerminal3_1_1](/dev/api/contracts/or-payment-terminals/or-abstract/jbpayoutredemptionpaymentterminal3_1_1/)) during that funding cycle. Project owners can configure this directly, or allow it to be derived automatically from the previous funding cycle's weight and discount rate.
-
-
-##### Discount rate
-
-The percent to automatically decrease the subsequent cycle's weight from the current cycle's weight.
-
-
-The discount rate is not applied during funding cycles where the weight is explicitly reconfigured.
-
-
-[Learn more about discount rates](/dev/learn/glossary/discount-rate)
-
-##### Ballot
-
-The address of a contract that adheres to [<code>IJBFundingCycleBallot</code>](/dev/api/interfaces/ijbfundingcycleballot), which can provide custom criteria that prevents funding cycle reconfigurations from taking effect.
-
-
-A common implementation is to force reconfigurations to be submitted at least X days before the end of the current funding cycle, giving the community foresight into any misconfigurations or abuses of power before they take effect.
-
-
-A more complex implementation might include on-chain governance.
-
-
-[Learn more ballots](/dev/learn/glossary/ballot)
-
-
-##### Reserved rate
-
-The percentage of newly minted tokens that a project wishes to withhold for custom distributions. The project owner can pre-program a list of addresses, other Juicebox project owners, and contracts that adhere to [<code>IJBSplitAllocator</code>](/dev/api/interfaces/ijbsplitallocator) to split reserved tokens between.
-
-
-[Learn more about reserved rate](/dev/learn/glossary/reserved-tokens)
-
-
-##### Redemption rate
-
-The percentage of a project's treasury funds that can be reclaimed by community members by redeeming the project's tokens during the funding cycle.
-
-A rate of 100% suggests a linear proportion, meaning X% of treasury overflow can be reclaimed by redeeming X% of the token supply.
-
-
-[Learn more about redemption rates](/dev/learn/glossary/redemption-rate)
-
-##### Ballot redemption rate
-
-A project can specify a custom redemption rate that only applies when a proposed reconfiguration is waiting to take effect.
-
-
-This can be used to automatically allow for more favorable redemption rates during times of potential change.
-
-##### Pause payments, pause distributions, pause redemptions, pause burn
-
-Projects can pause various bits of its treasury's functionality on a per-funding cycle basis. These functions are unpaused by default.
-
-##### Allow minting tokens, allow changing tokens, allow setting terminals, allow setting the controller, allow terminal migrations, allow controller migration
-
-Projects can allow various bits of treasury functionality on a per-funding cycle basis. These functions are disabled by default.
-
-##### Hold fees
-
-By default, JBX membership fees are paid automatically when funds are distributed out of the ecosystem from a project's treasury. During funding cycles configured to hold fees, this fee amount is set aside instead of being immediately processed. Projects can get their held fees returned by adding the same amount of withdrawn funds back to their treasury. Otherwise, JuiceboxDAO or the project can process these held fees at any point to get JBX at the current rate.
-
-
-This allows a project to withdraw funds and later add them back into their Juicebox treasury without incurring fees.<br/>
-
-
-This applies to both distributions from the distribution limit and from the overflow allowance.
-
-##### Data source
-
-The address of a contract that adheres to [<code>IJBFundingCycleDataSource</code>](/dev/api/interfaces/ijbfundingcycledatasource), which can be used to extend or override what happens when the treasury receives funds, and what happens when someone tries to redeem their project tokens.
-
-
-[Learn more about data sources](/dev/learn/glossary/data-source)
-
-
-</details>
-
-#### Mint tokens
-
-By default, a project starts with 0 tokens and mints them when its treasury receives contributions.<br/>
-A project can mint and distribute tokens on demand if its current funding cycle is configured to allow minting.<br/>
-By default, project tokens are not ERC-20s and thus not compatible with standard market protocols like Uniswap. At any time, you can issue ERC-20s that your token holders can claim. This is optional.
-
-
-#### Burn tokens
-
-Anyone can burn a project's tokens if the project's current funding cycle isn't configured to paused burning.
-
-
-#### Bring-your-own token
-
-A project can bring its own token, as long as it adheres to [<code>IJBToken</code>](/dev/api/interfaces/ijbtoken) and uses fixed point accounting with 18 decimals.<br/>
-
-
-This allows a project to use ERC-721's, ERC-1155's, or any other custom contract that'll be called upon when the protocol asks to mint or burn tokens.<br/>
-
-
-A project can change its token during any of its funding cycles that are explicitly configured to allow changes.<br/>
-
-
-By default, the protocol provides a transaction for projects to deploy [<code>JBToken</code>](/dev/api/contracts/jbtoken) ERC-20 tokens.
-
-
-#### Splits
-
-A project can pre-program token distributions to splits. The destination of a split can be an Ethereum address, the project ID of another project's Juicebox treasury (the split will allow you to configure the beneficiary of that project's tokens that get minted in response to the contribution), to the <code>allocate(...)</code> function of any contract that adheres to [<code>IJBSplitAllocator</code>](/dev/api/interfaces/ijbsplitallocator), or to the address that initiated the transaction that distributes tokens to the splits.
-
-
-[Learn more about splits](/dev/learn/glossary/splits)<br/>
-[Learn more about allocators](/dev/learn/glossary/split-allocator)
-
-
-#### JBX membership fee
-
-All funds distributed by projects from their treasuries to destinations outside of the Juicebox ecosystem (i.e. distributions that do not go to other Juicebox treasuries) will incure a protocol fee. Redemptions from projects using [<code>JBETHPaymentTerminal3_1_1</code>](/dev/api/contracts/or-payment-terminals/jbethpaymentterminal3_1_1/) incur fees if the redemption rate (or ballot redemption rate) is less than 100%. This fee is sent to the JuiceboxDAO treasury which runs on the Juicebox protocol itself (project ID of 1), triggering the same functionality as a payment directly to JuiceboxDAO (by default, minting JBX for the fee payer according to JuiceboxDAO's current funding cycle configuration) from an external source.<br/>
-
-
-This fee is adjustable by JuiceboxDAO, with a max value of 5%.<br/>
-
-
-Any funds sent from one juicebox treasury to another via splits do not incur fees.
-
-
-#### Custom treasury strategies
-
-Funding cycles can be configured to use an [<code>IJBRedemptionDelegate</code>](/dev/api/interfaces/ijbfundingcycledatasource"><code>IJBFundingCycleDataSource</code></a>, <a href="/dev/api/interfaces/ijbpaydelegate"><code>IJBPayDelegate</code></a>, and <a href="/dev/api/interfaces/ijbredemptiondelegate) to extend or override the default protocol's behavior that defines what happens when an address tries to make a payment to the project's treasury, and what happens when someone tries to redeem the project tokens during any particular funding cycle.
-
-
-[Learn more about data sources](/dev/learn/glossary/data-source)<br/>
-[Learn more about delegates](/dev/learn/glossary/delegate)
-
-
-#### Accept multiple tokens
-
-A project can specify any number of payment terminal contracts where it can receive funds denominated in various tokens. This allows projects to create distinct rules for accepting ETH, any ERC-20, or any asset in general.
-
-
-Anyone can roll their own contract that adheres to [<code>IJBPaymentTerminal</code>](/dev/api/interfaces/ijbpaymentterminal) for projects to use, and a project can migrate funds between terminals that use the same token as it wishes.
-
-
-#### Forkability and migratability
-
-A project can migrate its treasury's controller to any other contract that adheres to [<code>IJBController3_1</code>](/dev/api/interfaces/ijbcontroller3_1). This allows a project to evolve into updated or custom treasury dynamics over time as it wishes.
-
-
-#### Operators
-
-Addresses can specify other addresses that are allowed to operate certain administrative treasury transactions on its behalf.<br/>
-
-
-[Learn more about operators](/dev/learn/glossary/operator)
-
-
-# Risks
-
-The following are risks that everyone should be aware of before interacting with the protocol. The protocol's design exposes these risks in consequence to its normal operating procedures.
-
-*Also see [Security & Audits](/dev/resources/security).*
-
-# Project Setup Examples
-
-The examples below demonstrate how projects have used Juicebox to achieve their goals.
-
-Before looking at the examples below, read the success stories on [juicebox.money](https://juicebox.money):
-
-1. [ConstitutionDAO](https://juicebox.money/success-stories/constitutiondao): How a group of friends on the internet raised over $46 million to buy the U.S. Constitution.
-2. [MoonDAO](https://juicebox.money/success-stories/moondao): How a community of space enthusiasts raised $8.3 million to send a DAO member to space on a Blue Origin rocket.
-3. [SharkDAO](https://juicebox.money/success-stories/sharkdao): How SharkDAO raised over 1,000 ETH to buy 6 Nouns NFTs and become the largest sub-DAO of Nouns DAO.
-4. [StudioDAO](https://juicebox.money/success-stories/studiodao): How StudioDAO is building the first million person movie studio on Juicebox.
-
-
-## NFTs
-
-Juicebox also lets you reward your supporters with one or more custom NFT tiers:
-
-- **You can use NFTs for redemption instead of using tokens.**
-- You can set up tiers when creating your project, and can also add or remove tiers over time.
-- Each tier can have unique metadata, as well as a unique price, maximum supply, reserved rate, and governance voting power.
-
-You can use NFTs for off-chain governance with a tool like [Snapshot](/user/resources/snapshot/), or for on-chain governance with Governor Contracts — Juicebox NFTs adhere to the [`ERC721Votes`](https://docs.openzeppelin.com/contracts/4.x/api/token/erc721#ERC721Votes) standard. [*Learn more about on-chain governance.*](#on-chain-governance)
+[What is Solarpunk and can it Save the Planet?](https://www.bbc.com/news/business-57761297)
