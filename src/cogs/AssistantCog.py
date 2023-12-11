@@ -1,10 +1,8 @@
 import os
 import random
 import discord
-from typing import Optional
 from attr import dataclass
 from discord.ext import commands
-from logos.scenarios import EdenAssistant
 
 from common.discord import (
     get_source,
@@ -12,9 +10,8 @@ from common.discord import (
     replace_bot_mention,
     replace_mentions_with_usernames,
 )
-from common.eden import generation_loop
+from common.eden import generation_loop, get_assistant
 from common.models import (
-    EdenAssistantConfig,
     GenerationLoopInput,
     SignInCredentials,
     StableDiffusionConfig,
@@ -26,6 +23,7 @@ EDEN_API_URL = os.getenv("EDEN_API_URL")
 EDEN_FRONTEND_URL = EDEN_API_URL.replace("api", "app")
 EDEN_API_KEY = os.getenv("EDEN_API_KEY")
 EDEN_API_SECRET = os.getenv("EDEN_API_SECRET")
+EDEN_CHARACTER_ID = os.getenv("EDEN_CHARACTER_ID")
 
 
 @dataclass
@@ -40,21 +38,12 @@ class AssistantCog(commands.Cog):
     def __init__(
         self,
         bot: commands.bot,
-        assistant_config: EdenAssistantConfig,
-        lora: Optional[LoraInput] = None,
     ) -> None:
         self.bot = bot
         self.eden_credentials = SignInCredentials(
             apiKey=EDEN_API_KEY, apiSecret=EDEN_API_SECRET
         )
-        self.assistant = EdenAssistant(
-            character_description=assistant_config.character_description,
-            creator_prompt=assistant_config.creator_prompt,
-            documentation_prompt=assistant_config.documentation_prompt,
-            documentation=assistant_config.documentation,
-            router_prompt=assistant_config.router_prompt,
-        )
-        self.lora = lora
+        self.characterId = EDEN_CHARACTER_ID
 
     @commands.Cog.listener("on_message")
     async def on_message(self, message: discord.Message) -> None:
@@ -88,7 +77,13 @@ class AssistantCog(commands.Cog):
                     "attachments": attachment_files,
                 }
 
-                response = self.assistant(
+                assistant = get_assistant(
+                    api_url=EDEN_API_URL,
+                    character_id=self.characterId,
+                    credentials=self.eden_credentials,
+                )
+
+                response = assistant(
                     assistant_message, session_id=str(message.author.id)
                 )
                 reply = response.get("message")[:2000]
