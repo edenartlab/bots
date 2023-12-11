@@ -312,10 +312,13 @@ def get_assistant(api_url: str, character_id: str, credentials: SignInCredential
     description = character.get("description")
     logosData = character.get("logosData")
 
-    return EdenAssistant(
+    assistant = EdenAssistant(
         character_description=description,
         creator_prompt=logosData.get("creatorPrompt"),
         documentation_prompt=logosData.get("documentationPrompt"),
         documentation=logosData.get("documentation"),
         router_prompt=logosData.get("routerPrompt"),
     )
+    concept = character.get("concept")
+
+    return assistant, concept

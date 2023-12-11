@@ -77,7 +77,7 @@ class AssistantCog(commands.Cog):
                     "attachments": attachment_files,
                 }
 
-                assistant = get_assistant(
+                assistant, concept = get_assistant(
                     api_url=EDEN_API_URL,
                     character_id=self.characterId,
                     credentials=self.eden_credentials,
@@ -118,7 +118,7 @@ class AssistantCog(commands.Cog):
 
                 config = StableDiffusionConfig(generator_name=mode, **config)
 
-                config = self.add_lora(config)
+                config = self.add_lora(config, concept)
 
                 source = get_source(ctx)
 
@@ -152,10 +152,10 @@ class AssistantCog(commands.Cog):
         message_content = message_content.strip()
         return message_content
 
-    def add_lora(self, config: StableDiffusionConfig):
-        if self.lora:
-            config.lora = self.lora.lora_id
-            config.lora_strength = self.lora.lora_strength
+    def add_lora(self, config: StableDiffusionConfig, concept: str):
+        if concept:
+            config.lora = concept
+            config.lora_strength = 0.6
         return config
 
     def check_lora_trigger_provided(message: str, lora_trigger: str):
