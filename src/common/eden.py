@@ -40,8 +40,10 @@ async def request_creation(
         "attributes": attributes,
     }
 
+    task_route = "characters" if os.getenv("EDEN_CHARACTER_ID") else "admin"
+
     response = requests.post(
-        f"{api_url}/characters/tasks/create", json=request, headers=header
+        f"{api_url}/{task_route}/tasks/create", json=request, headers=header
     )
 
     check, error = await check_server_result_ok(response)
