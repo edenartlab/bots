@@ -39,6 +39,7 @@ class CharacterCog(commands.Cog):
         self,
         bot: commands.bot,
     ) -> None:
+        print("CharacterCog init...")
         self.bot = bot
         self.eden_credentials = SignInCredentials(
             apiKey=EDEN_API_KEY, apiSecret=EDEN_API_SECRET

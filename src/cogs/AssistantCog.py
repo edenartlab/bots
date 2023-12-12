@@ -43,6 +43,7 @@ class AssistantCog(commands.Cog):
         assistant_config: EdenAssistantConfig,
         lora: Optional[LoraInput] = None,
     ) -> None:
+        print("AssistantCog init...")
         self.bot = bot
         self.eden_credentials = SignInCredentials(
             apiKey=EDEN_API_KEY, apiSecret=EDEN_API_SECRET
