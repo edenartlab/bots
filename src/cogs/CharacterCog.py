@@ -34,7 +34,7 @@ class LoraInput:
     require_lora_trigger: bool
 
 
-class AssistantCog(commands.Cog):
+class CharacterCog(commands.Cog):
     def __init__(
         self,
         bot: commands.bot,
