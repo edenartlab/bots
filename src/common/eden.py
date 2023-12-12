@@ -308,6 +308,7 @@ def get_assistant(api_url: str, character_id: str, credentials: SignInCredential
         "x-api-secret": credentials.apiSecret,
     }
 
+    print(f"{api_url}/characters/{character_id}")
     response = requests.get(f"{api_url}/characters/{character_id}", headers=header)
     json = response.json()
     print(json)
