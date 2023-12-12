@@ -2,6 +2,8 @@ import asyncio
 import io
 import os
 from typing import Optional
+from logos.scenarios import EdenAssistant
+
 
 import aiohttp
 import discord
@@ -38,9 +40,10 @@ async def request_creation(
         "attributes": attributes,
     }
 
-    # response = requests.post(f"{api_url}/tasks/create", json=request, headers=header)
+    task_route = "characters" if os.getenv("EDEN_CHARACTER_ID") else "admin"
+
     response = requests.post(
-        f"{api_url}/admin/tasks/create", json=request, headers=header
+        f"{api_url}/{task_route}/tasks/create", json=request, headers=header
     )
 
     check, error = await check_server_result_ok(response)
@@ -297,3 +300,27 @@ async def edit_message(
         await message.edit(content=message_content)
     if file_update:
         await message.edit(files=[file_update], attachments=[])
+
+
+def get_assistant(api_url: str, character_id: str, credentials: SignInCredentials):
+    header = {
+        "x-api-key": credentials.apiKey,
+        "x-api-secret": credentials.apiSecret,
+    }
+
+    response = requests.get(f"{api_url}/characters/{character_id}", headers=header)
+    json = response.json()
+    character = json.get("character")
+    description = character.get("description")
+    logosData = character.get("logosData")
+
+    assistant = EdenAssistant(
+        character_description=description,
+        creator_prompt=logosData.get("creatorPrompt"),
+        documentation_prompt=logosData.get("documentationPrompt"),
+        documentation=logosData.get("documentation"),
+        router_prompt=logosData.get("routerPrompt"),
+    )
+    concept = character.get("concept")
+
+    return assistant, concept
