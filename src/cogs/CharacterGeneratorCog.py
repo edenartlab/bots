@@ -40,6 +40,7 @@ class LoraInput:
 
 class CharacterGeneratorCog(commands.Cog):
     def __init__(self, bot: commands.bot) -> None:
+        print("CharacterGeneratorCog init...")
         self.bot = bot
         self.eden_credentials = SignInCredentials(
             apiKey=EDEN_API_KEY, apiSecret=EDEN_API_SECRET
