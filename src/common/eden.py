@@ -310,6 +310,7 @@ def get_assistant(api_url: str, character_id: str, credentials: SignInCredential
 
     response = requests.get(f"{api_url}/characters/{character_id}", headers=header)
     json = response.json()
+    print(json)
     character = json.get("character")
     description = character.get("description")
     logosData = character.get("logosData")
