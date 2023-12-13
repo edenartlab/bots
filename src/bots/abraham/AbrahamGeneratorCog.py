@@ -1,18 +1,11 @@
 from discord.ext import commands
+from cogs.CharacterGeneratorCog import CharacterGeneratorCog
 
-from cogs.GeneratorCog import GeneratorCog, LoraInput
 
-
-class AbrahamGeneratorCog(GeneratorCog):
+class AbrahamCharacterGeneratorCog(CharacterGeneratorCog):
     def __init__(self, bot: commands.bot) -> None:
-        lora = LoraInput(
-            lora_id="6558ee435e91d48ad780de92",
-            lora_strength=0.65,
-            lora_trigger="abraham",
-            require_lora_trigger=True,
-        )
-        super().__init__(bot, lora)
+        super().__init__(bot)
 
 
 def setup(bot: commands.Bot) -> None:
-    bot.add_cog(AbrahamGeneratorCog(bot))
+    bot.add_cog(AbrahamCharacterGeneratorCog(bot))
