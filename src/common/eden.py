@@ -2,7 +2,6 @@ import asyncio
 import io
 import os
 from typing import Optional
-from logos.scenarios import EdenAssistant
 
 
 import aiohttp
@@ -308,21 +307,18 @@ def get_assistant(api_url: str, character_id: str, credentials: SignInCredential
         "x-api-secret": credentials.apiSecret,
     }
 
-    print(f"{api_url}/characters/{character_id}")
     response = requests.get(f"{api_url}/characters/{character_id}", headers=header)
     json = response.json()
-    print(json)
     character = json.get("character")
     description = character.get("description")
     logosData = character.get("logosData")
-
-    assistant = EdenAssistant(
-        character_description=description,
-        creator_prompt=logosData.get("creatorPrompt"),
-        documentation_prompt=logosData.get("documentationPrompt"),
-        documentation=logosData.get("documentation"),
-        router_prompt=logosData.get("routerPrompt"),
-    )
+    assistant = {
+        "character_description": description,
+        "creator_prompt": logosData.get("creatorPrompt"),
+        "documentation_prompt": logosData.get("documentationPrompt"),
+        "documentation": logosData.get("documentation"),
+        "router_prompt": logosData.get("routerPrompt"),
+    }
     concept = character.get("concept")
 
     return assistant, concept
