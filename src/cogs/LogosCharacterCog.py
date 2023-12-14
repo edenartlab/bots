@@ -11,6 +11,7 @@ from common.discord import (
     replace_mentions_with_usernames,
 )
 from common.eden import generation_loop, get_assistant
+from common.logos import request_logos_assistant
 from common.models import (
     GenerationLoopInput,
     SignInCredentials,
@@ -20,6 +21,7 @@ from common.models import (
 ALLOWED_CHANNELS = [int(c) for c in os.getenv("ALLOWED_CHANNELS", "").split(",")]
 
 EDEN_API_URL = os.getenv("EDEN_API_URL")
+LOGOS_API_URL = os.getenv("LOGOS_API_URL")
 EDEN_FRONTEND_URL = EDEN_API_URL.replace("api", "app")
 EDEN_API_KEY = os.getenv("EDEN_API_KEY")
 EDEN_API_SECRET = os.getenv("EDEN_API_SECRET")
@@ -34,12 +36,12 @@ class LoraInput:
     require_lora_trigger: bool
 
 
-class CharacterCog(commands.Cog):
+class LogosCharacterCog(commands.Cog):
     def __init__(
         self,
         bot: commands.bot,
     ) -> None:
-        print("CharacterCog init...")
+        print("LogosCharacterCog init...")
         self.bot = bot
         self.eden_credentials = SignInCredentials(
             apiKey=EDEN_API_KEY, apiSecret=EDEN_API_SECRET
@@ -61,22 +63,7 @@ class CharacterCog(commands.Cog):
             ctx = await self.bot.get_context(message)
             async with ctx.channel.typing():
                 prompt = self.message_preprocessor(message)
-
                 attachment_urls = [attachment.url for attachment in message.attachments]
-                attachment_lookup_file = {
-                    url: f"/files/image{i+1}.jpeg"
-                    for i, url in enumerate(attachment_urls)
-                }
-                attachment_lookup_url = {
-                    v: k for k, v in attachment_lookup_file.items()
-                }
-                attachment_files = [
-                    attachment_lookup_file[url] for url in attachment_urls
-                ]
-                assistant_message = {
-                    "prompt": prompt,
-                    "attachments": attachment_files,
-                }
 
                 assistant, concept = get_assistant(
                     api_url=EDEN_API_URL,
@@ -84,8 +71,14 @@ class CharacterCog(commands.Cog):
                     credentials=self.eden_credentials,
                 )
 
-                response = assistant(
-                    assistant_message, session_id=str(message.author.id)
+                interaction = {
+                    "prompt": prompt,
+                    "attachments": attachment_urls,
+                    "author_id": str(message.author.id),
+                }
+
+                response = request_logos_assistant(
+                    LOGOS_API_URL, assistant, interaction
                 )
                 reply = response.get("message")[:2000]
                 reply_message = await message.reply(reply)
@@ -105,15 +98,6 @@ class CharacterCog(commands.Cog):
                 else:
                     text_input = mode
 
-                if config.get("init_image"):
-                    config["init_image"] = attachment_lookup_url.get(
-                        config["init_image"]
-                    )
-                if config.get("interpolation_init_images"):
-                    config["interpolation_init_images"] = [
-                        attachment_lookup_url.get(img)
-                        for img in config["interpolation_init_images"]
-                    ]
                 if not config.get("seed"):
                     config["seed"] = random.randint(1, 1e8)
 
