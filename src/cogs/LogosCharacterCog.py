@@ -21,7 +21,7 @@ from common.models import (
 ALLOWED_CHANNELS = [int(c) for c in os.getenv("ALLOWED_CHANNELS", "").split(",")]
 
 EDEN_API_URL = os.getenv("EDEN_API_URL")
-LOGOS_API_URL = os.getenv("LOGOS_API_URL")
+LOGOS_URL = os.getenv("LOGOS_API_URL")
 EDEN_FRONTEND_URL = EDEN_API_URL.replace("api", "app")
 EDEN_API_KEY = os.getenv("EDEN_API_KEY")
 EDEN_API_SECRET = os.getenv("EDEN_API_SECRET")
@@ -77,9 +77,7 @@ class LogosCharacterCog(commands.Cog):
                     "author_id": str(message.author.id),
                 }
 
-                response = request_logos_assistant(
-                    LOGOS_API_URL, assistant, interaction
-                )
+                response = request_logos_assistant(LOGOS_URL, assistant, interaction)
                 reply = response.get("message")[:2000]
                 reply_message = await message.reply(reply)
 
