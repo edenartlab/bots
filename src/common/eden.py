@@ -310,15 +310,19 @@ def get_assistant(api_url: str, character_id: str, credentials: SignInCredential
     response = requests.get(f"{api_url}/characters/{character_id}", headers=header)
     json = response.json()
     character = json.get("character")
-    description = character.get("description")
     logosData = character.get("logosData")
+    identity = logosData.get("identity") or character.get("description")
+    knowledge = logosData.get("knowledge") or logosData.get("documentation")
+    knowledge_summary = (
+        logosData.get("knowledgeSummary")
+        or "There is no short summary for this character."
+    )
     assistant = {
-        "character_description": description,
-        "creator_prompt": logosData.get("creatorPrompt"),
-        "documentation_prompt": logosData.get("documentationPrompt"),
-        "documentation": logosData.get("documentation"),
-        "router_prompt": logosData.get("routerPrompt"),
+        "name": character.get("name"),
+        "identity": identity,
+        "knowledge": knowledge,
+        "knowledge_summary": knowledge_summary,
     }
-    concept = character.get("concept")
+    concept = logosData.get("concept") or character.get("concept")
 
     return assistant, concept
