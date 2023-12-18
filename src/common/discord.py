@@ -122,9 +122,23 @@ def replace_mentions_with_usernames(
     """
     for mention in mentions:
         message_content = message_content.replace(
-            f"<@{mention.id}>",
+            f"<@!?{mention.id}>",
             f"{prefix}{mention.display_name}{suffix}",
         )
+    return message_content
+
+
+def replace_usernames_with_mentions(
+    message_content: str,
+    user_lookup: dict,
+) -> str:
+    """
+    Replaces all usernames with mentions of their ID.
+    :param message_content: The message to replace usernames in.
+    :return: The message with all usernames replaced with their mentions.
+    """
+    for user in user_lookup:
+        message_content = message_content.replace(user, f"<@!{user_lookup[user]}>")
     return message_content
 
 
