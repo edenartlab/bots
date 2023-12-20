@@ -27,6 +27,7 @@ EDEN_API_KEY = os.getenv("EDEN_API_KEY")
 EDEN_API_SECRET = os.getenv("EDEN_API_SECRET")
 EDEN_CHARACTER_ID = os.getenv("EDEN_CHARACTER_ID")
 
+print("EDEN CHAR", EDEN_CHARACTER_ID)
 
 @dataclass
 class LoraInput:
@@ -77,6 +78,9 @@ class LogosCharacterCog(commands.Cog):
                     "prompt": prompt,
                     "attachments": attachment_urls,
                 }
+
+                print("THE INTERACTION")
+                print(interaction)
 
                 response = request_logos_assistant(LOGOS_URL, assistant, interaction)
                 reply = response.get("message")[:2000]
