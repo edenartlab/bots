@@ -72,6 +72,11 @@ class LogosCharacterCog(commands.Cog):
                     credentials=self.eden_credentials,
                 )
 
+                print("ASISSTANT")
+                print(assistant)
+                print("CONCEPT")
+                print(concept)
+
                 interaction = {
                     "character_id": self.characterId,
                     "session_id": str(message.author.id) + str(message.channel.id),
@@ -82,7 +87,12 @@ class LogosCharacterCog(commands.Cog):
                 print("THE INTERACTION")
                 print(interaction)
 
+
+                print(LOGOS_URL)
+
                 response = request_logos_assistant(LOGOS_URL, assistant, interaction)
+                print("RESPONSE")
+                print(response)
                 reply = response.get("message")[:2000]
                 reply_message = await message.reply(reply)
 
