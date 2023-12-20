@@ -72,9 +72,10 @@ class LogosCharacterCog(commands.Cog):
                 )
 
                 interaction = {
+                    "character_id": self.characterId,
+                    "session_id": str(message.author.id) + str(message.channel.id),
                     "prompt": prompt,
                     "attachments": attachment_urls,
-                    "author_id": str(message.author.id),
                 }
 
                 response = request_logos_assistant(LOGOS_URL, assistant, interaction)
