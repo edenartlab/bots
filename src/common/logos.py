@@ -1,26 +1,17 @@
 import requests
 
 
-def request_logos_assistant(api_url: str, assistant: dict, interaction: dict):
-    
-    print("----")
-    print(assistant)
-    print(interaction)
-    print(api_url)
-    print("----")
-    print("--> 1")
-    print("GET KEYS")
-    print(assistant.keys())
-    print(interaction.keys())
-    print("--> 2")
+def logos_think(api_url: str, request: dict):
     response = requests.post(
-        f"{api_url}/interact",
-        json={
-            "assistant": assistant,
-            "interaction": interaction,
-        },
+        f"{api_url}/chat/think",
+        json=request,
     )
-    print("--> 3")
-    print(response.json())
+    return response.json()
 
+
+def logos_speak(api_url: str, request: dict):
+    response = requests.post(
+        f"{api_url}/chat/speak",
+        json=request,
+    )
     return response.json()

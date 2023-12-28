@@ -1,6 +1,7 @@
 import os
 import random
 import discord
+from datetime import datetime, timedelta
 from attr import dataclass
 from discord.ext import commands
 
@@ -10,8 +11,14 @@ from common.discord import (
     replace_bot_mention,
     replace_mentions_with_usernames,
 )
-from common.eden import generation_loop, get_assistant
-from common.logos import request_logos_assistant
+from common.eden import (
+    generation_loop, 
+    get_assistant,
+)
+from common.logos import (
+    logos_think, 
+    logos_speak,
+)
 from common.models import (
     GenerationLoopInput,
     SignInCredentials,
@@ -27,7 +34,6 @@ EDEN_API_KEY = os.getenv("EDEN_API_KEY")
 EDEN_API_SECRET = os.getenv("EDEN_API_SECRET")
 EDEN_CHARACTER_ID = os.getenv("EDEN_CHARACTER_ID")
 
-print("EDEN CHAR", EDEN_CHARACTER_ID)
 
 @dataclass
 class LoraInput:
@@ -58,43 +64,45 @@ class LogosCharacterCog(commands.Cog):
         ):
             return
 
-        trigger_reply = is_mentioned(message, self.bot.user)
+        session_id = f'{message.channel.id}/{message.author.id}'
+        prompt = self.message_preprocessor(message)
+        attachment_urls = [attachment.url for attachment in message.attachments]
 
+        cutoff = message.created_at - timedelta(minutes=90)
+        conversation_history = await message.channel.history(after=cutoff).flatten()
+        conversation = ""
+        for message in conversation_history[-10:]:
+            timestamp = message.created_at.strftime("%I:%M %p")
+            author = message.author.name
+            content = replace_mentions_with_usernames(
+                message.content,
+                message.mentions,
+            )
+            conversation += f"\n{author} — {timestamp}\n{content}\n"
+            #if message.attachments:
+        
+        request = {
+            "character_id": self.characterId,
+            "session_id": session_id,
+            "prompt": conversation,
+            # "prompt": prompt,
+            "attachments": attachment_urls,
+        }
+
+        trigger_reply = is_mentioned(message, self.bot.user)
+        #if not trigger_reply:
+        #    trigger_reply = logos_think(LOGOS_URL, request)
+        
         if trigger_reply:
             ctx = await self.bot.get_context(message)
             async with ctx.channel.typing():
-                prompt = self.message_preprocessor(message)
-                attachment_urls = [attachment.url for attachment in message.attachments]
+                request["prompt"] = prompt
+                response = logos_speak(LOGOS_URL, request)
 
-                assistant, concept = get_assistant(
-                    api_url=EDEN_API_URL,
-                    character_id=self.characterId,
-                    credentials=self.eden_credentials,
-                )
-
-                print("ASISSTANT")
-                print(assistant)
-                print("CONCEPT")
-                print(concept)
-
-                interaction = {
-                    "character_id": self.characterId,
-                    "session_id": str(message.author.id) + str(message.channel.id),
-                    "prompt": prompt,
-                    "attachments": attachment_urls,
-                }
-
-                print("THE INTERACTION")
-                print(interaction)
-
-
-                print(LOGOS_URL)
-
-                response = request_logos_assistant(LOGOS_URL, assistant, interaction)
-                print("RESPONSE")
-                print(response)
-                reply = response.get("message")[:2000]
-                reply_message = await message.reply(reply)
+                reply = response.get("message")
+                reply_chunks = [reply[i:i+2000] for i in range(0, len(reply), 2000)]
+                for chunk in reply_chunks:
+                    reply_message = await message.reply(chunk)
 
                 # check if there is a config
                 config = response.get("config")
@@ -116,15 +124,13 @@ class LogosCharacterCog(commands.Cog):
 
                 config = StableDiffusionConfig(generator_name=mode, **config)
 
-                config = self.add_lora(config, concept)
-
                 source = get_source(ctx)
 
                 is_video_request = mode in ["interpolate", "real2real"]
 
                 start_bot_message = f"**{text_input}** - <@!{ctx.author.id}>\n"
                 original_text = (
-                    f"{reply[0:1950-len(start_bot_message)]}\n\n{start_bot_message}"
+                    f"{reply_message.content[0:1950-len(start_bot_message)]}\n\n{start_bot_message}"
                 )
 
                 generation_loop_input = GenerationLoopInput(
@@ -149,12 +155,6 @@ class LogosCharacterCog(commands.Cog):
         )
         message_content = message_content.strip()
         return message_content
-
-    def add_lora(self, config: StableDiffusionConfig, concept: str):
-        if concept:
-            config.lora = concept
-            config.lora_strength = 0.6
-        return config
 
     def check_lora_trigger_provided(message: str, lora_trigger: str):
         return lora_trigger in message

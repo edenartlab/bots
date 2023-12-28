@@ -11,7 +11,6 @@ dependencies = [
     "python-dotenv>=1.0.0",
     "pymongo>=4.6.0",
     "py-cord>=2.4.1",
-    "eden-logos @ git+https://github.com/edenartlab/logos",
 ]
 readme = "README.md"
 requires-python = ">= 3.11"
