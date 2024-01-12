@@ -98,7 +98,8 @@ class LogosCharacterCog(commands.Cog):
             async with ctx.channel.typing():
                 request["prompt"] = prompt
                 response = logos_speak(LOGOS_URL, request)
-
+                print("response")
+                print(response)
                 reply = response.get("message")
                 reply_chunks = [reply[i:i+2000] for i in range(0, len(reply), 2000)]
                 for chunk in reply_chunks:
