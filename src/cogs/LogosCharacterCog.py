@@ -84,7 +84,7 @@ class LogosCharacterCog(commands.Cog):
         request = {
             "character_id": self.characterId,
             "session_id": session_id,
-            "prompt": conversation,
+            "message": conversation,
             # "prompt": prompt,
             "attachments": attachment_urls,
         }
@@ -96,7 +96,7 @@ class LogosCharacterCog(commands.Cog):
         if trigger_reply:
             ctx = await self.bot.get_context(message)
             async with ctx.channel.typing():
-                request["prompt"] = prompt
+                request["message"] = prompt
                 response = logos_speak(LOGOS_URL, request)
                 print("response")
                 print(response)
