@@ -90,8 +90,8 @@ class LogosCharacterCog(commands.Cog):
         }
 
         trigger_reply = is_mentioned(message, self.bot.user)
-        #if not trigger_reply:
-        #    trigger_reply = logos_think(LOGOS_URL, request)
+        if not trigger_reply:
+            trigger_reply = logos_think(LOGOS_URL, request)
         
         if trigger_reply:
             ctx = await self.bot.get_context(message)
