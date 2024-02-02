@@ -111,7 +111,10 @@ class LogosCharacterCog(commands.Cog):
                 if not config:
                     return
 
-                mode = config.pop("generator")
+                if config.get("generator"):
+                    mode = config.pop("generator")
+                else:
+                    return
 
                 if config.get("text_input"):
                     text_input = config["text_input"]
