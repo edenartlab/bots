@@ -8,11 +8,11 @@ welcome_message = """🎨 Welcome to kojii.ai Discord! 🤖✨
 
 Hello **{name}** and welcome to our creative space! 🚀 I'm excited to have you here as part of our community of art enthusiasts and tech explorers.
 
-🌟 Dive into our various channels. Introduce yourself in <https://discord.com/channels/1128729869535150260/1203819263731834961> and head over to <https://discord.com/channels/1128729869535150260/1203819229066043433> for a relaxed conversation. 
+🌟 Dive into our various channels. Introduce yourself in https://discord.com/channels/1128729869535150260/1203819263731834961 and head over to https://discord.com/channels/1128729869535150260/1203819229066043433 for a relaxed conversation. 
 
-💬 Our team is here to help! If you have any questions, ideas, or need assistance, feel free to reach out to us in <https://discord.com/channels/1128729869535150260/1203819834836656128>. 
+💬 Our team is here to help! If you have any questions, ideas, or need assistance, feel free to reach out to us in https://discord.com/channels/1128729869535150260/1203819834836656128. 
 
-🎙️ This Discord is a hub for creativity! Share your thoughts, ideas, or even your latest artworks in <https://discord.com/channels/1128729869535150260/1203819881481506876>.
+🎙️ This Discord is a hub for creativity! Share your thoughts, ideas, or even your latest artworks in https://discord.com/channels/1128729869535150260/1203819881481506876.
 
 🤖 Ready to unleash your creativity? Head over to your favorite artist channel and play with the models. Don't forget to share your masterpieces with the community!
 
