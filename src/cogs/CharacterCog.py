@@ -14,7 +14,7 @@ from common.eden import generation_loop, get_assistant
 from common.models import (
     GenerationLoopInput,
     SignInCredentials,
-    StableDiffusionConfig,
+    EdenConfig,
 )
 
 ALLOWED_CHANNELS = [int(c) for c in os.getenv("ALLOWED_CHANNELS", "").split(",")]
@@ -117,13 +117,13 @@ class CharacterCog(commands.Cog):
                 if not config.get("seed"):
                     config["seed"] = random.randint(1, 1e8)
 
-                config = StableDiffusionConfig(generator_name=mode, **config)
+                config = EdenConfig(generator_name=mode, **config)
 
                 config = self.add_lora(config, concept)
 
                 source = get_source(ctx)
 
-                is_video_request = mode in ["interpolate", "real2real"]
+                is_video_request = mode in ["interpolate", "real2real", "monologue", "dialogue", "story"]
 
                 start_bot_message = f"**{text_input}** - <@!{ctx.author.id}>\n"
                 original_text = (
@@ -153,7 +153,7 @@ class CharacterCog(commands.Cog):
         message_content = message_content.strip()
         return message_content
 
-    def add_lora(self, config: StableDiffusionConfig, concept: str):
+    def add_lora(self, config: EdenConfig, concept: str):
         if concept:
             config.lora = concept
             config.lora_strength = 0.6

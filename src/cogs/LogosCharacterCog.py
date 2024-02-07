@@ -22,7 +22,7 @@ from common.logos import (
 from common.models import (
     GenerationLoopInput,
     SignInCredentials,
-    StableDiffusionConfig,
+    EdenConfig,
 )
 
 ALLOWED_CHANNELS = [int(c) for c in os.getenv("ALLOWED_CHANNELS", "").split(",")]
@@ -57,6 +57,14 @@ class LogosCharacterCog(commands.Cog):
 
     @commands.Cog.listener("on_message")
     async def on_message(self, message: discord.Message) -> None:
+
+        try:
+            print("on msg")
+            print(message)
+            
+        except Exception as e:
+            print(e)
+
         if (
             message.channel.id not in ALLOWED_CHANNELS
             or message.author.id == self.bot.user.id
@@ -126,11 +134,11 @@ class LogosCharacterCog(commands.Cog):
                 if not config.get("seed"):
                     config["seed"] = random.randint(1, 1e8)
 
-                config = StableDiffusionConfig(generator_name=mode, **config)
+                config = EdenConfig(generator_name=mode, **config)
 
                 source = get_source(ctx)
 
-                is_video_request = mode in ["interpolate", "real2real"]
+                is_video_request = mode in ["interpolate", "real2real", "monologue", "dialogue", "story"]
 
                 start_bot_message = f"**{text_input}** - <@!{ctx.author.id}>\n"
                 original_text = (

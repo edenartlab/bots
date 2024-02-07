@@ -209,7 +209,6 @@ async def generation_loop(
     refresh_interval = loop_input.refresh_interval
     is_video_request = loop_input.is_video_request
     prefer_gif = loop_input.prefer_gif
-
     try:
         task_id = await request_creation(api_url, eden_credentials, source, config)
         current_output_url = None
@@ -238,12 +237,13 @@ async def generation_loop(
                     result, is_video_request, prefer_gif
                 )
                 view = ui.View()
-                view.add_item(
-                    LinkButton(
-                        "View this on Eden",
-                        f"{frontend_url}/creations/{result['creation']['_id']}",
-                    )
-                )
+                
+                # view.add_item(
+                #     LinkButton(
+                #         "View this on Eden",
+                #         f"{frontend_url}/creations/{result['creation']['_id']}",
+                #     )
+                # )
 
                 if not is_connected:
                     view.add_item(
@@ -253,16 +253,31 @@ async def generation_loop(
                         )
                     )
 
+
+                creation_url = f"{frontend_url}/creations/{result['creation']['_id']}"
+                print("THE CREATION URL", creation_url)
+
                 if parent_message:
+
+                    #if is_video_request:
                     await parent_message.reply(
-                        start_bot_message,
-                        files=[file],
+                        start_bot_message + " -> " + creation_url,
+                        files=[],
                         view=view,
                     )
+                    # else:
+                    #     await parent_message.reply(
+                    #         start_bot_message,
+                    #         files=[file],
+                    #         view=view,
+                    #     )
+
                 else:
                     await message.channel.send(
-                        start_bot_message,
-                        files=[file],
+                        #start_bot_message,
+                        start_bot_message + " -> " + creation_url,
+                        files=[],
+                        #files=[file],
                         view=view,
                     )
                 await message.delete()
