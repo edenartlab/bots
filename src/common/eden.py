@@ -220,22 +220,23 @@ async def generation_loop(
                 is_video_request,
                 prefer_gif,
             )
-            if output_url != current_output_url:
-                current_output_url = output_url
-                message_update = get_message_update(result)
-                await edit_message(
-                    message,
-                    start_bot_message,
-                    message_update,
-                    file_update=file,
-                )
+            ## Intermediate results
+            # if output_url != current_output_url:   
+            #     current_output_url = output_url
+            #     message_update = get_message_update(result)
+            #     await edit_message(
+            #         message,
+            #         start_bot_message,
+            #         message_update,
+            #         file_update=file,
+            #     )
             if result["status"] == "completed":
                 is_connected = await query_user_discord_connection(
                     api_url, eden_credentials, source.author_id
                 )
-                file, output_url = await get_file_update(
-                    result, is_video_request, prefer_gif
-                )
+                # file, output_url = await get_file_update(
+                #     result, is_video_request, prefer_gif
+                # )
                 view = ui.View()
                 
                 # view.add_item(
@@ -261,7 +262,7 @@ async def generation_loop(
 
                     #if is_video_request:
                     await parent_message.reply(
-                        start_bot_message + " -> " + creation_url,
+                        start_bot_message + "\n" + creation_url,
                         files=[],
                         view=view,
                     )
@@ -275,7 +276,7 @@ async def generation_loop(
                 else:
                     await message.channel.send(
                         #start_bot_message,
-                        start_bot_message + " -> " + creation_url,
+                        start_bot_message + "\n" + creation_url,
                         files=[],
                         #files=[file],
                         view=view,
