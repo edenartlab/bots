@@ -22,7 +22,7 @@ from common.logos import (
 from common.models import (
     GenerationLoopInput,
     SignInCredentials,
-    StableDiffusionConfig,
+    EdenConfig,
 )
 
 ALLOWED_CHANNELS = [int(c) for c in os.getenv("ALLOWED_CHANNELS", "").split(",")]
@@ -57,6 +57,16 @@ class LogosCharacterCog(commands.Cog):
 
     @commands.Cog.listener("on_message")
     async def on_message(self, message: discord.Message) -> None:
+        print("thios is a message")
+        print("--->")
+        try:
+            print("on msg")
+            print(message)
+            print(message.content)
+            
+        except Exception as e:
+            print(e)
+
         if (
             message.channel.id not in ALLOWED_CHANNELS
             or message.author.id == self.bot.user.id
@@ -71,15 +81,15 @@ class LogosCharacterCog(commands.Cog):
         cutoff = message.created_at - timedelta(minutes=90)
         conversation_history = await message.channel.history(after=cutoff).flatten()
         conversation = ""
-        for message in conversation_history[-10:]:
-            timestamp = message.created_at.strftime("%I:%M %p")
-            author = message.author.name
+        for msg in conversation_history[-10:]:
+            timestamp = msg.created_at.strftime("%I:%M %p")
+            author = msg.author.name
             content = replace_mentions_with_usernames(
-                message.content,
-                message.mentions,
+                msg.content,
+                msg.mentions,
             )
             conversation += f"\n{author} — {timestamp}\n{content}\n"
-            #if message.attachments:
+            #if msg.attachments:
         
         request = {
             "character_id": self.characterId,
@@ -93,6 +103,8 @@ class LogosCharacterCog(commands.Cog):
         if not trigger_reply:
             trigger_reply = logos_think(LOGOS_URL, request)
         
+        print("TRIG REPLY", trigger_reply)
+
         if trigger_reply:
             ctx = await self.bot.get_context(message)
             async with ctx.channel.typing():
@@ -111,7 +123,10 @@ class LogosCharacterCog(commands.Cog):
                 if not config:
                     return
 
-                mode = config.pop("generator")
+                if config.get("generator"):
+                    mode = config.pop("generator")
+                else:
+                    return
 
                 if config.get("text_input"):
                     text_input = config["text_input"]
@@ -123,11 +138,11 @@ class LogosCharacterCog(commands.Cog):
                 if not config.get("seed"):
                     config["seed"] = random.randint(1, 1e8)
 
-                config = StableDiffusionConfig(generator_name=mode, **config)
+                config = EdenConfig(generator_name=mode, **config)
 
                 source = get_source(ctx)
 
-                is_video_request = mode in ["interpolate", "real2real"]
+                is_video_request = mode in ["interpolate", "real2real", "monologue", "dialogue", "story"]
 
                 start_bot_message = f"**{text_input}** - <@!{ctx.author.id}>\n"
                 original_text = (

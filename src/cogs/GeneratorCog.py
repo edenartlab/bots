@@ -14,7 +14,7 @@ from common.eden import (
 from common.models import (
     GenerationLoopInput,
     SignInCredentials,
-    StableDiffusionConfig,
+    EdenConfig,
 )
 
 ALLOWED_GUILDS = [g for g in os.getenv("ALLOWED_GUILDS", "").split(",")] or []
@@ -53,7 +53,7 @@ class GeneratorCog(commands.Cog):
     ):
         print("Received test")
 
-        config = StableDiffusionConfig(
+        config = EdenConfig(
             generator_name="test",
         )
 
@@ -111,7 +111,7 @@ class GeneratorCog(commands.Cog):
         width, height, upscale_f = self.get_dimensions(aspect_ratio, large)
         steps = 15 if fast else 35
 
-        config = StableDiffusionConfig(
+        config = EdenConfig(
             generator_name="create",
             text_input=text_input,
             width=width,
@@ -165,7 +165,7 @@ class GeneratorCog(commands.Cog):
         steps = 50
         width, height = 1024, 1024
 
-        config = StableDiffusionConfig(
+        config = EdenConfig(
             generator_name="remix",
             text_input="remix",
             init_image_data=image1.url,
@@ -227,7 +227,7 @@ class GeneratorCog(commands.Cog):
         steps = 40
         width, height = 768, 768
 
-        config = StableDiffusionConfig(
+        config = EdenConfig(
             generator_name="real2real",
             stream=True,
             stream_every=1,
@@ -307,7 +307,7 @@ class GeneratorCog(commands.Cog):
         steps = 40
         width, height, upscale_f = self.get_video_dimensions(aspect_ratio, False)
 
-        config = StableDiffusionConfig(
+        config = EdenConfig(
             generator_name="interpolate",
             stream=True,
             stream_every=1,
@@ -373,7 +373,7 @@ class GeneratorCog(commands.Cog):
             return False
         return True
 
-    def add_lora(self, config: StableDiffusionConfig):
+    def add_lora(self, config: EdenConfig):
         if self.lora:
             config.lora = self.lora.lora_id
             config.lora_strength = self.lora.lora_strength
