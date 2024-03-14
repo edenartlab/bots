@@ -2,7 +2,7 @@ import asyncio
 import io
 import os
 from typing import Optional
-
+import time
 
 import aiohttp
 import discord
@@ -13,16 +13,43 @@ from common.models import SignInCredentials
 
 from discord import ui, ButtonStyle
 
+UNLINKED_USER_CREATION_COOLDOWN = 60 * 60
+UNLINKED_USER_PREMIUM_ENDPOINT_COOLDOWN = 60 * 60 * 24
+unlinked_users_creation_times = {}
+
 
 class LinkButton(ui.Button):
     def __init__(self, label, url):
         super().__init__(label=label, url=url, style=ButtonStyle.link)
 
 
+async def check_creation_allowed(api_url: str, source: SourceSettings, config):
+    generator_name = config.generator_name
+
+    eden_user = await get_eden_user(api_url, source.author_id)
+    current_time = time.time()
+    is_premium_endpoint = generator_name != "create"
+
+    if not eden_user:
+        last_creation_time = unlinked_users_creation_times.get(source.author_id)
+        cooldown_period = UNLINKED_USER_PREMIUM_ENDPOINT_COOLDOWN if is_premium_endpoint else UNLINKED_USER_CREATION_COOLDOWN
+        if last_creation_time and (current_time - last_creation_time) < cooldown_period:
+            time_left = cooldown_period - (current_time - last_creation_time)
+            hours, remainder = divmod(time_left, 3600)
+            minutes, _ = divmod(remainder, 60)
+            raise Exception(f"Creation limit exceeded. Please wait {int(hours)}h {int(minutes)}m, or [connect your Discord account to Eden](https://app.eden.art/account) to remove this limit.")
+        unlinked_users_creation_times[source.author_id] = current_time
+    else:
+        # TODO: spend user's manna
+        pass
+
+
 async def request_creation(
     api_url: str, credentials: SignInCredentials, source: SourceSettings, config
 ):
     generator_name = config.generator_name
+    await check_creation_allowed(api_url, source, config)
+
     config_dict = config.__dict__
     config_dict.pop("generator_name", None)
 
@@ -249,7 +276,7 @@ async def generation_loop(
                     view.add_item(
                         LinkButton(
                             "Link your Discord account to Eden",
-                            f"{frontend_url}/tools",
+                            f"{frontend_url}/account",
                         )
                     )
 
