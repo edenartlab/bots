@@ -1,11 +1,11 @@
-from discord.ext import commands
-from cogs.LogosCharacterCog import LogosCharacterCog
+# from discord.ext import commands
+# from cogs.Eden2Cog import Eden2Cog
 
 
-class EdenLogosCharacterCog(LogosCharacterCog):
-    def __init__(self, bot: commands.bot) -> None:
-        super().__init__(bot)
+# class EdenEden2Cog(Eden2Cog):
+#     def __init__(self, bot: commands.bot) -> None:
+#         super().__init__(bot)
 
 
-def setup(bot: commands.Bot) -> None:
-    bot.add_cog(EdenLogosCharacterCog(bot))
+# def setup(bot: commands.Bot) -> None:
+#     bot.add_cog(EdenEden2Cog(bot))
