@@ -56,6 +56,9 @@ class Eden2Cog(commands.Cog):
         ):
             return
         
+        if message.channe.id != 1186378591118839808:
+            return
+        
         global thread_id
         content = replace_bot_mention(message.content, only_first=True)
         content = replace_mentions_with_usernames(content, message.mentions)
