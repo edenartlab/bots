@@ -1,11 +1,11 @@
 from discord.ext import commands
-from cogs.Eden2Cog import Eden2Cog
+from cogs.CharacterGeneratorCog import CharacterGeneratorCog
 
 
-class EdenEden2Cog(Eden2Cog):
+class EdenCharacterGeneratorCog(CharacterGeneratorCog):
     def __init__(self, bot: commands.bot) -> None:
         super().__init__(bot)
 
 
 def setup(bot: commands.Bot) -> None:
-    bot.add_cog(EdenEden2Cog(bot))
+    bot.add_cog(EdenCharacterGeneratorCog(bot))
