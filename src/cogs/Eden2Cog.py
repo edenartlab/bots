@@ -56,7 +56,7 @@ class Eden2Cog(commands.Cog):
         ):
             return
         
-        if message.channe.id != 1186378591118839808:
+        if message.channel.id != 1186378591118839808:
             return
         
         global thread_id
