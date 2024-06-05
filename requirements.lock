@@ -5,33 +5,87 @@
 #   pre: false
 #   features: []
 #   all-features: false
+#   with-sources: false
 
 -e file:.
 aiohttp==3.8.6
+    # via py-cord
 aiosignal==1.3.1
+    # via aiohttp
 annotated-types==0.6.0
+    # via pydantic
 anyio==3.7.1
+    # via httpx
+    # via openai
 async-timeout==4.0.3
+    # via aiohttp
 attrs==23.1.0
+    # via aiohttp
 certifi==2023.11.17
+    # via httpcore
+    # via httpx
+    # via requests
 charset-normalizer==3.3.2
+    # via aiohttp
+    # via requests
 distro==1.8.0
+    # via openai
 dnspython==2.4.2
+    # via pymongo
+eden @ git+https://github.com/edenartlab/eden2#subdirectory=sdk@c547eed987856e49de875989f823e0a09981d70b
+    # via bots
 frozenlist==1.4.0
+    # via aiohttp
+    # via aiosignal
 h11==0.14.0
+    # via httpcore
 httpcore==1.0.2
+    # via httpx
 httpx==0.25.1
+    # via openai
 idna==3.4
+    # via anyio
+    # via httpx
+    # via requests
+    # via yarl
+markdown-it-py==3.0.0
+    # via rich
+mdurl==0.1.2
+    # via markdown-it-py
 multidict==6.0.4
+    # via aiohttp
+    # via yarl
 openai==1.3.3
+    # via bots
 py-cord==2.4.1
+    # via bots
 pydantic==2.5.1
+    # via openai
 pydantic-core==2.14.3
+    # via pydantic
+pygments==2.18.0
+    # via rich
 pymongo==4.6.0
+    # via bots
 python-dotenv==1.0.0
+    # via bots
 requests==2.31.0
+    # via bots
+    # via eden
+rich==13.7.1
+    # via eden
 sniffio==1.3.0
+    # via anyio
+    # via httpx
 tqdm==4.66.1
+    # via openai
 typing-extensions==4.8.0
+    # via openai
+    # via pydantic
+    # via pydantic-core
 urllib3==2.1.0
+    # via requests
+websocket-client==1.8.0
+    # via bots
 yarl==1.9.3
+    # via aiohttp
