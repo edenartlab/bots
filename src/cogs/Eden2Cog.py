@@ -32,7 +32,7 @@ from common.models import (
 EDEN_CHARACTER_ID = os.getenv("EDEN_CHARACTER_ID")
 
 client = EdenClient()
-client.api_url = 'edenartlab--tasks-fastapi-app-dev.modal.run'
+# client.api_url = 'edenartlab--tasks-fastapi-app-dev.modal.run'
 client.api_key = "2e4c65fb98622ca2aec8dae6ff07aae2eec3300aeab890e5"
 
 thread_id = "665161a77df49de2c24fc225"
