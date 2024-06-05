@@ -28,13 +28,13 @@ from common.models import (
     EdenConfig,
 )
 
-ALLOWED_CHANNELS = [int(c) for c in os.getenv("ALLOWED_CHANNELS", "").split(",")]
+# ALLOWED_CHANNELS = [int(c) for c in os.getenv("ALLOWED_CHANNELS", "").split(",")]
 EDEN_CHARACTER_ID = os.getenv("EDEN_CHARACTER_ID")
 
 client = EdenClient()
 client.api_key = "2e4c65fb98622ca2aec8dae6ff07aae2eec3300aeab890e5"
 print(client.api_url)
-thread_id = None
+thread_id = "665161a77df49de2c24fc225"
 
 import asyncio
 
@@ -48,15 +48,21 @@ class Eden2Cog(commands.Cog):
 
     @commands.Cog.listener("on_message")
     async def on_message(self, message: discord.Message) -> None:
+        print("ok???")
         print("ON MESSAGE", message.content)
         if (
-            message.channel.id not in ALLOWED_CHANNELS
-            or message.author.id == self.bot.user.id
+            # message.channel.id not in ALLOWED_CHANNELS
+            #or message.author.id == self.bot.user.id
+            message.author.id == self.bot.user.id
             or message.author.bot
         ):
             return
         
-        if message.channel.id != 1186378591118839808:
+        trigger_reply = is_mentioned(message, self.bot.user)
+        if not trigger_reply:
+            return
+
+        if message.channel.id != 1186378591118839808 and message.channel.id != 1006143747588898849:
             return
         
         global thread_id
