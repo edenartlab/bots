@@ -32,8 +32,9 @@ from common.models import (
 EDEN_CHARACTER_ID = os.getenv("EDEN_CHARACTER_ID")
 
 client = EdenClient()
+client.api_url = 'edenartlab--tasks-fastapi-app-dev.modal.run'
 client.api_key = "2e4c65fb98622ca2aec8dae6ff07aae2eec3300aeab890e5"
-print(client.api_url)
+
 thread_id = "665161a77df49de2c24fc225"
 
 import asyncio
@@ -48,8 +49,6 @@ class Eden2Cog(commands.Cog):
 
     @commands.Cog.listener("on_message")
     async def on_message(self, message: discord.Message) -> None:
-        print("ok???")
-        print("ON MESSAGE", message.content)
         if (
             # message.channel.id not in ALLOWED_CHANNELS
             #or message.author.id == self.bot.user.id
@@ -72,7 +71,8 @@ class Eden2Cog(commands.Cog):
         # Check if the message is a reply
         if message.reference:
             source_message = await message.channel.fetch_message(message.reference.message_id)
-            content = f"((Reply to {source_message.author.name}: {source_message.content[:120]} ...))\n\n{content}"
+            # content = f"((Reply to {source_message.author.name}: {source_message.content[:120]} ...))\n\n{content}"
+            content = f"((Reply to {source_message.author.name}: {source_message.content[:50]} ...))\n\n{content}"
             # TODO: extract urls don't shorten them
 
         chat_message = {
@@ -81,27 +81,19 @@ class Eden2Cog(commands.Cog):
             "attachments": [attachment.url for attachment in message.attachments],
             "settings": {}
         }
-        print("THE CHAT MESSAGE", chat_message)
 
         ctx = await self.bot.get_context(message)
-        print("ctx 1")
         async with ctx.channel.typing():
-            print("ctx 2")
-            print("TO THE URL", client.api_url)
-
             heartbeat_task = asyncio.create_task(self.heartbeat())
-
-            try:                    
+            try:
+                print(chat_message)
                 async for response in client.async_chat(chat_message, thread_id):
-                    print("ctx 3")
-                    print("-----------------")
                     print(response)
                     error = response.get("error")
-                    print("ERROR", error)
                     if error:
                         await reply(message, error)
                         continue
-                    thread_id = response.get("task_id") 
+                    thread_id = response.get("thread_id") 
                     msg = json.loads(response.get("message"))
                     content = msg.get("content")
                     if content:
