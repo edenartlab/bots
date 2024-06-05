@@ -126,7 +126,7 @@ def replace_mentions_with_usernames(
             f"{prefix}{mention.display_name}{suffix}",
             message_content
         )
-    return message_content
+    return message_content.strip()
 
 
 def replace_usernames_with_mentions(
@@ -140,7 +140,7 @@ def replace_usernames_with_mentions(
     """
     for user in user_lookup:
         message_content = message_content.replace(user, f"<@!{user_lookup[user]}>")
-    return message_content
+    return message_content.strip()
 
 
 def in_channels(channel_ids: List[int]) -> commands.check:
