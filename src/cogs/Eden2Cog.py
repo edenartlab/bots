@@ -59,16 +59,18 @@ class Eden2Cog(commands.Cog):
             return
         
         trigger_reply = is_mentioned(message, self.bot.user)
+        print("trig reply", trigger_reply)
         if not trigger_reply:
             return
 
         if message.channel.id != 1186378591118839808 and message.channel.id != 1006143747588898849:
             return
         
+        print("got here..", message.content)
         global thread_id
         content = replace_bot_mention(message.content, only_first=True)
         content = replace_mentions_with_usernames(content, message.mentions)
-
+        print("content", content)
         # Check if the message is a reply
         if message.reference:
             source_message = await message.channel.fetch_message(message.reference.message_id)
