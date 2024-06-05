@@ -32,7 +32,7 @@ distro==1.8.0
     # via openai
 dnspython==2.4.2
     # via pymongo
-eden @ git+https://github.com/edenartlab/eden2#subdirectory=sdk@c547eed987856e49de875989f823e0a09981d70b
+eden @ git+https://github.com/edenartlab/eden2#subdirectory=sdk@fea267e7f6b219dfba67786f5783f0bee1b67159
     # via bots
 frozenlist==1.4.0
     # via aiohttp
