@@ -20,6 +20,10 @@ def is_mentioned(message: discord.Message, user: discord.User) -> bool:
     :param user: The user to check.
     :return: True if the user is mentioned, False otherwise.
     """
+    # print("message mentions")
+    # print(message.mentions)
+    # print(user.id)
+    # print("----")
     return user.id in [m.id for m in message.mentions]
 
 

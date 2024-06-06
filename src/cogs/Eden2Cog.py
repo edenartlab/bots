@@ -35,7 +35,7 @@ client = EdenClient()
 # client.api_url = 'edenartlab--tasks-fastapi-app-dev.modal.run'
 client.api_key = "2e4c65fb98622ca2aec8dae6ff07aae2eec3300aeab890e5"
 
-thread_id = "665161a77df49de2c24fc225"
+thread_id = "664c3add9ab5c394b8fa2c7f"
 
 import asyncio
 
@@ -58,6 +58,7 @@ class Eden2Cog(commands.Cog):
         ):
             return
         
+        print("check if mention")
         trigger_reply = is_mentioned(message, self.bot.user)
         print("trig reply", trigger_reply)
         if not trigger_reply:
