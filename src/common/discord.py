@@ -20,11 +20,9 @@ def is_mentioned(message: discord.Message, user: discord.User) -> bool:
     :param user: The user to check.
     :return: True if the user is mentioned, False otherwise.
     """
-    # print("message mentions")
-    # print(message.mentions)
-    # print(user.id)
-    # print("----")
-    return user.id in [m.id for m in message.mentions]
+    bot_name = message.guild.me.name
+    name_mentioned = bot_name.lower() in message.content.lower()
+    return name_mentioned or user.id in [m.id for m in message.mentions]
 
 
 def role_is_mentioned(message: discord.Message, role_name: str) -> bool:
