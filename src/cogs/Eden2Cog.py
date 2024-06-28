@@ -18,8 +18,6 @@ from common.discord import (
 EDEN_CHARACTER_ID = os.getenv("EDEN_CHARACTER_ID")
 
 client = EdenClient()
-# client.api_url = 'edenartlab--tasks-fastapi-app-dev.modal.run'
-# client.api_key = "2e4c65fb98622ca2aec8dae6ff07aae2eec3300aeab890e5"
 
 
 from discord import ui, ButtonStyle
@@ -27,7 +25,6 @@ from discord import ui, ButtonStyle
 class MyView(ui.View):
     @ui.button(label="Click Me", style=ButtonStyle.green, custom_id="button_click")
     async def button_click(self, button: ui.Button, interaction: discord.Interaction):
-        # Define what should happen when the button is clicked
         await interaction.response.send_message("Button was clicked!", ephemeral=True)
 
 
@@ -41,7 +38,7 @@ class Eden2Cog(commands.Cog):
     ) -> None:
         self.bot = bot
         self.characterId = EDEN_CHARACTER_ID
-        self.thread_id = client.get_or_create_thread("discord-test")
+        self.thread_id = client.get_or_create_thread("discord-test3")
         print("thread id", self.thread_id)
 
     @commands.Cog.listener("on_message")
