@@ -1,5 +1,5 @@
 import os
-import random
+import asyncio
 import discord
 import json
 from datetime import datetime, timedelta
@@ -9,23 +9,9 @@ from discord.ext import commands
 from eden import EdenClient
 
 from common.discord import (
-    get_source,
     is_mentioned,
     replace_bot_mention,
     replace_mentions_with_usernames,
-)
-from common.eden import (
-    generation_loop, 
-    get_assistant,
-)
-from common.logos import (
-    logos_think, 
-    logos_speak,
-)
-from common.models import (
-    GenerationLoopInput,
-    SignInCredentials,
-    EdenConfig,
 )
 
 # ALLOWED_CHANNELS = [int(c) for c in os.getenv("ALLOWED_CHANNELS", "").split(",")]
@@ -33,11 +19,20 @@ EDEN_CHARACTER_ID = os.getenv("EDEN_CHARACTER_ID")
 
 client = EdenClient()
 # client.api_url = 'edenartlab--tasks-fastapi-app-dev.modal.run'
-client.api_key = "2e4c65fb98622ca2aec8dae6ff07aae2eec3300aeab890e5"
+# client.api_key = "2e4c65fb98622ca2aec8dae6ff07aae2eec3300aeab890e5"
 
-thread_id = "664c3add9ab5c394b8fa2c7f"
 
-import asyncio
+from discord import ui, ButtonStyle
+
+class MyView(ui.View):
+    @ui.button(label="Click Me", style=ButtonStyle.green, custom_id="button_click")
+    async def button_click(self, button: ui.Button, interaction: discord.Interaction):
+        # Define what should happen when the button is clicked
+        await interaction.response.send_message("Button was clicked!", ephemeral=True)
+
+
+
+
 
 class Eden2Cog(commands.Cog):
     def __init__(
@@ -46,13 +41,13 @@ class Eden2Cog(commands.Cog):
     ) -> None:
         self.bot = bot
         self.characterId = EDEN_CHARACTER_ID
+        self.thread_id = client.get_or_create_thread("discord-test")
+        print("thread id", self.thread_id)
 
     @commands.Cog.listener("on_message")
     async def on_message(self, message: discord.Message) -> None:
         print("on... message ...", message.content)
         if (
-            # message.channel.id not in ALLOWED_CHANNELS
-            #or message.author.id == self.bot.user.id
             message.author.id == self.bot.user.id
             or message.author.bot
         ):
@@ -68,7 +63,6 @@ class Eden2Cog(commands.Cog):
             return
         
         print("got here..", message.content)
-        global thread_id
         content = replace_bot_mention(message.content, only_first=True)
         content = replace_mentions_with_usernames(content, message.mentions)
         print("content", content)
@@ -88,35 +82,29 @@ class Eden2Cog(commands.Cog):
 
         ctx = await self.bot.get_context(message)
         async with ctx.channel.typing():
-            heartbeat_task = asyncio.create_task(self.heartbeat())
-            try:
-                print(chat_message)
-                async for response in client.async_chat(chat_message, thread_id):
-                    print(response)
-                    error = response.get("error")
-                    if error:
-                        await reply(message, error)
-                        continue
-                    thread_id = response.get("thread_id") 
-                    msg = json.loads(response.get("message"))
-                    content = msg.get("content")
-                    if content:
+            print(chat_message)
+            async for response in client.async_chat(chat_message, self.thread_id):
+                print(response)
+                error = response.get("error")
+                if error:
+                    await reply(message, error)
+                    continue
+                response = json.loads(response.get("message"))
+                content = response.get("content")
+                tool_calls = response.get("tool_calls")
+                if tool_calls:
+                    tool_name = tool_calls[0].get("function").get("name")
+                    if tool_name in ["txt2vid", "style_mixing", "img2vid", "vid2vid", "video_upscale"]:
+                        args = json.loads(tool_calls[0].get("function").get("arguments"))
+                        prompt = args.get("prompt")
+                        content = f"Running {tool_name}: {prompt}. Please wait..."
                         await reply(message, content)
-            finally:
-                # Cancel the heartbeat task when the chat is done
-                heartbeat_task.cancel()
-                try:
-                    await heartbeat_task
-                except asyncio.CancelledError:
-                    print("Heartbeat stopped.")
-
-    async def heartbeat(self):
-        while True:
-            print("Heartbeat: The chat is still running.")
-            await asyncio.sleep(2)
-
+                if content:
+                    await reply(message, content)
 
 async def reply(message, content):
     content_chunks = [content[i:i+3980] for i in range(0, len(content), 3980)]
     for c, chunk in enumerate(content_chunks):
         await message.reply(chunk) if c == 0 else await message.channel.send(chunk)
+
+
