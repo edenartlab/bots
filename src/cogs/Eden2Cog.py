@@ -30,7 +30,6 @@ class MyView(ui.View):
         await interaction.response.send_message("Button was clicked!", ephemeral=True)
 
 
-
 class Eden2Cog(commands.Cog):
     def __init__(
         self,
@@ -38,8 +37,6 @@ class Eden2Cog(commands.Cog):
     ) -> None:
         self.bot = bot
         self.characterId = EDEN_CHARACTER_ID
-        self.thread_id = client.get_or_create_thread("discord-test11")
-        print("thread id", self.thread_id)
 
     @commands.Cog.listener("on_message")
     async def on_message(self, message: discord.Message) -> None:
@@ -81,18 +78,25 @@ class Eden2Cog(commands.Cog):
             ran = random.randint(1, 10000)
             print(ran, content)
             # print(chat_message)
-            async for response in client.async_chat(chat_message, self.thread_id):
+
+            print("look for", f"discord-{message.channel.id}-{message.author.id}")
+            thread_id = client.get_or_create_thread(f"discord-{message.channel.id}-{message.author.id}")
+            print("thread id", thread_id)
+
+            answered = False
+            async for response in client.async_chat(chat_message, thread_id):
                 print(ran, response)
-                error_message = response.get("error")
-                if error_message:
-                    await reply(message, error_message)
+                if 'error' in response:
+                    error_message = response.get("error")
+                    await reply(message, f"Error: {error_message}")
                     continue
+                print("response to json", response)
                 response = json.loads(response.get("message"))
                 content = response.get("content")
                 tool_calls = response.get("tool_calls")
                 if tool_calls:
                     tool_name = tool_calls[0].get("function").get("name")
-                    if tool_name in long_running_tools:
+                    if tool_name in long_running_tools and not answered:
                         args = json.loads(tool_calls[0].get("function").get("arguments"))
                         prompt = args.get("prompt")
                         if prompt:
@@ -101,6 +105,7 @@ class Eden2Cog(commands.Cog):
                             await reply(message, f"Running {tool_name}. Please wait...")
                         
                 if content:
+                    answered = True
                     await reply(message, content)
 
 async def reply(message, content):
