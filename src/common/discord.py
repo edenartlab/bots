@@ -21,7 +21,8 @@ def is_mentioned(message: discord.Message, user: discord.User) -> bool:
     :return: True if the user is mentioned, False otherwise.
     """
     bot_name = message.guild.me.name
-    name_mentioned = bot_name.lower() in message.content.lower()
+    # name_mentioned = bot_name.lower() in message.content.lower()
+    name_mentioned = re.search(rf"\b{re.escape(bot_name.lower())}\b", message.content.lower()) is not None
     return name_mentioned or user.id in [m.id for m in message.mentions]
 
 
