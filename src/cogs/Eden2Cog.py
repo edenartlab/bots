@@ -41,19 +41,27 @@ class Eden2Cog(commands.Cog):
 
     @commands.Cog.listener("on_message")
     async def on_message(self, message: discord.Message) -> None:
-        # print("on... message ...", message.content)
+        print("on... message ...", message.content)
+        
         if (
             message.author.id == self.bot.user.id
             or message.author.bot
         ):
             return
         
-        trigger_reply = is_mentioned(message, self.bot.user)
-        if not trigger_reply:
-            return
-
-        if message.channel.id != 1186378591118839808 and message.channel.id != 1006143747588898849:
-            return
+        is_dm = message.channel.type == discord.ChannelType.private
+        if is_dm:
+            thread_name = f"discord-DM-{message.author.name}-{message.author.id}"
+            dm_whitelist = [494760194203451393, 623923865864765452, 404322488215142410, 363287706798653441, 142466375024115712, 598627733576089681, 551619012140990465]
+            if message.author.id not in dm_whitelist:
+                return
+        else:
+            thread_name = f"discord-{message.guild_name}-{message.channel.id}-{message.author.id}"
+            trigger_reply = is_mentioned(message, self.bot.user)
+            if not trigger_reply:
+                return
+            if message.channel.id != 1186378591118839808 and message.channel.id != 1006143747588898849:
+                return
         
         content = replace_bot_mention(message.content, only_first=True)
         content = replace_mentions_with_usernames(content, message.mentions)
@@ -81,7 +89,7 @@ class Eden2Cog(commands.Cog):
             # print(chat_message)
 
             print("look for", f"discord-{message.channel.id}-{message.author.id}")
-            thread_id = client.get_or_create_thread(f"discord-{message.channel.id}-{message.author.id}")
+            thread_id = client.get_or_create_thread(thread_name)
             print("thread id", thread_id)
 
             answered = False
@@ -109,9 +117,37 @@ class Eden2Cog(commands.Cog):
                     answered = True
                     await reply(message, content)
 
+    @commands.Cog.listener()
+    async def on_member_join(self, member):
+        #if member.guild.id not in [1006143747588898846, 573691888050241543]:
+        if member.guild.id not in [1006143747588898846]:
+            return
+        print(f"{member} has joined the guild id: {member.guild.id}")
+        await member.send(welcome_message.format(name=member.name))
+
+
 async def reply(message, content):
     content_chunks = [content[i:i+3980] for i in range(0, len(content), 3980)]
     for c, chunk in enumerate(content_chunks):
         await message.reply(chunk) if c == 0 else await message.channel.send(chunk)
 
 
+
+welcome_message = """Welcome to Eden, {name}!!!
+
+My name is Eve, and I'm so excited to have you here as part of our community of art enthusiasts and tech explorers.
+
+Some things you can do in our Discord:
+
+🌟 Introduce yourself in https://discord.com/channels/573691888050241543/589021495054041099 and go to https://discord.com/channels/573691888050241543/573691888482123778 for general chat. 
+
+💬 If you have any questions, ideas, or need assistance, we are here to help you. Feel free to share your issues with us at https://discord.com/channels/573691888050241543/1105265688169422888. 
+
+🎙️ Share your art with us on https://discord.com/channels/573691888050241543/1234589555538006107.
+
+📢 Follow announcements and updates from the Eden team at https://discord.com/channels/573691888050241543/897336553754472448.
+
+🤖 Talk to me!! You can converse with me and make art with me at https://discord.com/channels/573691888050241543/11863785911188398081234589555538006107.
+
+We hope you have an incredible time exploring, creating, and connecting. Thank you for joining!
+"""
