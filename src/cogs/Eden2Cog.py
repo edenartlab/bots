@@ -56,7 +56,7 @@ class Eden2Cog(commands.Cog):
             if message.author.id not in dm_whitelist:
                 return
         else:
-            thread_name = f"discord-{message.guild_name}-{message.channel.id}-{message.author.id}"
+            thread_name = f"discord-{message.guild.name}-{message.channel.id}-{message.author.id}"
             trigger_reply = is_mentioned(message, self.bot.user)
             if not trigger_reply:
                 return
