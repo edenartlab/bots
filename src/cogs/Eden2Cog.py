@@ -20,6 +20,7 @@ long_running_tools = ["txt2vid", "style_mixing", "img2vid", "vid2vid", "video_up
 EDEN_CHARACTER_ID = os.getenv("EDEN_CHARACTER_ID")
 
 client = EdenClient()
+print("client", client.api_key)
 
 
 from discord import ui, ButtonStyle
