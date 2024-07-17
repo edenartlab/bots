@@ -51,13 +51,13 @@ class Eden2Cog(commands.Cog):
         
         is_dm = message.channel.type == discord.ChannelType.private
         if is_dm:
-            thread_name = f"discord-DM-{message.author.name}-{message.author.id}"
+            thread_name = f"discord0-DM-{message.author.name}-{message.author.id}"
             dm_whitelist = [494760194203451393, 623923865864765452, 404322488215142410, 363287706798653441, 142466375024115712, 598627733576089681, 551619012140990465]
             if message.author.id not in dm_whitelist:
                 return
         else:
-            thread_name = f"discord-{message.guild.name}-{message.channel.id}-{message.author.id}"
-            trigger_reply = is_mentioned(message, self.bot.user)
+            thread_name = f"discord0-{message.guild.name}-{message.channel.id}-{message.author.id}"
+            trigger_reply = True #is_mentioned(message, self.bot.user)
             if not trigger_reply:
                 return
             if message.channel.id != 1186378591118839808 and message.channel.id != 1006143747588898849:
@@ -80,6 +80,7 @@ class Eden2Cog(commands.Cog):
             "attachments": [attachment.url for attachment in message.attachments],
             "settings": {}
         }
+        print("chat message", chat_message)
 
         ctx = await self.bot.get_context(message)
         async with ctx.channel.typing():
