@@ -128,7 +128,7 @@ class Eden2Cog(commands.Cog):
 
 
 async def reply(message, content):
-    content_chunks = [content[i:i+3980] for i in range(0, len(content), 3980)]
+    content_chunks = [content[i:i+1980] for i in range(0, len(content), 1980)]
     for c, chunk in enumerate(content_chunks):
         await message.reply(chunk) if c == 0 else await message.channel.send(chunk)
 
