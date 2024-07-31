@@ -51,13 +51,13 @@ class Eden2Cog(commands.Cog):
         
         is_dm = message.channel.type == discord.ChannelType.private
         if is_dm:
-            thread_name = f"discord0-DM-{message.author.name}-{message.author.id}"
+            thread_name = f"discord2-DM-{message.author.name}-{message.author.id}"
             dm_whitelist = [494760194203451393, 623923865864765452, 404322488215142410, 363287706798653441, 142466375024115712, 598627733576089681, 551619012140990465]
             if message.author.id not in dm_whitelist:
                 return
         else:
-            thread_name = f"discord0-{message.guild.name}-{message.channel.id}-{message.author.id}"
-            trigger_reply = True #is_mentioned(message, self.bot.user)
+            thread_name = f"discord2-{message.guild.name}-{message.channel.id}-{message.author.id}"
+            trigger_reply = is_mentioned(message, self.bot.user)
             if not trigger_reply:
                 return
             if message.channel.id != 1186378591118839808 and message.channel.id != 1006143747588898849:
@@ -89,7 +89,7 @@ class Eden2Cog(commands.Cog):
             print(ran, content)
             # print(chat_message)
 
-            print("look for", f"discord-{message.channel.id}-{message.author.id}")
+            print("look for", f"discord2-{message.channel.id}-{message.author.id}")
             thread_id = client.get_or_create_thread(thread_name)
             print("thread id", thread_id)
 
@@ -103,19 +103,19 @@ class Eden2Cog(commands.Cog):
                 print("response to json", response)
                 response = json.loads(response.get("message"))
                 content = response.get("content")
-                tool_calls = response.get("tool_calls")
-                if tool_calls:
-                    tool_name = tool_calls[0].get("function").get("name")
-                    if tool_name in long_running_tools and not answered:
-                        args = json.loads(tool_calls[0].get("function").get("arguments"))
-                        prompt = args.get("prompt")
-                        if prompt:
-                            await reply(message, f"Running {tool_name}: {prompt}. Please wait...")
-                        else:
-                            await reply(message, f"Running {tool_name}. Please wait...")
+                # tool_calls = response.get("tool_calls")
+                # if tool_calls:
+                #     tool_name = tool_calls[0].get("function").get("name")
+                #     if tool_name in long_running_tools and not answered:
+                #         args = json.loads(tool_calls[0].get("function").get("arguments"))
+                #         prompt = args.get("prompt")
+                #         if prompt:
+                #             await reply(message, f"Running {tool_name}: {prompt}. Please wait...")
+                #         else:
+                #             await reply(message, f"Running {tool_name}. Please wait...")
                         
                 if content:
-                    answered = True
+                    # answered = True
                     await reply(message, content)
 
     @commands.Cog.listener()
