@@ -14,7 +14,7 @@ from common.discord import (
     replace_mentions_with_usernames,
 )
 
-long_running_tools = ["txt2vid", "style_mixing", "img2vid", "vid2vid", "video_upscale"]
+long_running_tools = ["txt2vid", "style_mixing", "img2vid", "vid2vid", "video_upscale", "vid2vid_sdxl"]
 
 # ALLOWED_CHANNELS = [int(c) for c in os.getenv("ALLOWED_CHANNELS", "").split(",")]
 EDEN_CHARACTER_ID = os.getenv("EDEN_CHARACTER_ID")
