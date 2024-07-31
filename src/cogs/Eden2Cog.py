@@ -51,12 +51,12 @@ class Eden2Cog(commands.Cog):
         
         is_dm = message.channel.type == discord.ChannelType.private
         if is_dm:
-            thread_name = f"discord4-DM-{message.author.name}-{message.author.id}"
+            thread_name = f"discord5-DM-{message.author.name}-{message.author.id}"
             dm_whitelist = [494760194203451393, 623923865864765452, 404322488215142410, 363287706798653441, 142466375024115712, 598627733576089681, 551619012140990465]
             if message.author.id not in dm_whitelist:
                 return
         else:
-            thread_name = f"discord4-{message.guild.name}-{message.channel.id}-{message.author.id}"
+            thread_name = f"discord5-{message.guild.name}-{message.channel.id}-{message.author.id}"
             trigger_reply = is_mentioned(message, self.bot.user)
             if not trigger_reply:
                 return
@@ -89,7 +89,7 @@ class Eden2Cog(commands.Cog):
             print(ran, content)
             # print(chat_message)
 
-            print("look for", f"discord4-{message.channel.id}-{message.author.id}")
+            print("look for", f"discord5-{message.channel.id}-{message.author.id}")
             thread_id = client.get_or_create_thread(thread_name)
             print("thread id", thread_id)
 
