@@ -60,7 +60,7 @@ class Eden2Cog(commands.Cog):
             trigger_reply = is_mentioned(message, self.bot.user)
             if not trigger_reply:
                 return
-            if message.channel.id != 1186378591118839808 and message.channel.id != 1006143747588898849:
+            if message.channel.id != 1186378591118839808 and message.channel.id != 1006143747588898849 and message.channel.id != 1268682080263606443:
                 return
         
         content = replace_bot_mention(message.content, only_first=True)
