@@ -1,5 +1,5 @@
 import os
-import asyncio
+import time
 import discord
 import json
 from datetime import datetime, timedelta
@@ -19,6 +19,7 @@ long_running_tools = ["txt2vid", "style_mixing", "img2vid", "vid2vid", "video_up
 # ALLOWED_CHANNELS = [int(c) for c in os.getenv("ALLOWED_CHANNELS", "").split(",")]
 EDEN_CHARACTER_ID = os.getenv("EDEN_CHARACTER_ID")
 
+#client = EdenClient(stage=True)
 client = EdenClient()
 print("client", client.api_key)
 
@@ -31,6 +32,43 @@ class MyView(ui.View):
         await interaction.response.send_message("Button was clicked!", ephemeral=True)
 
 
+video_tools = ["animate_3D", "txt2vid",  "img2vid", "vid2vid_sdxl", "style_mixing", "video_upscaler", "reel", "story", "lora_trainer"]
+hour_timestamps = {}
+day_timestamps = {}
+
+HOUR_IMAGE_LIMIT = 50
+HOUR_VIDEO_LIMIT = 10
+DAY_IMAGE_LIMIT = 200
+DAY_VIDEO_LIMIT = 40
+
+def user_over_rate_limits(user_id):
+    if user_id not in hour_timestamps:
+        hour_timestamps[user_id] = []
+    if user_id not in day_timestamps:
+        day_timestamps[user_id] = []
+
+    hour_timestamps[user_id] = [t for t in hour_timestamps[user_id] if time.time() - t["time"] < 3600]
+    day_timestamps[user_id] = [t for t in day_timestamps[user_id] if time.time() - t["time"] < 86400]
+
+    hour_video_tool_calls = len([t for t in hour_timestamps[user_id] if t["tool"] in video_tools])
+    hour_image_tool_calls = len([t for t in hour_timestamps[user_id] if t["tool"] not in video_tools])
+
+    day_video_tool_calls = len([t for t in day_timestamps[user_id] if t["tool"] in video_tools])
+    day_image_tool_calls = len([t for t in day_timestamps[user_id] if t["tool"] not in video_tools])
+
+    # print("hour_video_tool_calls", hour_video_tool_calls)
+    # print("hour_image_tool_calls", hour_image_tool_calls)
+    # print("day_video_tool_calls", day_video_tool_calls)
+    # print("day_image_tool_calls", day_image_tool_calls)
+
+    if hour_video_tool_calls >= HOUR_VIDEO_LIMIT or hour_image_tool_calls >= HOUR_IMAGE_LIMIT:
+        return True
+    if day_video_tool_calls >= DAY_VIDEO_LIMIT or day_image_tool_calls >= DAY_IMAGE_LIMIT:
+        return True
+    return False
+
+
+
 class Eden2Cog(commands.Cog):
     def __init__(
         self,
@@ -41,7 +79,7 @@ class Eden2Cog(commands.Cog):
 
     @commands.Cog.listener("on_message")
     async def on_message(self, message: discord.Message) -> None:
-        print("on... message ...", message.content)
+        print("on... message ...", message.content, "\n=============") 
         
         if (
             message.author.id == self.bot.user.id
@@ -62,7 +100,11 @@ class Eden2Cog(commands.Cog):
                 return
             if message.channel.id != 1186378591118839808 and message.channel.id != 1006143747588898849 and message.channel.id != 1268682080263606443:
                 return
-        
+
+        if user_over_rate_limits(message.author.id):
+            await reply(message, "I'm sorry, you've hit your rate limit. Please try again a bit later!")
+            return
+
         content = replace_bot_mention(message.content, only_first=True)
         content = replace_mentions_with_usernames(content, message.mentions)
         
@@ -84,39 +126,37 @@ class Eden2Cog(commands.Cog):
 
         ctx = await self.bot.get_context(message)
         async with ctx.channel.typing():
-            import random
-            ran = random.randint(1, 10000)
-            print(ran, content)
-            # print(chat_message)
-
-            print("look for", f"discord5-{message.channel.id}-{message.author.id}")
             thread_id = client.get_or_create_thread(thread_name)
-            print("thread id", thread_id)
-
             answered = False
+
             async for response in client.async_chat(chat_message, thread_id):
-                print(ran, response)
                 if 'error' in response:
                     error_message = response.get("error")
                     await reply(message, f"Error: {error_message}")
                     continue
-                print("response to json", response)
+
+                if not response.get("message"):
+                    continue
+
                 response = json.loads(response.get("message"))
-                content = response.get("content")
-                # tool_calls = response.get("tool_calls")
-                # if tool_calls:
-                #     tool_name = tool_calls[0].get("function").get("name")
-                #     if tool_name in long_running_tools and not answered:
-                #         args = json.loads(tool_calls[0].get("function").get("arguments"))
-                #         prompt = args.get("prompt")
-                #         if prompt:
-                #             await reply(message, f"Running {tool_name}: {prompt}. Please wait...")
-                #         else:
-                #             await reply(message, f"Running {tool_name}. Please wait...")
-                        
+                content = response.get("content", "")
+                tool_results = response.get("tool_results")
+                
+                if tool_results:
+                    for t in tool_results:
+                        print("tool result")
+                        hour_timestamps[message.author.id].append({"time": time.time(), "tool": t["name"]})
+                        day_timestamps[message.author.id].append({"time": time.time(), "tool": t["name"]}) 
+                        print("tool called", t["name"])
+                        print(hour_timestamps[message.author.id])
+
                 if content:
-                    # answered = True
-                    await reply(message, content)
+                    if not answered:
+                        await reply(message, content)
+                    else:
+                        await message.channel.send(content)
+                    answered = True
+
 
     @commands.Cog.listener()
     async def on_member_join(self, member):
