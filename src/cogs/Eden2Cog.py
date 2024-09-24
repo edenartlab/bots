@@ -26,7 +26,7 @@ EVE_AGENT_ID_PHOTO="66f1c7b5ee5c5f46bbfd3cb9"
 
 client = EdenClient(stage=False)
 # client = EdenClient()
-print(client, "ok")
+print(client)
 
 from discord import ui, ButtonStyle
 
