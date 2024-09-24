@@ -14,13 +14,20 @@ from common.discord import (
     replace_mentions_with_usernames,
 )
 
-long_running_tools = ["txt2vid", "style_mixing", "img2vid", "vid2vid", "video_upscale", "vid2vid_sdxl"]
+
+
+long_running_tools = ["txt2vid", "style_mixing", "img2vid", "vid2vid", "video_upscale", "vid2vid_sdxl", "lora_trainer", "animate_3D"]
 
 # ALLOWED_CHANNELS = [int(c) for c in os.getenv("ALLOWED_CHANNELS", "").split(",")]
-EDEN_CHARACTER_ID = os.getenv("EDEN_CHARACTER_ID")
+# EVE_AGENT_ID_ALL = os.getenv("EVE_AGENT_ID_ALL")
+# EVE_AGENT_ID_PHOTO = os.getenv("EVE_AGENT_ID_PHOTO")
 
-#client = EdenClient(stage=True)
-client = EdenClient()
+EVE_AGENT_ID_ALL="66f1c7b4ee5c5f46bbfd3cb8"
+EVE_AGENT_ID_PHOTO="66f1c7b5ee5c5f46bbfd3cb9"
+
+
+client = EdenClient(stage=False)
+# client = EdenClient()
 print("client", client.api_key)
 
 
@@ -30,6 +37,7 @@ class MyView(ui.View):
     @ui.button(label="Click Me", style=ButtonStyle.green, custom_id="button_click")
     async def button_click(self, button: ui.Button, interaction: discord.Interaction):
         await interaction.response.send_message("Button was clicked!", ephemeral=True)
+
 
 
 video_tools = ["animate_3D", "txt2vid",  "img2vid", "vid2vid_sdxl", "style_mixing", "video_upscaler", "reel", "story", "lora_trainer"]
@@ -75,7 +83,6 @@ class Eden2Cog(commands.Cog):
         bot: commands.bot,
     ) -> None:
         self.bot = bot
-        self.characterId = EDEN_CHARACTER_ID
 
     @commands.Cog.listener("on_message")
     async def on_message(self, message: discord.Message) -> None:
@@ -89,16 +96,16 @@ class Eden2Cog(commands.Cog):
         
         is_dm = message.channel.type == discord.ChannelType.private
         if is_dm:
-            thread_name = f"discord5-DM-{message.author.name}-{message.author.id}"
+            thread_name = f"discord8-DM-{message.author.name}-{message.author.id}"
             dm_whitelist = [494760194203451393, 623923865864765452, 404322488215142410, 363287706798653441, 142466375024115712, 598627733576089681, 551619012140990465]
             if message.author.id not in dm_whitelist:
                 return
         else:
-            thread_name = f"discord5-{message.guild.name}-{message.channel.id}-{message.author.id}"
+            thread_name = f"discord8-{message.guild.name}-{message.channel.id}-{message.author.id}"
             trigger_reply = is_mentioned(message, self.bot.user)
             if not trigger_reply:
                 return
-            if message.channel.id != 1186378591118839808 and message.channel.id != 1006143747588898849 and message.channel.id != 1268682080263606443:
+            if message.channel.id != 1186378591118839808 and message.channel.id != 1006143747588898849 and message.channel.id != 1268682080263606443 and message.channel.id != 1288181593051107490:
                 return
 
         if user_over_rate_limits(message.author.id):
@@ -127,9 +134,11 @@ class Eden2Cog(commands.Cog):
         ctx = await self.bot.get_context(message)
         async with ctx.channel.typing():
             thread_id = client.get_or_create_thread(thread_name)
+            #agent_id = EVE_AGENT_ID_PHOTO if message.channel.id == 1288181593051107490 else EVE_AGENT_ID_ALL
+            agent_id = EVE_AGENT_ID_PHOTO if message.channel.id == 1288181593051107490 else EVE_AGENT_ID_ALL
             answered = False
 
-            async for response in client.async_chat(chat_message, thread_id):
+            async for response in client.async_chat(chat_message, thread_id, agent_id):
                 if 'error' in response:
                     error_message = response.get("error")
                     await reply(message, f"Error: {error_message}")
@@ -154,7 +163,7 @@ class Eden2Cog(commands.Cog):
                     if not answered:
                         await reply(message, content)
                     else:
-                        await message.channel.send(content)
+                        await send(message, content)
                     answered = True
 
 
@@ -172,6 +181,10 @@ async def reply(message, content):
     for c, chunk in enumerate(content_chunks):
         await message.reply(chunk) if c == 0 else await message.channel.send(chunk)
 
+async def send(message, content):
+    content_chunks = [content[i:i+1980] for i in range(0, len(content), 1980)]
+    for c, chunk in enumerate(content_chunks):
+        await message.channel.send(chunk)
 
 
 welcome_message = """Welcome to Eden, {name}!!!
