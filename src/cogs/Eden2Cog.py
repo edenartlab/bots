@@ -14,8 +14,6 @@ from common.discord import (
     replace_mentions_with_usernames,
 )
 
-
-
 long_running_tools = ["txt2vid", "style_mixing", "img2vid", "vid2vid", "video_upscale", "vid2vid_sdxl", "lora_trainer", "animate_3D"]
 
 # ALLOWED_CHANNELS = [int(c) for c in os.getenv("ALLOWED_CHANNELS", "").split(",")]
@@ -28,8 +26,7 @@ EVE_AGENT_ID_PHOTO="66f1c7b5ee5c5f46bbfd3cb9"
 
 client = EdenClient(stage=False)
 # client = EdenClient()
-print("client", client.api_key)
-
+print(client, "ok")
 
 from discord import ui, ButtonStyle
 
