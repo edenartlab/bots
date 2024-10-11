@@ -20,13 +20,14 @@ long_running_tools = ["txt2vid", "style_mixing", "img2vid", "vid2vid", "video_up
 # EVE_AGENT_ID_ALL = os.getenv("EVE_AGENT_ID_ALL")
 # EVE_AGENT_ID_PHOTO = os.getenv("EVE_AGENT_ID_PHOTO")
 
-EVE_AGENT_ID_ALL="66f1c7b4ee5c5f46bbfd3cb8"
-EVE_AGENT_ID_PHOTO="66f1c7b5ee5c5f46bbfd3cb9"
+# EVE_AGENT_ID_ALL="66f1c7b4ee5c5f46bbfd3cb8"
+# EVE_AGENT_ID_PHOTO="66f1c7b5ee5c5f46bbfd3cb9"
 
 
 client = EdenClient(stage=False)
-# client = EdenClient()
 print(client)
+discord_channels = client.get_discord_channels()
+last_refresh_time = time.time()
 
 from discord import ui, ButtonStyle
 
@@ -83,6 +84,14 @@ class Eden2Cog(commands.Cog):
 
     @commands.Cog.listener("on_message")
     async def on_message(self, message: discord.Message) -> None:
+        global discord_channels, last_refresh_time
+
+        # Refresh discord_channels if it's been more than 5 minutes
+        current_time = time.time()
+        if current_time - last_refresh_time > 300:
+            discord_channels = client.get_discord_channels()
+            last_refresh_time = current_time
+
         print("on... message ...", message.content, "\n=============") 
         
         if (
@@ -91,24 +100,29 @@ class Eden2Cog(commands.Cog):
         ):
             return
         
+        print("a2")
+        
         is_dm = message.channel.type == discord.ChannelType.private
         if is_dm:
-            thread_name = f"discord8-DM-{message.author.name}-{message.author.id}"
+            thread_name = f"discord9-DM-{message.author.name}-{message.author.id}"
             dm_whitelist = [494760194203451393, 623923865864765452, 404322488215142410, 363287706798653441, 142466375024115712, 598627733576089681, 551619012140990465]
             if message.author.id not in dm_whitelist:
                 return
         else:
-            thread_name = f"discord8-{message.guild.name}-{message.channel.id}-{message.author.id}"
+            thread_name = f"discord9-{message.guild.name}-{message.channel.id}-{message.author.id}"
             trigger_reply = is_mentioned(message, self.bot.user)
             if not trigger_reply:
                 return
-            if message.channel.id != 1186378591118839808 and message.channel.id != 1006143747588898849 and message.channel.id != 1268682080263606443 and message.channel.id != 1288181593051107490:
+            print("a3")
+            print("message.channel.id", message.channel.id)
+            print("discord_channels", discord_channels)
+            
+            if str(message.channel.id) not in discord_channels:
                 return
-
         if user_over_rate_limits(message.author.id):
             await reply(message, "I'm sorry, you've hit your rate limit. Please try again a bit later!")
             return
-
+        print("a4")
         content = replace_bot_mention(message.content, only_first=True)
         content = replace_mentions_with_usernames(content, message.mentions)
         
@@ -128,14 +142,17 @@ class Eden2Cog(commands.Cog):
         }
         print("chat message", chat_message)
 
+
         ctx = await self.bot.get_context(message)
         async with ctx.channel.typing():
             thread_id = client.get_or_create_thread(thread_name)
             #agent_id = EVE_AGENT_ID_PHOTO if message.channel.id == 1288181593051107490 else EVE_AGENT_ID_ALL
-            agent_id = EVE_AGENT_ID_PHOTO if message.channel.id == 1288181593051107490 else EVE_AGENT_ID_ALL
+            #agent_id = EVE_AGENT_ID_PHOTO if message.channel.id == 1288181593051107490 else EVE_AGENT_ID_ALL
             answered = False
+            channel_id = str(message.channel.id)
 
-            async for response in client.async_chat(chat_message, thread_id, agent_id):
+            async for response in client.async_discord_chat(chat_message, thread_id, channel_id):
+                print("THE RESPONSE", response)
                 if 'error' in response:
                     error_message = response.get("error")
                     await reply(message, f"Error: {error_message}")
